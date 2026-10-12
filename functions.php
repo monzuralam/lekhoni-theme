@@ -173,5 +173,12 @@ function mytheme_allow_svg_uploads($mimes)
 add_filter('upload_mimes', 'mytheme_allow_svg_uploads');
 
 include_once get_template_directory() . '/inc/install.php';
-include_once get_template_directory() . '/inc/acf.php';
+include_once get_template_directory() . '/inc/acf-helpers.php';
+include_once get_template_directory() . '/inc/acf-home.php';
+include_once get_template_directory() . '/inc/acf-about.php';
+include_once get_template_directory() . '/inc/acf-contact.php';
+include_once get_template_directory() . '/inc/acf-author.php';
+include_once get_template_directory() . '/inc/newsletter.php';
+include_once get_template_directory() . '/inc/contact.php';
+include_once get_template_directory() . '/inc/payments.php';
 include_once get_template_directory() . '/inc/headless.php';
