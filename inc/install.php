@@ -94,6 +94,18 @@ function lekhoni_register_required_plugins()
 			'slug'      => 'wpgraphql-acf',
 			'required'  => true,
 		),
+		array(
+			'name'      => 'WooCommerce',
+			'slug'      => 'woocommerce',
+			'required'  => true,
+		),
+
+		array(
+			'name'      => 'WPGraphQL WooCommerce (WooGraphQL)',
+			'slug'      => 'wp-graphql-woocommerce',
+			'source'    => 'https://github.com/wp-graphql/wp-graphql-woocommerce/releases/download/v1.0.3/wp-graphql-woocommerce.zip',
+			'required'  => true,
+		),
 	);
 
 	/*

@@ -174,3 +174,4 @@ add_filter('upload_mimes', 'mytheme_allow_svg_uploads');
 
 include_once get_template_directory() . '/inc/install.php';
 include_once get_template_directory() . '/inc/acf.php';
+include_once get_template_directory() . '/inc/headless.php';
