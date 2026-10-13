@@ -154,6 +154,153 @@ function lekhoni_admin_bar_frontend_links($wp_admin_bar)
 add_action('admin_bar_menu', 'lekhoni_admin_bar_frontend_links', 100);
 
 /**
+ * Moves a WordPress link to the same path on the Next.js site.
+ *
+ * Used for published content only, and never during GraphQL requests:
+ * WPGraphQL builds each node's `uri` by cutting home_url() off the
+ * permalink, and the storefront finds every page by that uri. Also skips
+ * paths the storefront has no route for (see lekhoni_frontend_link_routes).
+ *
+ * @param string $url  WordPress link.
+ * @param string $kind 'post', 'page', a post type or a taxonomy.
+ * @return string
+ */
+function lekhoni_frontend_link($url, $kind)
+{
+    if (lekhoni_is_graphql_request() || ! is_string($url)) {
+        return $url;
+    }
+
+    $home = untrailingslashit(home_url());
+    if (0 !== stripos($url, $home . '/') && 0 !== strcasecmp($url, $home)) {
+        return $url;
+    }
+
+    $path   = (string) substr($url, strlen($home));
+    $routes = lekhoni_frontend_link_routes();
+    if (! isset($routes[$kind])) {
+        return $url;
+    }
+    if ('' !== $routes[$kind] && 0 !== strpos($path, $routes[$kind])) {
+        return $url; // A custom permalink base the storefront doesn't use.
+    }
+
+    // The storefront drops trailing slashes; skip its redirect.
+    $parts = explode('?', $path, 2);
+    $parts[0] = '/' === $parts[0] ? '/' : untrailingslashit($parts[0]);
+
+    return lekhoni_frontend_url() . ('' === $parts[0] ? '/' : $parts[0]) . (isset($parts[1]) ? '?' . $parts[1] : '');
+}
+
+/**
+ * Link kinds the storefront has routes for, with the path they must start
+ * with ('' = any path, resolved by the storefront's catch-all route).
+ *
+ * @return array<string, string>
+ */
+function lekhoni_frontend_link_routes()
+{
+    return apply_filters(
+        'lekhoni_frontend_link_routes',
+        array(
+            'post'        => '',
+            'page'        => '',
+            'category'    => '',
+            'post_tag'    => '',
+            'author'      => '',
+            'product'     => '/product/',
+            'product_cat' => '/product-category/',
+        )
+    );
+}
+
+/**
+ * Whether this request is a WPGraphQL query (the storefront's API).
+ *
+ * @return bool
+ */
+function lekhoni_is_graphql_request()
+{
+    if (function_exists('is_graphql_request')) {
+        return is_graphql_request();
+    }
+
+    return defined('GRAPHQL_REQUEST') && GRAPHQL_REQUEST;
+}
+
+/**
+ * Whether a post's link should point at the storefront: published, and not
+ * password protected (the storefront only shows public content).
+ *
+ * @param WP_Post|int $post Post.
+ * @return bool
+ */
+function lekhoni_post_is_public($post)
+{
+    $post = get_post($post);
+
+    return $post && 'publish' === $post->post_status && '' === $post->post_password;
+}
+
+/**
+ * "View" links for posts and pages (list tables, editor, admin bar, emails).
+ *
+ * @param string      $url  Permalink.
+ * @param WP_Post|int $post Post or page.
+ * @return string
+ */
+function lekhoni_frontend_post_link($url, $post)
+{
+    $post = get_post($post);
+
+    return $post && lekhoni_post_is_public($post) ? lekhoni_frontend_link($url, $post->post_type) : $url;
+}
+add_filter('post_link', 'lekhoni_frontend_post_link', 20, 2);
+add_filter('page_link', 'lekhoni_frontend_post_link', 20, 2);
+add_filter('post_type_link', 'lekhoni_frontend_post_link', 20, 2);
+
+/**
+ * Category, tag and product category links.
+ *
+ * @param string  $url  Term link.
+ * @param WP_Term $term Term.
+ * @return string
+ */
+function lekhoni_frontend_term_link($url, $term)
+{
+    return lekhoni_frontend_link($url, $term->taxonomy);
+}
+add_filter('term_link', 'lekhoni_frontend_term_link', 20, 2);
+
+/**
+ * Author archive links.
+ *
+ * @param string $url Author link.
+ * @return string
+ */
+function lekhoni_frontend_author_link($url)
+{
+    return lekhoni_frontend_link($url, 'author');
+}
+add_filter('author_link', 'lekhoni_frontend_author_link', 20);
+
+// "Preview" links: see inc/preview.php.
+
+/**
+ * Lets wp_safe_redirect() go to storefront links (e.g. after a comment).
+ *
+ * @param string[] $hosts Allowed hosts.
+ * @return string[]
+ */
+function lekhoni_allow_frontend_redirects($hosts)
+{
+    $host = wp_parse_url(lekhoni_frontend_url(), PHP_URL_HOST);
+
+    return $host ? array_merge($hosts, array($host)) : $hosts;
+}
+add_filter('allowed_redirect_hosts', 'lekhoni_allow_frontend_redirects');
+
+/**
  * Redirects front-end requests to the same path on the Next.js site.
  *
  * Previews and the Customizer stay on WordPress.

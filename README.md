@@ -165,6 +165,7 @@ npm run build && npm start   # production
 | `demo/content.json`, `demo/images/` | The demo package (built by the storefront's `scripts/build-demo.mjs`; don't edit by hand) |
 | `inc/acf-export-*.json` | An old ACF export of the first Home Shop fields. Not loaded; outdated reference only |
 | `inc/headless.php` | Headless helpers (below) |
+| `inc/preview.php` | Storefront previews of drafts and unsaved changes (section 4, "Previews") |
 | `templates/template-home.php` | "Home Shop" page template |
 | `templates/template-about.php` | "About" page template |
 | `templates/template-contact.php` | "Contact" page template |
@@ -177,6 +178,19 @@ npm run build && npm start   # production
   path on the storefront. These are skipped: admin, previews, Customizer,
   AJAX, cron, REST, GraphQL, feeds and robots.
 - The admin bar's **Visit Site** link points to the storefront.
+- **Storefront links:** the links for published posts, pages, products,
+  categories, tags, product categories and authors point to the storefront.
+  This covers "View" in the admin lists, "View post" in the editor, the admin
+  bar, and emails (`http://woo.local/which-pen-suits-you/` becomes
+  `{LEKHONI_FRONTEND_URL}/which-pen-suits-you`). These keep their WordPress link:
+  - drafts, private and password-protected posts (their "Preview" opens a
+    storefront preview instead; section 4, "Previews");
+  - every GraphQL request, because WPGraphQL's `uri` is built from these links;
+  - a product or product category whose permalink base isn't `/product/` or
+    `/product-category/` (Settings → Permalinks).
+
+  The filter `lekhoni_frontend_link_routes` changes which kinds are
+  rewritten.
 - **Instant refresh:** `lekhoni_revalidate($tags)` posts to the storefront's
   `/api/revalidate` (secret header from `LEKHONI_REVALIDATE_SECRET`; doesn't
   wait for an answer). It runs when Theme Settings are saved
@@ -398,6 +412,36 @@ The checkout lists the enabled methods in WooCommerce's order.
   the method is disabled.
 - Changes show within a few minutes (cache).
 
+### Previews (drafts, scheduled, pending, private and unsaved changes)
+**Preview** on a post or page (in the editor or the Posts/Pages lists, and
+**View** on a private one) opens it on the storefront, laid out like the live
+page, with a **প্রিভিউ** bar on top and a **প্রিভিউ বন্ধ করুন** (close) button.
+It shows the latest autosave when that is newer, so unsaved edits appear,
+just like WordPress's own preview.
+
+How it works (`inc/preview.php`, storefront `lib/preview.ts`):
+1. The link goes to `wp-admin/admin-post.php?action=lekhoni_preview&post=ID`
+   (with a nonce). That checks the user may edit the post, stores a one-time
+   handoff token (2 minutes), and redirects to
+   `{LEKHONI_FRONTEND_URL}/api/preview?token=…`. A logged-out user is sent to
+   the login first.
+2. The storefront trades the token (mutation `lekhoniStartPreview`, single
+   use) for a session token. The session lasts 1 hour and is tied to that
+   editor and that one post. It is kept in the httpOnly `lk-preview` cookie,
+   and the storefront then opens `/preview/post/ID` or `/preview/page/ID`.
+3. The preview page reads the post with query `lekhoniPreview(session, id)`,
+   uncached. Edit rights are checked again on every request. An expired,
+   reused or wrong token, or a visitor without the cookie, gets a "link
+   expired" card.
+
+The GraphQL request itself stays anonymous: the session token unlocks only
+that post's content, nothing else. Preview pages are `noindex`. Comments,
+share buttons, previous/next and related posts are left out.
+
+Not previewed on the storefront: products (WooCommerce keeps WordPress's
+preview), and the sections of the Home Shop, About and Contact templates (their
+preview shows the page's editor content with a note).
+
 ### Other content
 - **Product category images:** Products → Categories → Thumbnail.
 - **Menu:** Appearance → Menus → location **Primary menu**. Nest items to make
@@ -422,6 +466,7 @@ The checkout lists the enabled methods in WooCommerce's order.
 | `/search` | Product search results (the header's search palette uses the same search) |
 | Any other path (`app/[...uri]`) | Resolved with WordPress `nodeByUri`: the Posts page (e.g. `/blog`, with `/page/N`), category and tag archives, author archives (`/author/<slug>`), single posts and other pages (e.g. `/sample-page`). The front page's own slug redirects to `/`; anything else is a 404. |
 | `/login`, `/register`, `/forgot-password`, `/reset-password` | Customer auth |
+| `/preview/post/[id]`, `/preview/page/[id]` | Editor previews (section 4, "Previews"); `/api/preview` starts one, `/api/preview/exit` ends it |
 | `/my-account`, `/my-account/orders`, `/my-account/orders/[id]`, `/my-account/addresses`, `/my-account/details`, `/my-account/wishlist` | My account (same base URL as WooCommerce's) |
 
 ---

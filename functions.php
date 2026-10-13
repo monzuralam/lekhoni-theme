@@ -186,4 +186,5 @@ include_once get_template_directory() . '/inc/email-login.php';
 include_once get_template_directory() . '/inc/demo-import.php';
 include_once get_template_directory() . '/inc/demo-import-admin.php';
 include_once get_template_directory() . '/inc/demo-import-cli.php';
+include_once get_template_directory() . '/inc/preview.php';
 include_once get_template_directory() . '/inc/headless.php';
