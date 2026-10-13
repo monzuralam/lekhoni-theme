@@ -63,7 +63,7 @@ if (! function_exists('lekhoni_setup')) {
         register_nav_menus(
             array(
                 'primary' => esc_html__('Primary menu', 'lekhoni'),
-                'footer'  => esc_html__('Secondary menu', 'lekhoni'),
+                'footer'  => esc_html__('Footer menu', 'lekhoni'),
             )
         );
 
@@ -174,6 +174,7 @@ add_filter('upload_mimes', 'mytheme_allow_svg_uploads');
 
 include_once get_template_directory() . '/inc/install.php';
 include_once get_template_directory() . '/inc/acf-helpers.php';
+include_once get_template_directory() . '/inc/acf-settings.php';
 include_once get_template_directory() . '/inc/acf-home.php';
 include_once get_template_directory() . '/inc/acf-about.php';
 include_once get_template_directory() . '/inc/acf-contact.php';
@@ -181,4 +182,8 @@ include_once get_template_directory() . '/inc/acf-author.php';
 include_once get_template_directory() . '/inc/newsletter.php';
 include_once get_template_directory() . '/inc/contact.php';
 include_once get_template_directory() . '/inc/payments.php';
+include_once get_template_directory() . '/inc/email-login.php';
+include_once get_template_directory() . '/inc/demo-import.php';
+include_once get_template_directory() . '/inc/demo-import-admin.php';
+include_once get_template_directory() . '/inc/demo-import-cli.php';
 include_once get_template_directory() . '/inc/headless.php';

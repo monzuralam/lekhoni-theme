@@ -24,6 +24,117 @@ function lekhoni_frontend_url()
 }
 
 /**
+ * Tells the storefront to drop cached data (POST {LEKHONI_FRONTEND_URL}/api/revalidate).
+ *
+ * Needs the same secret in wp-config.php and the storefront's .env.local:
+ *     define('LEKHONI_REVALIDATE_SECRET', '…');   // wp-config.php
+ *     LEKHONI_REVALIDATE_SECRET=…                 // lekhoni/.env.local
+ * Without it nothing is sent and the storefront refreshes on its own within
+ * a few minutes. The request doesn't wait for an answer, so saving stays fast.
+ *
+ * @param string[] $tags Cache tags, e.g. 'theme-settings', 'menus'.
+ * @return void
+ */
+function lekhoni_revalidate($tags)
+{
+    if (! defined('LEKHONI_REVALIDATE_SECRET') || '' === LEKHONI_REVALIDATE_SECRET) {
+        return;
+    }
+
+    wp_remote_post(
+        lekhoni_frontend_url() . '/api/revalidate',
+        array(
+            'blocking' => false,
+            'timeout'  => 3,
+            'headers'  => array(
+                'Content-Type'                => 'application/json',
+                'X-Lekhoni-Revalidate-Secret' => LEKHONI_REVALIDATE_SECRET,
+            ),
+            'body'     => wp_json_encode(array('tags' => array_values(array_unique($tags)))),
+        )
+    );
+}
+
+/**
+ * Refreshes the storefront's header and footer when Theme Settings are saved.
+ *
+ * @param int|string $post_id ACF post id; 'options' for options pages.
+ * @return void
+ */
+function lekhoni_revalidate_theme_settings($post_id)
+{
+    if ('options' === $post_id) {
+        lekhoni_revalidate(array('theme-settings'));
+    }
+}
+add_action('acf/save_post', 'lekhoni_revalidate_theme_settings', 20);
+
+/**
+ * Refreshes the storefront's menus when a menu or the menu locations change.
+ *
+ * @return void
+ */
+function lekhoni_revalidate_menus()
+{
+    lekhoni_revalidate(array('menus'));
+}
+add_action('wp_update_nav_menu', 'lekhoni_revalidate_menus');
+add_action('wp_delete_nav_menu', 'lekhoni_revalidate_menus');
+add_action('update_option_theme_mods_' . get_option('stylesheet'), 'lekhoni_revalidate_menus');
+
+/**
+ * Refreshes the logo text, tagline and favicon when Settings → General changes.
+ *
+ * @return void
+ */
+function lekhoni_revalidate_site_identity()
+{
+    lekhoni_revalidate(array('theme-settings', 'blog-settings'));
+}
+foreach (array('blogname', 'blogdescription', 'site_icon') as $lekhoni_option) {
+    add_action("update_option_{$lekhoni_option}", 'lekhoni_revalidate_site_identity');
+}
+
+/**
+ * GraphQL field `siteIcon { small large }`: the Site Icon (Settings →
+ * General) for the storefront's favicon; null when none is set.
+ *
+ * @return void
+ */
+function lekhoni_register_site_icon_field()
+{
+    register_graphql_object_type(
+        'LekhoniSiteIcon',
+        array(
+            'description' => 'The Site Icon in two sizes.',
+            'fields'      => array(
+                'small' => array('type' => 'String', 'description' => '32 x 32 (browser tab).'),
+                'large' => array('type' => 'String', 'description' => '180 x 180 (home screen).'),
+            ),
+        )
+    );
+
+    register_graphql_field(
+        'RootQuery',
+        'siteIcon',
+        array(
+            'type'        => 'LekhoniSiteIcon',
+            'description' => 'The Site Icon from Settings → General.',
+            'resolve'     => function () {
+                if (! has_site_icon()) {
+                    return null;
+                }
+                return array(
+                    'small' => get_site_icon_url(32),
+                    'large' => get_site_icon_url(180),
+                );
+            },
+        )
+    );
+}
+add_action('graphql_register_types', 'lekhoni_register_site_icon_field');
+
+/**
  * Points the admin bar "Visit Site" links to the front end.
  *
  * @param WP_Admin_Bar $wp_admin_bar Admin bar instance.

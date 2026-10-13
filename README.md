@@ -56,6 +56,11 @@ that list.** Install it manually from
 ### WordPress
 
 1. Activate the **Lekhoni** theme and the plugins above.
+
+   > **Quickest start:** after step 2, open **Theme Settings → Demo Import**
+   > and click **Import demo**. It sets up steps 4–7 for you (pages, Reading,
+   > menus, Theme Settings and, if ticked, the store settings) and fills the
+   > shop with demo products and posts. See "Demo import" in section 4.
 2. Add these to `wp-config.php` above `/* That's all, stop editing! */`:
 
    ```php
@@ -66,9 +71,14 @@ that list.** Install it manually from
    // Signs customer login tokens. Long random string; keep it secret.
    // Changing it logs every customer out.
    define('GRAPHQL_JWT_AUTH_SECRET_KEY', 'paste-a-long-random-string-here');
+
+   // Shared with the storefront's .env.local (same value): lets WordPress
+   // tell the storefront to refresh right after Theme Settings or menus are
+   // saved. Optional; without it changes show within a few minutes.
+   define('LEKHONI_REVALIDATE_SECRET', 'another-long-random-string');
    ```
 
-   Generate a key with, for example,
+   Generate each key with, for example,
    `node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"`.
 3. **Settings → Permalinks:** use any "pretty" structure (for example Post name).
    Product URLs must look like `/product/cap/` and categories like
@@ -93,9 +103,13 @@ that list.** Install it manually from
 
    With a static front page, its own slug (for example `/home` from a menu
    link) redirects (307) to `/`, as WordPress does.
-5. **Appearance → Menus:** create a menu and tick **Primary menu**. Until a
-   menu is assigned, the storefront shows the fallback links Home and Shop.
-6. **WooCommerce → Settings:** set the currency (BDT shows ৳), enable payment
+5. **Appearance → Menus:** create a menu and tick **Primary menu** (header),
+   and another for **Footer menu** (footer "Links" column). Until a menu is
+   assigned, the header shows Home and Shop, and the footer shows Shop,
+   My Account, About and Contact.
+6. **Theme Settings** (admin menu): logo, announcement bar, social profiles,
+   header buttons and footer (section 4). Optional: the defaults match the design.
+7. **WooCommerce → Settings:** set the currency (BDT shows ৳), enable payment
    methods (cash on delivery works out of the box) and add shipping zones.
    For **Direct bank transfer**, fill in the account details and the
    **Instructions** text; see "Payment methods" in section 4.
@@ -112,6 +126,8 @@ Create `lekhoni/.env.local`:
 ```
 WP_GRAPHQL_URL=http://woo.local/graphql
 WP_SITE_URL=http://woo.local
+# Same value as in wp-config.php (optional; instant refresh after saving)
+LEKHONI_REVALIDATE_SECRET=another-long-random-string
 ```
 
 ```bash
@@ -131,7 +147,8 @@ npm run build && npm start   # production
 
 | File | Purpose |
 |---|---|
-| `functions.php` | Theme supports, menu locations (`primary`, `footer`), includes `inc/*` |
+| `functions.php` | Theme supports, menu locations (`primary` "Primary menu", `footer` "Footer menu"), includes `inc/*` |
+| `inc/acf-settings.php` | **Theme Settings** admin page: the theme's global settings (ACF options page; GraphQL `themeSettings { themeOptions }`) |
 | `inc/install.php` | TGM Plugin Activation: required plugin list |
 | `inc/acf-helpers.php` | Shared helpers for PHP-defined ACF fields (`lekhoni_acf_field()`, `lekhoni_icon_choices()`) |
 | `inc/acf-about.php` | ACF field group **About Page** (shown on the About template; GraphQL `aboutPage`) |
@@ -141,6 +158,11 @@ npm run build && npm start   # production
 | `inc/acf-author.php` | ACF field group **Author Profile** on the user profile screen (GraphQL `authorProfile`) |
 | `inc/newsletter.php` | Newsletter: **Subscribers** admin list with CSV export, and the `subscribeNewsletter` GraphQL mutation |
 | `inc/payments.php` | GraphQL `bankTransfer { instructions accounts }`: the Direct bank transfer accounts, shown at checkout (when that method is picked) and on the order-received page |
+| `inc/email-login.php` | Email link login: the `sendLoginLink` and `loginWithEmailLink` GraphQL mutations (switched on under Theme Settings → Login; section 6) |
+| `inc/demo-import.php` | Demo import engine: the steps, lookups by demo marker, and removal |
+| `inc/demo-import-admin.php` | **Theme Settings → Demo Import** page, its AJAX endpoints and the "import the demo" notice after activation |
+| `inc/demo-import-cli.php` | `wp lekhoni demo import` / `wp lekhoni demo remove` |
+| `demo/content.json`, `demo/images/` | The demo package (built by the storefront's `scripts/build-demo.mjs`; don't edit by hand) |
 | `inc/acf-export-*.json` | An old ACF export of the first Home Shop fields. Not loaded; outdated reference only |
 | `inc/headless.php` | Headless helpers (below) |
 | `templates/template-home.php` | "Home Shop" page template |
@@ -155,6 +177,14 @@ npm run build && npm start   # production
   path on the storefront. These are skipped: admin, previews, Customizer,
   AJAX, cron, REST, GraphQL, feeds and robots.
 - The admin bar's **Visit Site** link points to the storefront.
+- **Instant refresh:** `lekhoni_revalidate($tags)` posts to the storefront's
+  `/api/revalidate` (secret header from `LEKHONI_REVALIDATE_SECRET`; doesn't
+  wait for an answer). It runs when Theme Settings are saved
+  (`theme-settings`), when a menu or the menu locations change (`menus`), and
+  when the Site Title, Tagline or Site Icon change. Without the secret nothing
+  is sent.
+- **GraphQL `siteIcon { small large }`:** the Site Icon (Settings → General),
+  used as the storefront's favicon.
 - **Password reset links** go to the storefront's `/reset-password` page. Both
   WordPress's email (`retrieve_password_message`) and WooCommerce's email
   (the `lost-password` endpoint) are rewritten to
@@ -163,6 +193,93 @@ npm run build && npm start   # production
 ---
 
 ## 4. Editing content
+
+### Demo import (wp-admin → Theme Settings → Demo Import)
+
+One click fills a fresh install with the লেখনী demo, built from the design:
+
+| Content | What |
+|---|---|
+| Images | 32 illustrations from `design/assets/img`, as JPG/PNG (about 640 KB), added to the Media Library |
+| Products | 12 Bangla stationery products in 8 categories (with images). Prices in ৳, sales with end dates, stock levels including low and out of stock. The notebook (ruling) and gift box (colour × size) are variable products. Gallery images, featured products, 18 approved 4–5★ reviews and sales counts for "best sellers". |
+| Blog | 12 posts in 5 categories with tags, cover images and two authors (role Author, random passwords, `@example.com` emails); one sticky |
+| Pages | Home (every Home Shop tab filled), About, Contact and ব্লগ (Blog) |
+| Menus | "প্রধান মেনু" (Shop with category submenu) and "ফুটার মেনু" |
+
+**Options on the page:**
+- **Use the demo homepage, menus and Theme Settings** (ticked): fills the Home,
+  About and Contact fields (replacing what's there), makes Home the front page
+  and ব্লগ the posts page, assigns the menus to their locations and adds social
+  links and footer topics in Theme Settings.
+- **Store settings for Bangladesh** (ticked): currency ৳ (BDT, no decimals),
+  store country Bangladesh (Dhaka), a "বাংলাদেশ" shipping zone (flat ৳60, free
+  over ৳১,০০০), cash on delivery on, and the demo coupon `LEKHONI10` (10% over ৳500).
+
+**How it works:**
+- **Small steps:** images, terms, products, posts, pages, menus, settings,
+  then finish. Each is its own AJAX request, so slow hosts don't time out.
+  A full import takes about 30 seconds.
+- **The page:** shows a requirements check (WooCommerce, ACF PRO, WPGraphQL,
+  WooGraphQL, writable uploads, GD/Imagick, PHP memory) and a progress log.
+- **Re-running is safe:** every created item carries the meta
+  `_lekhoni_demo = "<kind>:<key>"`, so a second run updates the demo items
+  instead of adding copies.
+- **Existing items with the same slug are used, never taken over:** pages
+  (home, about, contact, blog), categories and authors are marked
+  `_lekhoni_demo_adopted` and are never deleted. An existing page's fields
+  are only replaced with the first option ticked.
+- **Remove demo content** deletes exactly what the demo created: products
+  with their variations and reviews, posts, pages it created, images and
+  their files, menus, terms, authors, attributes, the shipping zone and the
+  coupon. Your own content stays, and so do changed settings (currency, Theme
+  Settings). A homepage or posts page that pointed at a deleted page is reset.
+- **Storefront refresh:** after import and removal, the storefront is told to
+  refresh every cache tag (needs `LEKHONI_REVALIDATE_SECRET`; otherwise
+  within a few minutes).
+- **Prompt after activation:** a notice suggests the import until it's done
+  or dismissed.
+- **Command line:** `wp lekhoni demo import [--no-site] [--no-store]` and
+  `wp lekhoni demo remove [--yes]`.
+
+**Changing the demo:** edit `lekhoni/scripts/demo-content/*.mjs` (products,
+posts, pages, menus, settings; About/Contact text is in `pages.json`), then run
+`node scripts/build-demo.mjs` from `lekhoni/`. It renders the design's SVGs
+with sharp, writes `demo/content.json` and `demo/images/`, and stops if any
+reference (`@image:`, `@product:`, `@term:`, `@page:`) points at something
+missing.
+
+### Theme Settings (wp-admin → Theme Settings): header and footer
+
+The theme's **global settings**. They are stored as site options, not on any
+page, so they apply to every page of the storefront. One ACF options page
+(`inc/acf-settings.php`) with a tab per area; GraphQL
+`themeSettings { themeOptions { … } }`. Everything is optional. An empty
+field uses the design's default, and a switch that was never saved counts as
+on, so an untouched page looks exactly like the design.
+
+| Tab | Fields | When empty |
+|---|---|---|
+| Branding | Logo, logo for dark mode, logo width (px) | Text logo from the Site Title (Settings → General) with the accent dot: "লেখনী." |
+| Announcement Bar | Show, visitors can close it, icon, text, link text, link URL (`/shop` or `https://…`), show from / until (site timezone) | "৳১,০০০-এর বেশি অর্ডারে ফ্রি ডেলিভারি · আজই অর্ডার করুন" with the truck icon |
+| Social Profiles | Repeater: network (Facebook, X, Instagram, YouTube, LinkedIn, RSS) and URL | Icons hidden in the header, footer and blog sidebar |
+| Login | **Email link login** on/off, link valid for (5–60 minutes), email subject (`{site}` = Site Title), email text | **Off.** 15 minutes, "{site}-এ লগইন করার লিংক". See "Email link login" in section 6. |
+| Header | Switches: social icons, search, wishlist, My Account, dark mode toggle | All on. The cart is always shown; the menu is Appearance → Menus → Primary menu. |
+| Footer | Column 1 About (title, text, social icons) · Column 2 Recent posts (title, number) · Column 3 Topics (title; post categories, post tags or product categories; number) · Column 4 Links (title; Appearance → Menus → **Footer menu**) · Bottom bar (payment badges, copyright) | Design texts. Each column has a **Show** switch; empty columns are hidden and the rest close up. Copyright: `© {year} {site} · WordPress ও Next.js দিয়ে তৈরি`, where `{year}` and `{site}` are filled in. |
+
+- **Announcement bar:** a visitor who closes the bar doesn't see it again,
+  until its text or link changes. The schedule is checked in the browser, so
+  it works on cached pages.
+- **Favicon:** the Site Icon (Settings → General), falling back to
+  `lekhoni/public/favicon.ico`.
+- **When changes show:** right after **Save Settings**, when
+  `LEKHONI_REVALIDATE_SECRET` is set on both sides (section 2). Otherwise
+  within a few minutes. Menu changes refresh the same way.
+- **Storefront code:** `lekhoni/lib/theme-settings.ts` (`getThemeSettings()`,
+  one cached request with all defaults), used by `Header`, `Footer`,
+  `AnnouncementBar`, `header/Logo`, `layout/SocialLinks` and the blog sidebar.
+
+Field keys and names are permanent. ACF stores values by them, so renaming a
+field in `inc/acf-settings.php` loses its saved content.
 
 ### Home page: ACF field group "Home Shop"
 
@@ -286,7 +403,8 @@ The checkout lists the enabled methods in WooCommerce's order.
 - **Menu:** Appearance → Menus → location **Primary menu**. Nest items to make
   dropdowns (two levels are styled). A custom link with URL `#` becomes a
   label that only opens its dropdown. Links to `woo.local` become storefront
-  paths, and other sites stay external.
+  paths, and other sites stay external. The **Footer menu** location fills
+  the footer's Links column (one level; nested items are listed in order).
 
 ---
 
@@ -354,6 +472,14 @@ can't return tokens in the registration response. The account is signed in
 straight away. Note that this works even when WooCommerce's "Allow customers
 to create an account on the My account page" setting is off.
 
+**Password rules:** a new password (register, reset, change password under My
+account → Details) needs at least 8 characters and must not be rated **weak**
+on the strength meter. That means two of: upper and lower case, a digit, a
+symbol, or 12+ characters. While the typed password is weak, the meter says
+what to add and the submit button is disabled; the API routes reject weak
+passwords too (`passwordError()` in `app/components/auth/validation.ts`).
+Existing customers can still log in with older, weaker passwords.
+
 **Forgot / reset password:**
 1. `/forgot-password` sends to `/api/auth/forgot`, which calls `sendPasswordResetEmail`.
    It always answers OK, so it can't be used to find out which emails are registered.
@@ -361,6 +487,32 @@ to create an account on the My account page" setting is off.
    This theme rewrites the link (section 3).
 3. `/reset-password` sends to `/api/auth/reset`, which calls `resetUserPassword`.
    The key is valid for 24 hours and works only once.
+
+**Email link login** (only while Theme Settings → Login → Email Link Login is on):
+1. On `/login`, "ইমেইল লিংক দিয়ে" swaps the password form for an email field.
+   It sends to `/api/auth/email-link` (5 per visitor per 10 minutes), which
+   calls `sendLoginLink`. The answer is always "if an account exists, a link
+   was sent", so it can't be used to find customers.
+2. WordPress emails a one-time link, in WooCommerce's email template, to
+   `{LEKHONI_FRONTEND_URL}/login/link?token=…&next=…`.
+3. `/login/link` shows a **লগইন করুন** button. Logging in waits for this
+   click because email scanners (Outlook, Gmail) open links on their own and
+   would use up the link. The click posts to `/api/auth/email-link/verify` →
+   `loginWithEmailLink`, which returns the same JWT tokens as a password
+   login. The cookies are set for 30 days, the cart carries over, and the
+   customer goes to `next` or `/my-account`.
+
+   Rules:
+   - **Customer accounts only:** staff (anyone who can edit posts, manage
+     WooCommerce, or edit users or options) get no email.
+   - **One-time and expiring:** each link works once and expires after the
+     set minutes. A new link cancels the previous one.
+   - **Only a hash is stored:** the token is 256 random bits and WordPress
+     keeps only its HMAC.
+   - **Limits:** 1 link per email per minute, 5 per hour, 100 per hour site-wide.
+   - **Switched off:** both mutations refuse, even for links already sent.
+
+   Test locally with Mailpit (Local → the site → Tools → Mailpit).
 
 **Logout:** `POST /api/auth/logout` clears `lk-auth` and `lk-refresh`, plus the
 cart cookie `woo-session`, so the next person on that browser starts with an
@@ -376,6 +528,8 @@ empty cart. The customer's cart stays saved in their account.
 | `POST /api/auth/forgot` | `{ username }` | `{ ok: true }` |
 | `POST /api/auth/reset` | `{ key, login, password }` | `{ ok: true }` or `{ error }` |
 | `GET /api/auth/me` | | `{ signedIn, customer? }` |
+| `POST /api/auth/email-link` | `{ email, next? }` | `{ ok: true }` (also for unknown emails), or `{ error }` (400/403 off/429) |
+| `POST /api/auth/email-link/verify` | `{ token }` | `{ ok: true }` + login cookies, or `{ error }` (400 invalid, used or expired; 403 off) |
 
 Error messages are returned in Bangla.
 
@@ -476,8 +630,12 @@ Cart API: `GET/POST/PATCH/DELETE /api/cart`, `/api/cart/coupon`,
   (`dangerouslyAllowLocalIP` is enabled only in development, for `woo.local`.)
 - [ ] Currency, payment methods, shipping zones and coupons configured in WooCommerce
 - [ ] Direct bank transfer (if enabled): real account details and **Instructions** text; customers see both
-- [ ] Primary menu assigned
+- [ ] Primary menu and Footer menu assigned
+- [ ] Theme Settings: real social profile URLs, logo, announcement and copyright
+- [ ] `LEKHONI_REVALIDATE_SECRET`: a new random value, the same in `wp-config.php` and the storefront's environment
+- [ ] If email link login is on: WordPress can send email on the live server (an SMTP plugin), and a test link arrives
 - [ ] Test users and orders deleted
+- [ ] Demo content removed (Theme Settings → Demo Import → Remove demo content), or replaced with real products; the demo coupon `LEKHONI10` deleted if not wanted
 
 ---
 
@@ -492,4 +650,5 @@ Cart API: `GET/POST/PATCH/DELETE /api/cart`, `/api/cart/coupon`,
 | A Home Shop field change doesn't show | Wait about 60 seconds (revalidation), and check that the field has "Show in GraphQL" enabled. |
 | Bank details don't show at checkout | Direct bank transfer must be enabled and its account row saved (WooCommerce → Settings → Payments). Check with GraphQL `{ bankTransfer { accounts { bankName accountNumber } } }`, then allow a few minutes for the cache. |
 | `/home` (or another page) shows 404 | A menu link to the front page's slug redirects to `/`; other pages need to be published. Better: link the menu item to `/` directly. |
+| `npm run build` fails with `Unexpected token '<', "<html>…" is not valid JSON` | WordPress answered with nginx's HTML error page: Local's PHP on Windows drops connections when the build floods it (`logs/nginx/error.log` shows "no live upstreams"). The build renders at most 4 pages per worker and retries failed pages (`next.config.ts`), and `lib/wp.js` retries queries. If it still happens, lower `staticGenerationMaxConcurrency`, or restart the site in Local. |
 | Running WP-CLI or PHP scripts against Local | The system PHP lacks `mysqli`. Use Local's PHP, e.g. `"%APPDATA%\Local\lightning-services\php-8.2.29+0\bin\win64\php.exe" -c "%APPDATA%\Local\run\<site-id>\conf\php\php.ini" -d mysqli.default_port=<mysql port>`. The site id and MySQL port are in `%APPDATA%\Local\sites.json`. |
