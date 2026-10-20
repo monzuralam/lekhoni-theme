@@ -1,0 +1,1878 @@
+{
+ "version": 2,
+ "id": "cosmetics",
+ "meta": {
+  "title": "বিউটি শপ",
+  "name": "Cosmetics store",
+  "description": "A beauty store: skincare, makeup, hair and fragrance, with shop-by-concern filters, shade swatches, morning and night routines with a bundle discount, and beauty tips. Template \"Home – Cosmetics\", Cosmetics style.",
+  "design": "home-cosmetics.html",
+  "counts": {
+   "products": 13,
+   "categories": 6,
+   "posts": 15,
+   "pages": 4,
+   "images": 34
+  }
+ },
+ "generated": "2026-10-20",
+ "images": {
+  "avatar-1": {
+   "file": "shared/avatar-1.jpg",
+   "alt": "রহিম আহমেদ",
+   "width": 320,
+   "height": 320
+  },
+  "avatar-2": {
+   "file": "shared/avatar-2.jpg",
+   "alt": "করিমা সুলতানা",
+   "width": 320,
+   "height": 320
+  },
+  "cover-1": {
+   "file": "shared/cover-1.jpg",
+   "alt": "ব্রাউজারে খোলা ওয়েবসাইটের নকশা",
+   "width": 1200,
+   "height": 675
+  },
+  "cover-2": {
+   "file": "shared/cover-2.jpg",
+   "alt": "কোড এডিটরের জানালা",
+   "width": 1200,
+   "height": 675
+  },
+  "cover-3": {
+   "file": "shared/cover-3.jpg",
+   "alt": "ধাপে ধাপে সাজানো কম্পোনেন্টের ছবি",
+   "width": 1200,
+   "height": 675
+  },
+  "cover-4": {
+   "file": "shared/cover-4.jpg",
+   "alt": "বড় অক্ষরে সাজানো টাইপোগ্রাফির নকশা",
+   "width": 1200,
+   "height": 675
+  },
+  "cs-body-lotion": {
+   "file": "cosmetics/images/cs-body-lotion.jpg",
+   "alt": "বডি লোশনের বোতল",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-cat-bodycare": {
+   "file": "cosmetics/images/cs-cat-bodycare.jpg",
+   "alt": "বডি কেয়ার",
+   "width": 600,
+   "height": 600
+  },
+  "cs-cat-fragrance": {
+   "file": "cosmetics/images/cs-cat-fragrance.jpg",
+   "alt": "সুগন্ধি",
+   "width": 600,
+   "height": 600
+  },
+  "cs-cat-haircare": {
+   "file": "cosmetics/images/cs-cat-haircare.jpg",
+   "alt": "চুলের যত্ন",
+   "width": 600,
+   "height": 600
+  },
+  "cs-cat-makeup": {
+   "file": "cosmetics/images/cs-cat-makeup.jpg",
+   "alt": "মেকআপ",
+   "width": 600,
+   "height": 600
+  },
+  "cs-cat-masks": {
+   "file": "cosmetics/images/cs-cat-masks.jpg",
+   "alt": "মাস্ক ও টুলস",
+   "width": 600,
+   "height": 600
+  },
+  "cs-cat-skincare": {
+   "file": "cosmetics/images/cs-cat-skincare.jpg",
+   "alt": "স্কিনকেয়ার",
+   "width": 600,
+   "height": 600
+  },
+  "cs-cleanser": {
+   "file": "cosmetics/images/cs-cleanser.jpg",
+   "alt": "ফোমিং ক্লিনজারের বোতল",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-g1": {
+   "file": "cosmetics/images/cs-g1.jpg",
+   "alt": "সিরাম আর লিপস্টিকের ছবি",
+   "width": 1200,
+   "height": 1200
+  },
+  "cs-g2": {
+   "file": "cosmetics/images/cs-g2.jpg",
+   "alt": "পাম্প বোতল আর ক্রিমের ছবি",
+   "width": 1200,
+   "height": 1200
+  },
+  "cs-g3": {
+   "file": "cosmetics/images/cs-g3.jpg",
+   "alt": "টোনার আর শিট মাস্কের ছবি",
+   "width": 1200,
+   "height": 1200
+  },
+  "cs-g4": {
+   "file": "cosmetics/images/cs-g4.jpg",
+   "alt": "হেয়ার অয়েল আর পারফিউমের ছবি",
+   "width": 1200,
+   "height": 1200
+  },
+  "cs-g5": {
+   "file": "cosmetics/images/cs-g5.jpg",
+   "alt": "আইশ্যাডো প্যালেটের ছবি",
+   "width": 1200,
+   "height": 1200
+  },
+  "cs-g6": {
+   "file": "cosmetics/images/cs-g6.jpg",
+   "alt": "সানস্ক্রিন আর সিরামের ছবি",
+   "width": 1200,
+   "height": 1200
+  },
+  "cs-hair-oil": {
+   "file": "cosmetics/images/cs-hair-oil.jpg",
+   "alt": "আরগান হেয়ার অয়েল",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-hero-1": {
+   "file": "cosmetics/images/cs-hero-1.jpg",
+   "alt": "সিরাম, পাম্প বোতল আর ক্রিমের কৌটা",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-hero-2": {
+   "file": "cosmetics/images/cs-hero-2.jpg",
+   "alt": "লিপস্টিক, পারফিউম আর আইশ্যাডো প্যালেট",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-kit": {
+   "file": "cosmetics/images/cs-kit.jpg",
+   "alt": "ট্রাভেল কিটের মিনি পণ্য",
+   "width": 800,
+   "height": 800
+  },
+  "cs-lipstick": {
+   "file": "cosmetics/images/cs-lipstick.jpg",
+   "alt": "ম্যাট লিপস্টিক",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-moisturizer": {
+   "file": "cosmetics/images/cs-moisturizer.jpg",
+   "alt": "ময়েশ্চারাইজারের কৌটা",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-niacinamide": {
+   "file": "cosmetics/images/cs-niacinamide.jpg",
+   "alt": "নিয়াসিনামাইড সিরামের বোতল",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-night-cream": {
+   "file": "cosmetics/images/cs-night-cream.jpg",
+   "alt": "নাইট ক্রিমের কৌটা",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-palette": {
+   "file": "cosmetics/images/cs-palette.jpg",
+   "alt": "আইশ্যাডো প্যালেট",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-perfume": {
+   "file": "cosmetics/images/cs-perfume.jpg",
+   "alt": "পারফিউমের বোতল",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-sheet-mask": {
+   "file": "cosmetics/images/cs-sheet-mask.jpg",
+   "alt": "শিট মাস্কের প্যাকেট",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-sunscreen": {
+   "file": "cosmetics/images/cs-sunscreen.jpg",
+   "alt": "সানস্ক্রিনের টিউব",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-toner": {
+   "file": "cosmetics/images/cs-toner.jpg",
+   "alt": "রোজ ওয়াটার টোনার",
+   "width": 1000,
+   "height": 1250
+  },
+  "cs-vitc-serum": {
+   "file": "cosmetics/images/cs-vitc-serum.jpg",
+   "alt": "ভিটামিন সি সিরামের বোতল",
+   "width": 1000,
+   "height": 1250
+  }
+ },
+ "authors": [
+  {
+   "key": "rahim",
+   "login": "rahim-ahmed",
+   "email": "rahim.demo@example.com",
+   "first": "রহিম",
+   "last": "আহমেদ",
+   "bio": "কোড লেখেন, কোড নিয়ে লেখেন। লেখনীর টিউটোরিয়ালগুলোর বেশিরভাগ তাঁর হাতে তৈরি।",
+   "profile": {
+    "job_title": "ফ্রন্টএন্ড ডেভেলপার ও লেখক",
+    "experience": "৮ বছর"
+   }
+  },
+  {
+   "key": "karima",
+   "login": "karima-sultana",
+   "email": "karima.demo@example.com",
+   "first": "করিমা",
+   "last": "সুলতানা",
+   "bio": "লেখনীর নকশা ও সম্পাদনা দেখেন। বাংলা টাইপোগ্রাফি তাঁর প্রিয় বিষয়।",
+   "profile": {
+    "job_title": "ডিজাইনার ও সম্পাদক",
+    "experience": "৬ বছর"
+   }
+  }
+ ],
+ "terms": {
+  "product_cat": [
+   {
+    "key": "skincare",
+    "name": "স্কিনকেয়ার",
+    "slug": "skincare",
+    "icon": "droplet",
+    "image": "cs-cat-skincare",
+    "description": "ক্লিনজার, টোনার, সিরাম, ময়েশ্চারাইজার আর সানস্ক্রিন।"
+   },
+   {
+    "key": "makeup",
+    "name": "মেকআপ",
+    "slug": "makeup",
+    "icon": "sparkles",
+    "image": "cs-cat-makeup",
+    "description": "লিপস্টিক, আইশ্যাডো আর বেস মেকআপ।"
+   },
+   {
+    "key": "haircare",
+    "name": "চুলের যত্ন",
+    "slug": "haircare",
+    "icon": "leaf",
+    "image": "cs-cat-haircare",
+    "description": "তেল, শ্যাম্পু আর সিরাম।"
+   },
+   {
+    "key": "fragrance",
+    "name": "সুগন্ধি",
+    "slug": "fragrance",
+    "icon": "flask",
+    "image": "cs-cat-fragrance",
+    "description": "পারফিউম আর বডি মিস্ট।"
+   },
+   {
+    "key": "bodycare",
+    "name": "বডি কেয়ার",
+    "slug": "bodycare",
+    "icon": "heart",
+    "image": "cs-cat-bodycare",
+    "description": "লোশন আর বডি ওয়াশ।"
+   },
+   {
+    "key": "masks",
+    "name": "মাস্ক ও টুলস",
+    "slug": "masks-tools",
+    "icon": "smile",
+    "image": "cs-cat-masks",
+    "description": "শিট মাস্ক আর রূপচর্চার সরঞ্জাম।"
+   }
+  ],
+  "product_tag": [
+   {
+    "key": "dry-skin",
+    "name": "শুষ্ক ত্বক",
+    "slug": "dry-skin"
+   },
+   {
+    "key": "oily-skin",
+    "name": "তৈলাক্ত ত্বক",
+    "slug": "oily-skin"
+   },
+   {
+    "key": "acne",
+    "name": "ব্রণ",
+    "slug": "acne"
+   },
+   {
+    "key": "dullness",
+    "name": "নিষ্প্রভতা",
+    "slug": "dullness"
+   },
+   {
+    "key": "dark-spots",
+    "name": "কালো দাগ",
+    "slug": "dark-spots"
+   },
+   {
+    "key": "sun-care",
+    "name": "রোদ সুরক্ষা",
+    "slug": "sun-care"
+   }
+  ],
+  "category": [
+   {
+    "key": "wordpress",
+    "name": "ওয়ার্ডপ্রেস",
+    "slug": "wordpress"
+   },
+   {
+    "key": "graphql",
+    "name": "GraphQL",
+    "slug": "graphql"
+   },
+   {
+    "key": "nextjs",
+    "name": "Next.js",
+    "slug": "nextjs"
+   },
+   {
+    "key": "design",
+    "name": "ডিজাইন",
+    "slug": "design"
+   },
+   {
+    "key": "buying-guide",
+    "name": "কেনার গাইড",
+    "slug": "buying-guide"
+   },
+   {
+    "key": "beauty-tips",
+    "name": "বিউটি টিপস",
+    "slug": "beauty-tips"
+   }
+  ],
+  "post_tag": [
+   {
+    "key": "headless",
+    "name": "হেডলেস",
+    "slug": "headless"
+   },
+   {
+    "key": "wpgraphql",
+    "name": "WPGraphQL",
+    "slug": "wpgraphql"
+   },
+   {
+    "key": "react",
+    "name": "React",
+    "slug": "react"
+   },
+   {
+    "key": "typography",
+    "name": "টাইপোগ্রাফি",
+    "slug": "typography"
+   },
+   {
+    "key": "woocommerce",
+    "name": "WooCommerce",
+    "slug": "woocommerce"
+   },
+   {
+    "key": "seo",
+    "name": "SEO",
+    "slug": "seo"
+   },
+   {
+    "key": "notebook",
+    "name": "নোটবুক",
+    "slug": "notebook"
+   },
+   {
+    "key": "pen",
+    "name": "কলম",
+    "slug": "pen"
+   },
+   {
+    "key": "gift",
+    "name": "উপহার",
+    "slug": "gift"
+   }
+  ]
+ },
+ "attributes": [
+  {
+   "key": "shade",
+   "name": "শেড",
+   "slug": "shade",
+   "terms": [
+    {
+     "name": "রুবি",
+     "slug": "ruby",
+     "swatch": "#a8324a"
+    },
+    {
+     "name": "টেরাকোটা",
+     "slug": "terracotta",
+     "swatch": "#c45a5a"
+    },
+    {
+     "name": "রোজ",
+     "slug": "rose",
+     "swatch": "#d4787f"
+    },
+    {
+     "name": "বেরি",
+     "slug": "berry",
+     "swatch": "#8e3b52"
+    },
+    {
+     "name": "নুড",
+     "slug": "nude",
+     "swatch": "#e09a8c"
+    }
+   ]
+  }
+ ],
+ "products": [
+  {
+   "key": "cs-cleanser",
+   "name": "জেন্টল ফোমিং ক্লিনজার",
+   "slug": "gentle-foaming-cleanser",
+   "sku": "CS-SK-001",
+   "categories": [
+    "skincare"
+   ],
+   "tags": [
+    "oily-skin",
+    "acne"
+   ],
+   "image": "cs-cleanser",
+   "regular": 550,
+   "stock": 40,
+   "sales": 233,
+   "short": "সালফেট মুক্ত, ত্বকের প্রাকৃতিক আর্দ্রতা নষ্ট না করে পরিষ্কার করে।",
+   "description": "<p>দিনের ধুলো, তেল আর মেকআপ তুলে দেয় হালকা ফোমে। ধোয়ার পর ত্বক টানটান লাগে না।</p><p>প্যারাবেন ও সালফেট মুক্ত, ক্রুয়েলটি ফ্রি। ডার্মাটোলজিস্ট পরীক্ষিত।</p><h3>যেভাবে ব্যবহার করবেন</h3><p>ভেজা মুখে অল্প পরিমাণ নিয়ে এক মিনিট আলতো ম্যাসাজ করে ধুয়ে ফেলুন। সকাল ও রাতে।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "১৫০ মিলি"
+    ],
+    [
+     "ত্বক",
+     "তৈলাক্ত ও মিশ্র"
+    ],
+    [
+     "মূল উপাদান",
+     "গ্লিসারিন, গ্রিন টি"
+    ]
+   ],
+   "weight": "0.18",
+   "reviews": [
+    {
+     "author": "সাদিয়া ইসলাম",
+     "email": "sadia.beauty@example.com",
+     "rating": 5,
+     "title": "সংবেদনশীল ত্বকেও আরাম",
+     "text": "কোনো জ্বালাপোড়া হয়নি। হালকা ফোম, ধোয়ার পর ত্বক শুকিয়ে যায় না।",
+     "days": 7
+    }
+   ]
+  },
+  {
+   "key": "cs-toner",
+   "name": "রোজ ওয়াটার হাইড্রেটিং টোনার",
+   "slug": "rose-water-hydrating-toner",
+   "sku": "CS-SK-002",
+   "categories": [
+    "skincare"
+   ],
+   "tags": [
+    "dry-skin",
+    "dullness"
+   ],
+   "image": "cs-toner",
+   "regular": 620,
+   "stock": 30,
+   "sales": 175,
+   "short": "গোলাপজল আর গ্লিসারিন, ত্বককে সতেজ ও কোমল রাখে।",
+   "description": "<p>ক্লিনজারের পর ত্বকের ভারসাম্য ফেরায়, পরের ধাপের পণ্য ভালোভাবে শুষে নিতে সাহায্য করে।</p><p>প্যারাবেন ও সালফেট মুক্ত, ক্রুয়েলটি ফ্রি। ডার্মাটোলজিস্ট পরীক্ষিত।</p><h3>যেভাবে ব্যবহার করবেন</h3><p>তুলায় বা হাতের তালুতে নিয়ে আলতো চাপ দিয়ে মুখে লাগান।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "২০০ মিলি"
+    ],
+    [
+     "ত্বক",
+     "শুষ্ক ও স্বাভাবিক"
+    ]
+   ],
+   "weight": "0.24",
+   "reviews": [
+    {
+     "author": "তাসনিম রহমান",
+     "email": "tasnim.beauty@example.com",
+     "rating": 4,
+     "title": "সুন্দর গন্ধ",
+     "text": "গোলাপের হালকা গন্ধ, লাগানোর পর ত্বক ঠান্ডা লাগে।",
+     "days": 20
+    }
+   ]
+  },
+  {
+   "key": "cs-vitc-serum",
+   "name": "ভিটামিন সি ব্রাইটেনিং সিরাম",
+   "slug": "vitamin-c-brightening-serum",
+   "sku": "CS-SK-003",
+   "categories": [
+    "skincare"
+   ],
+   "tags": [
+    "dullness",
+    "dark-spots"
+   ],
+   "image": "cs-vitc-serum",
+   "gallery": [
+    "cs-g1"
+   ],
+   "regular": 1500,
+   "sale": 1250,
+   "saleDays": 10,
+   "stock": 25,
+   "featured": true,
+   "sales": 412,
+   "short": "১৫% ভিটামিন সি ত্বকের নিষ্প্রভতা আর কালো দাগ কমায়, দেয় প্রাকৃতিক উজ্জ্বলতা।",
+   "description": "<p>স্থিতিশীল ১৫% ভিটামিন সি আর ফেরুলিক অ্যাসিড একসঙ্গে কাজ করে দাগ হালকা করতে আর রোদের ক্ষতি থেকে ত্বককে রক্ষা করতে।</p><p>প্যারাবেন ও সালফেট মুক্ত, ক্রুয়েলটি ফ্রি। ডার্মাটোলজিস্ট পরীক্ষিত।</p><h3>যেভাবে ব্যবহার করবেন</h3><p>সকালে পরিষ্কার ত্বকে ২-৩ ফোঁটা, তারপর ময়েশ্চারাইজার ও সানস্ক্রিন।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "৩০ মিলি"
+    ],
+    [
+     "মূল উপাদান",
+     "১৫% ভিটামিন সি, ফেরুলিক অ্যাসিড"
+    ],
+    [
+     "ত্বক",
+     "সব ধরনের"
+    ]
+   ],
+   "weight": "0.08",
+   "reviews": [
+    {
+     "author": "ফারহানা আক্তার",
+     "email": "farhana.beauty@example.com",
+     "rating": 4,
+     "title": "দাগ হালকা হচ্ছে",
+     "text": "দুই সপ্তাহে দাগ কিছুটা হালকা হয়েছে, ত্বকও উজ্জ্বল দেখাচ্ছে।",
+     "days": 5
+    },
+    {
+     "author": "নুসরাত জাহান",
+     "email": "nusrat.beauty@example.com",
+     "rating": 5,
+     "title": "প্রতিদিনের সঙ্গী",
+     "text": "হালকা টেক্সচার, চটচটে নয়। মেকআপের নিচেও ভালো বসে।",
+     "days": 26
+    }
+   ]
+  },
+  {
+   "key": "cs-niacinamide",
+   "name": "নিয়াসিনামাইড ১০% সিরাম",
+   "slug": "niacinamide-10-serum",
+   "sku": "CS-SK-004",
+   "categories": [
+    "skincare"
+   ],
+   "tags": [
+    "oily-skin",
+    "acne",
+    "dark-spots"
+   ],
+   "image": "cs-niacinamide",
+   "regular": 890,
+   "stock": 28,
+   "sales": 351,
+   "short": "লোমকূপ ছোট দেখায়, ব্রণের দাগ আর অতিরিক্ত তেল নিয়ন্ত্রণ করে।",
+   "description": "<p>১০% নিয়াসিনামাইড আর ১% জিংক ত্বকের তেল নিয়ন্ত্রণে রাখে, ত্বকের প্রাকৃতিক বাধা মজবুত করে।</p><p>প্যারাবেন ও সালফেট মুক্ত, ক্রুয়েলটি ফ্রি। ডার্মাটোলজিস্ট পরীক্ষিত।</p><h3>যেভাবে ব্যবহার করবেন</h3><p>রাতে ক্লিনজার ও টোনারের পর কয়েক ফোঁটা।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "৩০ মিলি"
+    ],
+    [
+     "মূল উপাদান",
+     "১০% নিয়াসিনামাইড, ১% জিংক"
+    ]
+   ],
+   "weight": "0.08",
+   "reviews": [
+    {
+     "author": "সাদিয়া ইসলাম",
+     "email": "sadia.beauty@example.com",
+     "rating": 5,
+     "title": "তেল কম",
+     "text": "দুপুরের পরও মুখ তেলতেলে হয় না। লোমকূপও কম দেখায়।",
+     "days": 13
+    }
+   ]
+  },
+  {
+   "key": "cs-moisturizer",
+   "name": "হায়ালুরোনিক ময়েশ্চারাইজার",
+   "slug": "hyaluronic-moisturizer",
+   "sku": "CS-SK-005",
+   "categories": [
+    "skincare"
+   ],
+   "tags": [
+    "dry-skin"
+   ],
+   "image": "cs-moisturizer",
+   "regular": 980,
+   "stock": 34,
+   "featured": true,
+   "sales": 286,
+   "short": "হালকা জেল-ক্রিম, ২৪ ঘণ্টা আর্দ্রতা ধরে রাখে, তেলতেলে ভাব নেই।",
+   "description": "<p>তিন ধরনের হায়ালুরোনিক অ্যাসিড ত্বকের ভেতর থেকে আর্দ্রতা দেয়। গরমেও ভারী লাগে না।</p><p>প্যারাবেন ও সালফেট মুক্ত, ক্রুয়েলটি ফ্রি। ডার্মাটোলজিস্ট পরীক্ষিত।</p><h3>যেভাবে ব্যবহার করবেন</h3><p>সকাল ও রাতে সিরামের পর।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "৫০ গ্রাম"
+    ],
+    [
+     "ত্বক",
+     "শুষ্ক ও স্বাভাবিক"
+    ]
+   ],
+   "weight": "0.1",
+   "reviews": [
+    {
+     "author": "তাসনিম রহমান",
+     "email": "tasnim.beauty@example.com",
+     "rating": 5,
+     "title": "শীতে বাঁচিয়েছে",
+     "text": "আমার ত্বক খুব টানটান হয়ে যেত। এক সপ্তাহে অনেক নরম লাগছে।",
+     "days": 9
+    }
+   ]
+  },
+  {
+   "key": "cs-sunscreen",
+   "name": "ডেইলি সানস্ক্রিন SPF ৫০ PA++++",
+   "slug": "daily-sunscreen-spf50",
+   "sku": "CS-SK-006",
+   "categories": [
+    "skincare"
+   ],
+   "tags": [
+    "sun-care",
+    "oily-skin",
+    "acne"
+   ],
+   "image": "cs-sunscreen",
+   "gallery": [
+    "cs-g6"
+   ],
+   "regular": 850,
+   "sale": 750,
+   "stock": 50,
+   "featured": true,
+   "sales": 520,
+   "short": "সাদা আস্তর পড়ে না, মেকআপের নিচেও ব্যবহার করা যায়।",
+   "description": "<p>ব্রড স্পেকট্রাম UVA ও UVB সুরক্ষা। পানির মতো হালকা, দ্রুত শুষে নেয়।</p><p>প্যারাবেন ও সালফেট মুক্ত, ক্রুয়েলটি ফ্রি। ডার্মাটোলজিস্ট পরীক্ষিত।</p><h3>যেভাবে ব্যবহার করবেন</h3><p>বাইরে যাওয়ার ১৫ মিনিট আগে, দুই আঙুল পরিমাণ। প্রতি দুই ঘণ্টায় আবার।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "৫০ মিলি"
+    ],
+    [
+     "সুরক্ষা",
+     "SPF ৫০, PA++++"
+    ]
+   ],
+   "weight": "0.07",
+   "reviews": [
+    {
+     "author": "নুসরাত জাহান",
+     "email": "nusrat.beauty@example.com",
+     "rating": 5,
+     "title": "সাদা আস্তর নেই",
+     "text": "এই সানস্ক্রিনটা সত্যিই সাদা আস্তর ফেলে না। গরমেও মুখ তেলতেলে হয় না।",
+     "days": 3
+    },
+    {
+     "author": "মাহজাবীন চৌধুরী",
+     "email": "mahjabin.beauty@example.com",
+     "rating": 5,
+     "title": "মেকআপের নিচে দারুণ",
+     "text": "ফাউন্ডেশনের নিচে কোনো দলা পাকায় না।",
+     "days": 15
+    }
+   ]
+  },
+  {
+   "key": "cs-night-cream",
+   "name": "রেটিনল নাইট রিপেয়ার ক্রিম",
+   "slug": "retinol-night-repair-cream",
+   "sku": "CS-SK-007",
+   "categories": [
+    "skincare"
+   ],
+   "tags": [
+    "dullness",
+    "dry-skin"
+   ],
+   "image": "cs-night-cream",
+   "regular": 1600,
+   "sale": 1350,
+   "stock": 15,
+   "sales": 164,
+   "short": "রাতে ত্বক মেরামত করে, সূক্ষ্ম রেখা ও অসমান টোন কমায়।",
+   "description": "<p>এনক্যাপসুলেটেড রেটিনল ধীরে কাজ করে, তাই জ্বালাপোড়া কম। সেরামাইড ত্বককে কোমল রাখে।</p><p>প্যারাবেন ও সালফেট মুক্ত, ক্রুয়েলটি ফ্রি। ডার্মাটোলজিস্ট পরীক্ষিত।</p><h3>যেভাবে ব্যবহার করবেন</h3><p>রাতে সপ্তাহে ২-৩ বার দিয়ে শুরু করুন। দিনে সানস্ক্রিন জরুরি।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "৫০ গ্রাম"
+    ],
+    [
+     "মূল উপাদান",
+     "০.২% রেটিনল, সেরামাইড"
+    ]
+   ],
+   "weight": "0.1"
+  },
+  {
+   "key": "cs-sheet-mask",
+   "name": "হাইড্রেটিং শিট মাস্ক (৫টি)",
+   "slug": "hydrating-sheet-mask-5",
+   "sku": "CS-MK-008",
+   "categories": [
+    "masks",
+    "skincare"
+   ],
+   "tags": [
+    "dry-skin",
+    "dullness"
+   ],
+   "image": "cs-sheet-mask",
+   "regular": 490,
+   "stock": 60,
+   "sales": 302,
+   "short": "১৫ মিনিটেই ত্বকে ফেরে আর্দ্রতা আর সতেজ ভাব।",
+   "description": "<p>অ্যালোভেরা আর হায়ালুরোনিক অ্যাসিডে ভেজানো নরম সুতির মাস্ক।</p><h3>যেভাবে ব্যবহার করবেন</h3><p>পরিষ্কার মুখে ১৫-২০ মিনিট রেখে তুলে ফেলুন, বাকি সিরাম আলতো ম্যাসাজ করুন।</p>",
+   "specs": [
+    [
+     "প্যাকে",
+     "৫টি মাস্ক, প্রতিটি ২৫ মিলি"
+    ]
+   ],
+   "weight": "0.15"
+  },
+  {
+   "key": "cs-lipstick",
+   "type": "variable",
+   "name": "ভেলভেট ম্যাট লিপস্টিক",
+   "slug": "velvet-matte-lipstick",
+   "sku": "CS-MU-009",
+   "categories": [
+    "makeup"
+   ],
+   "image": "cs-lipstick",
+   "gallery": [
+    "cs-g1"
+   ],
+   "featured": true,
+   "sales": 198,
+   "short": "এক টানেই গাঢ় রং, ১২ ঘণ্টা টেকে, ঠোঁট শুকায় না।",
+   "description": "<p>ভিটামিন ই আর শিয়া বাটারে ঠোঁট থাকে নরম। পাঁচটি শেড, প্রতিদিন থেকে উৎসব পর্যন্ত।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "৩.৫ গ্রাম"
+    ],
+    [
+     "ফিনিশ",
+     "ভেলভেট ম্যাট"
+    ]
+   ],
+   "weight": "0.02",
+   "attributes": [
+    {
+     "attribute": "shade",
+     "terms": [
+      "ruby",
+      "terracotta",
+      "rose",
+      "berry",
+      "nude"
+     ]
+    }
+   ],
+   "variations": [
+    {
+     "attributes": {
+      "shade": "ruby"
+     },
+     "regular": 650,
+     "stock": 20,
+     "sku": "CS-MU-009-RU"
+    },
+    {
+     "attributes": {
+      "shade": "terracotta"
+     },
+     "regular": 650,
+     "stock": 14,
+     "sku": "CS-MU-009-TE"
+    },
+    {
+     "attributes": {
+      "shade": "rose"
+     },
+     "regular": 650,
+     "stock": 18,
+     "sku": "CS-MU-009-RO"
+    },
+    {
+     "attributes": {
+      "shade": "berry"
+     },
+     "regular": 650,
+     "stock": 9,
+     "sku": "CS-MU-009-BE"
+    },
+    {
+     "attributes": {
+      "shade": "nude"
+     },
+     "regular": 650,
+     "stock": 4,
+     "sku": "CS-MU-009-NU"
+    }
+   ],
+   "reviews": [
+    {
+     "author": "মাহজাবীন চৌধুরী",
+     "email": "mahjabin.beauty@example.com",
+     "rating": 5,
+     "title": "রুবি শেডটা দারুণ",
+     "text": "\"রুবি\" শেডটা একদম ছবির মতো। সারাদিন ছিল, খাওয়ার পরও খুব একটা ওঠেনি।",
+     "days": 4
+    },
+    {
+     "author": "ফারহানা আক্তার",
+     "email": "farhana.beauty@example.com",
+     "rating": 4,
+     "title": "শুকায় না",
+     "text": "ম্যাট হলেও ঠোঁট ফাটে না। নুড শেডটা অফিসের জন্য ভালো।",
+     "days": 17
+    }
+   ]
+  },
+  {
+   "key": "cs-palette",
+   "name": "সানসেট আইশ্যাডো প্যালেট",
+   "slug": "sunset-eyeshadow-palette",
+   "sku": "CS-MU-010",
+   "categories": [
+    "makeup"
+   ],
+   "image": "cs-palette",
+   "gallery": [
+    "cs-g5"
+   ],
+   "regular": 1800,
+   "sale": 1450,
+   "saleDays": 10,
+   "stock": 12,
+   "sales": 143,
+   "short": "ম্যাট আর শিমার মিলিয়ে ১২টি উষ্ণ রং, সহজে ব্লেন্ড হয়।",
+   "description": "<p>দিনের হালকা সাজ থেকে সন্ধ্যার স্মোকি আই, এক প্যালেটেই।</p>",
+   "specs": [
+    [
+     "রং",
+     "১২টি"
+    ],
+    [
+     "ফিনিশ",
+     "ম্যাট ও শিমার"
+    ]
+   ],
+   "weight": "0.12"
+  },
+  {
+   "key": "cs-hair-oil",
+   "name": "আরগান রিপেয়ার হেয়ার অয়েল",
+   "slug": "argan-repair-hair-oil",
+   "sku": "CS-HC-011",
+   "categories": [
+    "haircare"
+   ],
+   "image": "cs-hair-oil",
+   "gallery": [
+    "cs-g4"
+   ],
+   "regular": 850,
+   "stock": 26,
+   "sales": 210,
+   "short": "রুক্ষ চুলে আনে কোমলতা আর উজ্জ্বলতা, চুল ভাঙা কমায়।",
+   "description": "<p>খাঁটি আরগান আর নারকেল তেলের হালকা মিশ্রণ, চুল ভারী বা তেলতেলে করে না।</p><h3>যেভাবে ব্যবহার করবেন</h3><p>ভেজা বা শুকনো চুলের আগায় কয়েক ফোঁটা।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "১০০ মিলি"
+    ]
+   ],
+   "weight": "0.13"
+  },
+  {
+   "key": "cs-perfume",
+   "name": "অউ দ্য পারফিউম \"শিউলি\"",
+   "slug": "eau-de-parfum-shiuli",
+   "sku": "CS-FR-012",
+   "categories": [
+    "fragrance"
+   ],
+   "image": "cs-perfume",
+   "gallery": [
+    "cs-g4"
+   ],
+   "regular": 2450,
+   "stock": 10,
+   "featured": true,
+   "sales": 96,
+   "short": "শিউলি ফুল, চন্দন আর কস্তুরীর মৃদু সুবাস, সারাদিন থাকে।",
+   "description": "<p>শরতের সকালের শিউলির গন্ধ, উষ্ণ চন্দনের ছোঁয়া। সীমিত সংস্করণ।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "৫০ মিলি"
+    ],
+    [
+     "ধরন",
+     "অউ দ্য পারফিউম"
+    ]
+   ],
+   "weight": "0.25"
+  },
+  {
+   "key": "cs-body-lotion",
+   "name": "শিয়া বাটার বডি লোশন",
+   "slug": "shea-butter-body-lotion",
+   "sku": "CS-BC-013",
+   "categories": [
+    "bodycare"
+   ],
+   "tags": [
+    "dry-skin"
+   ],
+   "image": "cs-body-lotion",
+   "regular": 690,
+   "sale": 590,
+   "stock": 32,
+   "sales": 118,
+   "short": "শিয়া বাটার আর ভিটামিন ই, সারাদিন কোমল ত্বক।",
+   "description": "<p>দ্রুত শুষে নেয়, চটচটে ভাব নেই। শীতের রুক্ষতায় দারুণ।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "২৫০ মিলি"
+    ]
+   ],
+   "weight": "0.3"
+  }
+ ],
+ "posts": [
+  {
+   "key": "what-is-headless-wordpress",
+   "title": "হেডলেস ওয়ার্ডপ্রেস কী এবং কেন ব্যবহার করবেন",
+   "slug": "what-is-headless-wordpress",
+   "category": "wordpress",
+   "tags": [
+    "headless",
+    "wpgraphql"
+   ],
+   "image": "cover-1",
+   "author": "rahim",
+   "days": 15,
+   "sticky": true,
+   "excerpt": "কনটেন্ট থাকবে ওয়ার্ডপ্রেসে, আর সাইট চলবে Next.js-এ। এই ব্যবস্থায় গতি, নিরাপত্তা আর ডিজাইনের স্বাধীনতা কীভাবে বাড়ে, সহজ ভাষায় জেনে নিন।",
+   "content": "<p>ওয়ার্ডপ্রেস দিয়ে সাইট বানানো মানেই থিম, প্লাগইন আর PHP টেমপ্লেট, এমনটাই আমরা জানি। কিন্তু গত কয়েক বছরে আরেকটি ধারা জনপ্রিয় হয়েছে: <strong>হেডলেস ওয়ার্ডপ্রেস</strong>। এখানে ওয়ার্ডপ্রেস শুধু কনটেন্ট সামলায়, আর দর্শক যে সাইট দেখেন সেটা তৈরি হয় আলাদা একটি ফ্রন্টএন্ড দিয়ে।</p>\n<p>এই লেখায় আমরা দেখব হেডলেস বলতে আসলে কী বোঝায়, কখন এটি কাজে লাগে এবং কখন লাগে না। শেষে থাকবে শুরু করার একটি ছোট চেকলিস্ট।</p>\n<h2>হেডলেস বলতে কী বোঝায়</h2>\n<p>সাধারণ ওয়ার্ডপ্রেসে \"মাথা\" হলো থিম, অর্থাৎ যে অংশ HTML তৈরি করে। হেডলেস ব্যবস্থায় সেই মাথা সরিয়ে ফেলা হয়। ওয়ার্ডপ্রেস তখন একটি কনটেন্ট API হিসেবে কাজ করে, আর <code>Next.js</code>-এর মতো ফ্রেমওয়ার্ক সেই API থেকে ডেটা নিয়ে পাতা সাজায়।</p>\n<blockquote>\n<p>কনটেন্ট এক জায়গায় লিখুন, দেখান যেখানে খুশি: ওয়েবসাইটে, মোবাইল অ্যাপে কিংবা স্মার্ট ডিসপ্লেতে।</p>\n<cite>হেডলেস ধারণার মূল কথা</cite>\n</blockquote>\n<h3>REST নাকি GraphQL</h3>\n<p>ওয়ার্ডপ্রেসে REST API আগে থেকেই আছে। তবে <mark>WPGraphQL</mark> প্লাগইন ব্যবহার করলে এক অনুরোধেই ঠিক যতটুকু ডেটা দরকার ততটুকু আনা যায়। নিচের কোয়েরিটি সাম্প্রতিক ছয়টি পোস্ট আনে:</p>\n<pre><code>query RecentPosts {\nposts(first: 6) {\nnodes {\ntitle\nuri\nexcerpt\nfeaturedImage {\nnode { sourceUrl altText }\n}\n}\n}\n}</code></pre>\n<h2>কেন হেডলেস ব্যবহার করবেন</h2>\n<p>সব প্রকল্পে হেডলেস দরকার হয় না। তবে নিচের সুবিধাগুলো আপনার কাছে গুরুত্বপূর্ণ হলে ভেবে দেখতে পারেন:</p>\n<ul>\n<li><strong>গতি:</strong> পাতা আগে থেকেই তৈরি থাকে, তাই দর্শকের কাছে পৌঁছায় চোখের পলকে।</li>\n<li><strong>নিরাপত্তা:</strong> ওয়ার্ডপ্রেস অ্যাডমিন জনসাধারণের সাইট থেকে আলাদা থাকে।</li>\n<li><strong>ডিজাইনের স্বাধীনতা:</strong> থিমের সীমাবদ্ধতা নেই, কম্পোনেন্ট দিয়ে যা খুশি বানানো যায়।</li>\n<li><strong>পরিচিত এডিটর:</strong> লেখকরা আগের মতোই ব্লক এডিটরে লেখেন।</li>\n</ul>\n<figure>\n<img src=\"{{image-url:cover-2}}\" alt=\"ব্রাউজার উইন্ডোতে একটি ওয়েব পাতার নকশা\" width=\"1200\" height=\"675\" loading=\"lazy\">\n<figcaption class=\"wp-element-caption\">ফ্রন্টএন্ড আলাদা হলে ডিজাইন নিয়ে পরীক্ষা করা সহজ হয়।</figcaption>\n</figure>\n<h3>কখন হেডলেস ঠিক পছন্দ নয়</h3>\n<p>ছোট ব্যক্তিগত ব্লগ, কিংবা যেখানে অনেক প্লাগইনের ফ্রন্টএন্ড ফিচার দরকার, সেখানে প্রচলিত থিমই সহজ সমাধান। হেডলেসে দুটি আলাদা সিস্টেম দেখাশোনা করতে হয়, সেটা মাথায় রাখুন।</p>\n<h2>শুরু করার ধাপ</h2>\n<ol>\n<li>ওয়ার্ডপ্রেসে WPGraphQL প্লাগইন ইনস্টল ও চালু করুন।</li>\n<li>দোকান থাকলে WooGraphQL যোগ করুন।</li>\n<li><kbd>npx create-next-app</kbd> দিয়ে নতুন Next.js প্রকল্প খুলুন।</li>\n<li>একটি ছোট <code>fetchGraphQL()</code> ফাংশন লিখে প্রথম কোয়েরি চালান।</li>\n<li>পোস্ট প্রকাশের ওয়েবহুক দিয়ে রিভ্যালিডেশন সেট করুন।</li>\n</ol>\n<h2>এক নজরে কিছু ছবি</h2>\n<p>ছবিতে ক্লিক করলে বড় করে দেখা যাবে, তীর চিহ্ন দিয়ে পরের ছবিতে যাওয়া যাবে।</p>\n<figure class=\"wp-block-gallery\">\n<figure><img data-caption=\"ডেটার গ্রাফ: নোড ও সংযোগ\" src=\"{{image-url:cover-1}}\" alt=\"নোড ও সংযোগের চিত্র\" width=\"1200\" height=\"675\" loading=\"lazy\"></figure>\n<figure><img data-caption=\"ব্রাউজারে সাজানো পাতা\" src=\"{{image-url:cover-2}}\" alt=\"ব্রাউজার উইন্ডোর নকশা\" width=\"1200\" height=\"675\" loading=\"lazy\"></figure>\n<figure><img data-caption=\"স্তরে স্তরে সাজানো কম্পোনেন্ট\" src=\"{{image-url:cover-3}}\" alt=\"স্তরযুক্ত কার্ডের চিত্র\" width=\"1200\" height=\"675\" loading=\"lazy\"></figure>\n<figure><img data-caption=\"টাইপোগ্রাফির নমুনা\" src=\"{{image-url:cover-4}}\" alt=\"বড় অক্ষরের নকশা\" width=\"1200\" height=\"675\" loading=\"lazy\"></figure>\n</figure>\n<h2>শেষ কথা</h2>\n<p>হেডলেস ওয়ার্ডপ্রেস কোনো জাদু নয়, এটি একটি স্থাপত্য-সিদ্ধান্ত। আপনার দলে জাভাস্ক্রিপ্ট জানা মানুষ থাকলে এবং গতি ও ডিজাইনের স্বাধীনতা জরুরি হলে এটি দারুণ কাজ করে। পরের লেখায় আমরা WPGraphQL দিয়ে প্রথম কোয়েরি লিখব।</p>"
+  },
+  {
+   "key": "first-wpgraphql-query",
+   "title": "WPGraphQL দিয়ে প্রথম কোয়েরি লেখা",
+   "slug": "first-wpgraphql-query",
+   "category": "graphql",
+   "tags": [
+    "wpgraphql"
+   ],
+   "image": "cover-2",
+   "author": "karima",
+   "days": 19,
+   "excerpt": "প্লাগইন চালু করা থেকে শুরু করে পোস্টের তালিকা আনা পর্যন্ত, GraphiQL IDE-তে হাতে-কলমে প্রথম কোয়েরি লিখে ফেলুন।",
+   "content": "<p>WPGraphQL চালু করলেই ওয়ার্ডপ্রেসের সব কনটেন্ট একটি GraphQL এন্ডপয়েন্টে পাওয়া যায়। কোয়েরি লেখার আগে দেখে নেওয়া যাক কোথা থেকে শুরু করবেন।</p>\n<h2>প্লাগইন চালু করুন</h2>\n<p>প্লাগইন যোগ করার পর অ্যাডমিন মেনুতে GraphQL নামে নতুন একটি অংশ আসবে। সেখানে GraphiQL IDE খুললেই বাঁ দিকে পুরো স্কিমা দেখা যায়।</p>\n<h2>প্রথম কোয়েরি</h2>\n<pre><code>query RecentPosts {\n  posts(first: 3) {\n    nodes { title uri }\n  }\n}</code></pre>\n<p>চালালেই ডান দিকে তিনটি পোস্টের শিরোনাম আর লিংক আসবে। ঠিক যা চেয়েছেন, তার বেশি কিছু নয়, এটাই GraphQL-এর সুবিধা।</p>"
+  },
+  {
+   "key": "nextjs-app-router-blog",
+   "title": "Next.js App Router-এ ব্লগ তৈরি: ধাপে ধাপে",
+   "slug": "nextjs-app-router-blog",
+   "category": "nextjs",
+   "tags": [
+    "react",
+    "headless"
+   ],
+   "image": "cover-3",
+   "author": "rahim",
+   "days": 24,
+   "excerpt": "সার্ভার কম্পোনেন্ট, ডায়নামিক রাউট আর generateStaticParams ব্যবহার করে একটি পূর্ণাঙ্গ ব্লগের কাঠামো দাঁড় করানোর গাইড।",
+   "content": "<p>App Router-এ প্রতিটি ফোল্ডার একটি রাউট, আর পাতাগুলো ডিফল্টভাবে সার্ভার কম্পোনেন্ট। ব্লগের জন্য এর চেয়ে সুবিধাজনক কাঠামো খুব কমই আছে।</p>\n<h2>রাউটের কাঠামো</h2>\n<ul><li><code>app/blog/page.tsx</code>: সব লেখার তালিকা</li><li><code>app/blog/[slug]/page.tsx</code>: একটি লেখা</li><li><code>app/blog/[slug]/loading.tsx</code>: লোড হওয়ার সময়ের কাঠামো</li></ul>\n<h2>আগে থেকে পাতা তৈরি</h2>\n<p><code>generateStaticParams</code> দিয়ে সব লেখার slug আগে থেকে জানিয়ে দিলে বিল্ডের সময়ই পাতাগুলো তৈরি হয়ে থাকে। নতুন লেখা এলে রিভ্যালিডেশন বাকিটা সামলায়।</p>"
+  },
+  {
+   "key": "bangla-web-fonts",
+   "title": "বাংলা ওয়েবসাইটের জন্য সঠিক ফন্ট বাছাই",
+   "slug": "bangla-web-fonts",
+   "category": "design",
+   "tags": [
+    "typography"
+   ],
+   "image": "cover-4",
+   "author": "karima",
+   "days": 31,
+   "excerpt": "যুক্তাক্ষর, লাইন-হাইট আর ওজনের ভারসাম্য ঠিক না হলে বাংলা লেখা পড়তে কষ্ট হয়। কোন ফন্ট কোথায় মানায়, দেখে নিন।",
+   "content": "<p>বাংলা হরফের মাত্রা, যুক্তাক্ষর আর কার-চিহ্ন লাতিন হরফের চেয়ে বেশি জায়গা নেয়। তাই ইংরেজি সাইটের সেটিং হুবহু বসালে লেখা ঘিঞ্জি দেখায়।</p>\n<h2>শিরোনাম আর মূল লেখা আলাদা করুন</h2>\n<p>শিরোনামে সেরিফ ধাঁচের ফন্ট আর মূল লেখায় পরিষ্কার স্যান্স-সেরিফ ভালো মানায়। দুটোর ওজন আর উচ্চতা যেন কাছাকাছি থাকে।</p>\n<h2>লাইন-হাইট বাড়ান</h2>\n<p>বাংলা মূল লেখায় ১.৭ থেকে ১.৮ লাইন-হাইট রাখলে ওপর-নিচের কার-চিহ্ন একে অপরের গায়ে লাগে না।</p>"
+  },
+  {
+   "key": "woographql-headless-shop",
+   "title": "WooGraphQL দিয়ে হেডলেস দোকান: কার্ট থেকে চেকআউট",
+   "slug": "woographql-headless-shop",
+   "category": "graphql",
+   "tags": [
+    "woocommerce",
+    "wpgraphql"
+   ],
+   "image": "cover-2",
+   "author": "rahim",
+   "days": 38,
+   "excerpt": "সেশন টোকেন সামলানো, addToCart মিউটেশন আর চেকআউটের ধাপগুলো একটি বাস্তব উদাহরণ দিয়ে বোঝানো হয়েছে।",
+   "content": "<p>হেডলেস দোকানে কার্ট থাকে সার্ভারে, আর ব্রাউজার শুধু একটি সেশন টোকেন রাখে। সেই টোকেনই প্রতিটি অনুরোধে বলে দেয় কার্টটি কার।</p>\n<h2>সেশন টোকেন</h2>\n<p>প্রথম <code>addToCart</code> মিউটেশনের উত্তরে <code>woocommerce-session</code> হেডার আসে। সেটি httpOnly কুকিতে রেখে পরের সব অনুরোধে পাঠালেই কার্ট টিকে থাকে।</p>\n<h2>চেকআউট</h2>\n<p><code>checkout</code> মিউটেশনে ঠিকানা, পেমেন্ট পদ্ধতি আর শিপিং দিলেই অর্ডার তৈরি হয়। লগইন করা ক্রেতার অর্ডার তাঁর অ্যাকাউন্টে যুক্ত হয়ে যায়।</p>"
+  },
+  {
+   "key": "isr-on-demand-revalidation",
+   "title": "ISR ও অন-ডিমান্ড রিভ্যালিডেশন সহজ ভাষায়",
+   "slug": "isr-on-demand-revalidation",
+   "category": "nextjs",
+   "tags": [
+    "headless"
+   ],
+   "image": "cover-3",
+   "author": "karima",
+   "days": 45,
+   "excerpt": "নতুন পোস্ট প্রকাশের সঙ্গে সঙ্গে সাইট আপডেট হবে, অথচ পুরো সাইট আবার বিল্ড করতে হবে না। ওয়েবহুক দিয়ে সেটা কীভাবে করবেন।",
+   "content": "<p>আগে থেকে তৈরি পাতা দ্রুত, কিন্তু পুরোনো হয়ে যেতে পারে। রিভ্যালিডেশন এই দুইয়ের মাঝে ভারসাম্য আনে।</p>\n<h2>সময় ধরে রিভ্যালিডেশন</h2>\n<p>প্রতি কয়েক মিনিটে পাতা নতুন করে তৈরি হয়। সহজ, তবে পরিবর্তন দেখতে কিছুক্ষণ অপেক্ষা করতে হয়।</p>\n<h2>অন-ডিমান্ড রিভ্যালিডেশন</h2>\n<p>ওয়ার্ডপ্রেসে লেখা সেভ হলেই একটি ওয়েবহুক ফ্রন্টএন্ডকে জানায়, আর শুধু সংশ্লিষ্ট ডেটা নতুন করে আনা হয়। পরিবর্তন দেখা যায় সঙ্গে সঙ্গেই।</p>"
+  },
+  {
+   "key": "tailwind-v4-design-tokens",
+   "title": "Tailwind CSS v4-এ ডিজাইন টোকেন সাজানো",
+   "slug": "tailwind-v4-design-tokens",
+   "category": "design",
+   "tags": [
+    "typography"
+   ],
+   "image": "cover-4",
+   "author": "rahim",
+   "days": 53,
+   "excerpt": "কনফিগ ফাইল ছাড়াই @theme দিয়ে রঙ, ফন্ট আর ব্রেকপয়েন্ট সাজান, আর টোকেন বদলে ডার্ক মোড চালু করুন।",
+   "content": "<p>Tailwind v4-এ টোকেন থাকে সরাসরি CSS-এ। <code>@theme</code> ব্লকে রঙ বা ফন্ট লিখলেই সেগুলো ইউটিলিটি ক্লাস হয়ে যায়।</p>\n<h2>রঙের টোকেন</h2>\n<pre><code>@theme {\n  --color-ink: #1f2937;\n  --color-accent: #0f766e;\n}</code></pre>\n<h2>ডার্ক মোড</h2>\n<p>একই টোকেন ডার্ক মোডে নতুন মান পেলেই পুরো সাইটের রং বদলে যায়। আলাদা আলাদা ক্লাস লিখতে হয় না।</p>"
+  },
+  {
+   "key": "headless-seo",
+   "title": "হেডলেস সাইটে SEO: মেটাডেটা থেকে সাইটম্যাপ",
+   "slug": "headless-seo",
+   "category": "wordpress",
+   "tags": [
+    "seo",
+    "headless"
+   ],
+   "image": "cover-1",
+   "author": "karima",
+   "days": 60,
+   "excerpt": "ওয়ার্ডপ্রেসের SEO প্লাগইনের ডেটা GraphQL দিয়ে এনে Next.js-এর Metadata API-তে বসানোর পুরো প্রক্রিয়া।",
+   "content": "<p>হেডলেস সাইটে থিম নেই, তাই SEO প্লাগইন নিজে থেকে মেটা ট্যাগ বসাতে পারে না। কাজটি করতে হয় ফ্রন্টএন্ডে।</p>\n<h2>মেটাডেটা</h2>\n<p>প্রতিটি পাতার <code>generateMetadata</code> ফাংশনে শিরোনাম, বিবরণ আর Open Graph ছবি দিন। ডেটা আসবে GraphQL থেকে।</p>\n<h2>সাইটম্যাপ</h2>\n<p><code>app/sitemap.ts</code> ফাইলে সব পোস্ট আর পণ্যের লিংক তালিকা করে দিলেই সার্চ ইঞ্জিন নতুন পাতা খুঁজে পায়।</p>"
+  },
+  {
+   "key": "acf-fields-in-graphql",
+   "title": "ACF ফিল্ড GraphQL-এ আনার সহজ উপায়",
+   "slug": "acf-fields-in-graphql",
+   "category": "graphql",
+   "tags": [
+    "wpgraphql"
+   ],
+   "image": "cover-2",
+   "author": "rahim",
+   "days": 68,
+   "excerpt": "কাস্টম ফিল্ড গ্রুপ স্কিমায় দেখানো, ফ্র্যাগমেন্ট দিয়ে গুছিয়ে আনা এবং কম্পোনেন্টে ব্যবহার করার কৌশল।",
+   "content": "<p>WPGraphQL for ACF চালু থাকলে প্রতিটি ফিল্ড গ্রুপ GraphQL-এ একটি টাইপ হয়ে যায়। শুধু গ্রুপের সেটিংয়ে \"Show in GraphQL\" চালু রাখতে হয়।</p>\n<h2>ফ্র্যাগমেন্ট</h2>\n<p>একই ফিল্ড কয়েক জায়গায় লাগলে ফ্র্যাগমেন্ট লিখে রাখুন। কোয়েরি ছোট থাকে, ভুলও কম হয়।</p>\n<h2>ছবি আর সম্পর্ক</h2>\n<p>ছবি আর সম্পর্কিত পোস্ট আসে <code>node</code> বা <code>nodes</code> হিসেবে, তাই প্রয়োজনীয় ফিল্ডগুলো আলাদা করে চেয়ে নিতে হয়।</p>"
+  },
+  {
+   "key": "how-to-choose-a-notebook",
+   "title": "কেনার আগে পড়ুন: ভালো নোটবুক চেনার ৫ উপায়",
+   "slug": "how-to-choose-a-notebook",
+   "category": "buying-guide",
+   "tags": [
+    "notebook"
+   ],
+   "image": "cover-4",
+   "author": "karima",
+   "days": 11,
+   "excerpt": "কাগজের ওজন, বাঁধাই আর রুলিং দেখে কীভাবে বুঝবেন নোটবুকটি আপনার কাজের জন্য ঠিক কি না।",
+   "content": "<p>দেখতে সব নোটবুক প্রায় একই রকম। কিন্তু কয়েকটি জিনিস খেয়াল করলেই বোঝা যায় কোনটি দীর্ঘদিন সঙ্গী হবে।</p>\n<h2>যা দেখবেন</h2>\n<ol><li><strong>কাগজের ওজন:</strong> ৮০ জিএসএমের বেশি হলে কালি অন্য পাতায় যায় না।</li><li><strong>বাঁধাই:</strong> সেলাই করা বাঁধাই পুরো খুলে সমান রাখা যায়।</li><li><strong>রুলিং:</strong> লেখার জন্য রুলড, আঁকা ও তালিকার জন্য ডটেড।</li><li><strong>আকার:</strong> ব্যাগে রাখার জন্য A5 সবচেয়ে সুবিধাজনক।</li><li><strong>মলাট:</strong> হার্ডকভার হাতে রেখে লেখার সময় ভরসা দেয়।</li></ol>\n<p>আমাদের <a href=\"/product/lekhoni-classic-notebook\">ক্লাসিক নোটবুকে</a> এই পাঁচটিই মিলবে।</p>"
+  },
+  {
+   "key": "which-pen-suits-you",
+   "title": "কোন কলম আপনার লেখার জন্য মানানসই",
+   "slug": "which-pen-suits-you",
+   "category": "buying-guide",
+   "tags": [
+    "pen"
+   ],
+   "image": "cover-1",
+   "author": "rahim",
+   "days": 13,
+   "excerpt": "জেল, বলপয়েন্ট না ফাউন্টেন? লেখার ধরন আর কাগজ অনুযায়ী কলম বাছাইয়ের সহজ নিয়ম।",
+   "content": "<p>কলম বাছাই নির্ভর করে আপনি কী লেখেন, কত দ্রুত লেখেন আর কোন কাগজে লেখেন তার ওপর।</p>\n<h2>তিন ধরনের কলম</h2>\n<ul><li><strong>বলপয়েন্ট:</strong> সব কাগজে চলে, কালি দ্রুত শুকায়</li><li><strong>জেল:</strong> মসৃণ আর উজ্জ্বল, নোট আর জার্নালের জন্য ভালো</li><li><strong>ফাউন্টেন:</strong> হাতের লেখা সুন্দর করে, তবে ভালো কাগজ চায়</li></ul>\n<p>প্রতিদিনের নোটের জন্য <a href=\"/product/smooth-gel-pen-set\">জেল কলম সেট</a>, আর লেখার আনন্দের জন্য <a href=\"/product/classic-fountain-pen\">ফাউন্টেন পেন</a> চেষ্টা করে দেখুন।</p>"
+  },
+  {
+   "key": "gift-box-guide",
+   "title": "উপহারে কী দেবেন: গিফট বক্স সাজানোর গাইড",
+   "slug": "gift-box-guide",
+   "category": "buying-guide",
+   "tags": [
+    "gift"
+   ],
+   "image": "cover-3",
+   "author": "karima",
+   "days": 17,
+   "excerpt": "বাজেট অনুযায়ী তিন রকম গিফট বক্সের আইডিয়া, সঙ্গে মোড়ক আর শুভেচ্ছা কার্ডের পরামর্শ।",
+   "content": "<p>ভালো উপহার দামি হতে হবে এমন নয়। প্রাপকের পছন্দ মাথায় রেখে কয়েকটি জিনিস একসঙ্গে সাজালেই তা মনে রাখার মতো হয়।</p>\n<h2>বাজেট অনুযায়ী তিন আইডিয়া</h2>\n<ul><li><strong>৳১,০০০-এর মধ্যে:</strong> নোটবুক, জেল কলম সেট আর স্টিকার</li><li><strong>৳১,৫০০-এর মধ্যে:</strong> সঙ্গে একটি সিরামিক মগ</li><li><strong>৳২,০০০-এর মধ্যে:</strong> ফাউন্টেন পেন আর প্ল্যানারসহ বড় বক্স</li></ul>\n<h2>মোড়ক আর কার্ড</h2>\n<p>প্রাপকের প্রিয় রঙের মোড়ক বেছে নিন, আর কার্ডে দুই লাইন নিজের হাতে লিখুন। আমাদের <a href=\"/product/premium-gift-box\">প্রিমিয়াম গিফট বক্সে</a> তিন রঙ আর তিন আকার আছে।</p>"
+  },
+  {
+   "key": "serum-order-guide",
+   "title": "সিরাম কোন ক্রমে লাগাবেন: সহজ গাইড",
+   "slug": "serum-order-guide",
+   "category": "beauty-tips",
+   "tags": [],
+   "image": "cs-g1",
+   "author": "karima",
+   "days": 3,
+   "excerpt": "ভিটামিন সি, নিয়াসিনামাইড আর রেটিনল একসঙ্গে ব্যবহারের সঠিক নিয়ম।",
+   "content": "<p>একাধিক সিরাম ব্যবহার করলে ক্রমটা গুরুত্বপূর্ণ। সাধারণ নিয়ম: পাতলা থেকে ঘন।</p><h2>সকালে</h2><p>ক্লিনজার, টোনার, তারপর ভিটামিন সি সিরাম, ময়েশ্চারাইজার আর সবশেষে সানস্ক্রিন।</p><h2>রাতে</h2><p>ক্লিনজারের পর নিয়াসিনামাইড, তারপর রেটিনল ক্রিম। রেটিনল আর ভিটামিন সি একই সময়ে না লাগানোই ভালো।</p>"
+  },
+  {
+   "key": "sunscreen-how-much",
+   "title": "সানস্ক্রিন কতটুকু আর কতবার লাগাবেন",
+   "slug": "sunscreen-how-much",
+   "category": "beauty-tips",
+   "tags": [],
+   "image": "cs-g6",
+   "author": "rahim",
+   "days": 9,
+   "excerpt": "SPF আর PA-এর মানে, আর কেন মেঘলা দিনেও সানস্ক্রিন জরুরি।",
+   "content": "<p>মুখ আর গলার জন্য দুই আঙুল সমান সানস্ক্রিন যথেষ্ট। বাইরে থাকলে প্রতি দুই ঘণ্টায় আবার লাগান।</p><h2>SPF আর PA</h2><p>SPF বলে UVB থেকে কতটা সুরক্ষা, আর PA-এর প্লাস চিহ্ন বলে UVA থেকে। প্রতিদিনের জন্য SPF ৩০ থেকে ৫০ আর PA+++ বা তার বেশি ভালো।</p><h2>মেঘলা দিনেও কেন</h2><p>মেঘ ভেদ করে অতিবেগুনি রশ্মির বড় অংশ পৌঁছে যায়। তাই আবহাওয়া যেমনই হোক, সানস্ক্রিন বাদ দেবেন না।</p>"
+  },
+  {
+   "key": "lipstick-shade-guide",
+   "title": "উৎসবের সাজে ঠিক লিপস্টিক শেড বাছাই",
+   "slug": "lipstick-shade-guide",
+   "category": "beauty-tips",
+   "tags": [],
+   "image": "cs-g5",
+   "author": "karima",
+   "days": 16,
+   "excerpt": "ত্বকের আন্ডারটোন বুঝে কোন রং মানাবে, সহজ কয়েকটি কৌশল।",
+   "content": "<p>কবজির শিরার রং দেখে আন্ডারটোন বোঝা যায়: সবুজাভ হলে উষ্ণ, নীলচে হলে শীতল।</p><h2>উষ্ণ আন্ডারটোন</h2><p>টেরাকোটা, কোরাল আর নুড শেড বেশি মানায়।</p><h2>শীতল আন্ডারটোন</h2><p>রুবি, বেরি আর রোজ শেড ত্বককে উজ্জ্বল দেখায়।</p>"
+  }
+ ],
+ "pages": [
+  {
+   "key": "home-cosmetics",
+   "title": "হোম",
+   "slug": "home-cosmetics",
+   "template": "templates/template-home-cosmetics.php",
+   "acfGroup": "group_lk_home_cosmetics",
+   "acf": {
+    "hb_hero_section": {
+     "badge": "ডার্মাটোলজিস্ট পরীক্ষিত",
+     "rating_text": "১২ হাজার+ খুশি ক্রেতা",
+     "slides": [
+      {
+       "eyebrow": "নতুন · গ্লো কালেকশন",
+       "title": "আপনার ত্বকের নিজস্ব উজ্জ্বলতা ফিরিয়ে আনুন",
+       "text": "ডার্মাটোলজিস্ট পরীক্ষিত সিরাম আর ময়েশ্চারাইজার, বাংলাদেশের আবহাওয়ার কথা মাথায় রেখে বাছাই করা।",
+       "primary_link": {
+        "title": "এখনই কিনুন",
+        "url": "/product-category/skincare",
+        "target": ""
+       },
+       "secondary_link": {
+        "title": "ত্বক অনুযায়ী কিনুন",
+        "url": "/shop",
+        "target": ""
+       },
+       "image": "@image:cs-hero-1"
+      },
+      {
+       "eyebrow": "উৎসবের সাজ",
+       "title": "রঙে রঙে সাজুন এই মৌসুমে",
+       "text": "ম্যাট লিপস্টিক থেকে আইশ্যাডো প্যালেট, প্রতিটি সাজের জন্য সঠিক রং।",
+       "primary_link": {
+        "title": "এখনই কিনুন",
+        "url": "/product-category/makeup",
+        "target": ""
+       },
+       "secondary_link": {
+        "title": "মেকআপ দেখুন",
+        "url": "/product-category/makeup",
+        "target": ""
+       },
+       "image": "@image:cs-hero-2"
+      }
+     ]
+    },
+    "hb_promises_section": {
+     "enabled": 1,
+     "items": [
+      {
+       "icon": "award",
+       "text": "১০০% আসল পণ্য"
+      },
+      {
+       "icon": "heart",
+       "text": "ক্রুয়েলটি ফ্রি"
+      },
+      {
+       "icon": "leaf",
+       "text": "প্যারাবেন ও সালফেট মুক্ত"
+      },
+      {
+       "icon": "rotate-ccw",
+       "text": "৭ দিনে সহজ রিটার্ন"
+      }
+     ]
+    },
+    "hb_categories_section": {
+     "enabled": 1,
+     "eyebrow": "ক্যাটাগরি",
+     "title": "আপনার পছন্দের জগৎ বেছে নিন",
+     "categories": [
+      "@term:product_cat:skincare",
+      "@term:product_cat:makeup",
+      "@term:product_cat:haircare",
+      "@term:product_cat:fragrance",
+      "@term:product_cat:bodycare",
+      "@term:product_cat:masks"
+     ]
+    },
+    "hb_concerns_section": {
+     "enabled": 1,
+     "eyebrow": "ত্বকের সমস্যা অনুযায়ী",
+     "title": "আপনার ত্বকের যা দরকার",
+     "all_label": "সব",
+     "concerns": [
+      {
+       "label": "শুষ্ক ত্বক",
+       "tag": "@term:product_tag:dry-skin"
+      },
+      {
+       "label": "তৈলাক্ত ত্বক",
+       "tag": "@term:product_tag:oily-skin"
+      },
+      {
+       "label": "ব্রণ",
+       "tag": "@term:product_tag:acne"
+      },
+      {
+       "label": "নিষ্প্রভতা",
+       "tag": "@term:product_tag:dullness"
+      },
+      {
+       "label": "কালো দাগ",
+       "tag": "@term:product_tag:dark-spots"
+      },
+      {
+       "label": "রোদ সুরক্ষা",
+       "tag": "@term:product_tag:sun-care"
+      }
+     ],
+     "products": [
+      "@product:cs-vitc-serum",
+      "@product:cs-niacinamide",
+      "@product:cs-sunscreen",
+      "@product:cs-moisturizer",
+      "@product:cs-cleanser",
+      "@product:cs-toner",
+      "@product:cs-night-cream",
+      "@product:cs-sheet-mask"
+     ]
+    },
+    "hb_bestsellers_section": {
+     "enabled": 1,
+     "eyebrow": "সবার পছন্দ",
+     "title": "বেস্টসেলার",
+     "products": [
+      "@product:cs-sunscreen",
+      "@product:cs-lipstick",
+      "@product:cs-vitc-serum",
+      "@product:cs-palette",
+      "@product:cs-hair-oil",
+      "@product:cs-perfume",
+      "@product:cs-niacinamide"
+     ]
+    },
+    "hb_routines_section": {
+     "enabled": 1,
+     "eyebrow": "৪ ধাপের রুটিন",
+     "title": "আপনার রুটিন তৈরি করুন",
+     "text": "",
+     "discount": 15,
+     "routines": [
+      {
+       "name": "সকালের রুটিন",
+       "icon": "sun",
+       "steps": [
+        {
+         "label": "পরিষ্কার",
+         "product": [
+          "@product:cs-cleanser"
+         ]
+        },
+        {
+         "label": "টোন",
+         "product": [
+          "@product:cs-toner"
+         ]
+        },
+        {
+         "label": "সিরাম",
+         "product": [
+          "@product:cs-vitc-serum"
+         ]
+        },
+        {
+         "label": "সুরক্ষা",
+         "product": [
+          "@product:cs-sunscreen"
+         ]
+        }
+       ]
+      },
+      {
+       "name": "রাতের রুটিন",
+       "icon": "moon",
+       "steps": [
+        {
+         "label": "পরিষ্কার",
+         "product": [
+          "@product:cs-cleanser"
+         ]
+        },
+        {
+         "label": "সিরাম",
+         "product": [
+          "@product:cs-niacinamide"
+         ]
+        },
+        {
+         "label": "মেরামত",
+         "product": [
+          "@product:cs-night-cream"
+         ]
+        },
+        {
+         "label": "মাস্ক (সপ্তাহে ২ বার)",
+         "product": [
+          "@product:cs-sheet-mask"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "hb_ingredients_section": {
+     "enabled": 1,
+     "eyebrow": "উপাদান",
+     "title": "কী আছে ভেতরে, জেনে কিনুন",
+     "ingredients": [
+      {
+       "name": "ভিটামিন সি",
+       "icon": "sun",
+       "tone": "star",
+       "text": "শক্তিশালী অ্যান্টিঅক্সিডেন্ট। দাগ হালকা করে, ত্বককে উজ্জ্বল করে আর রোদের ক্ষতি থেকে রক্ষা করে।",
+       "good_for": "নিষ্প্রভ ত্বক, কালো দাগ",
+       "link": {
+        "title": "ভিটামিন সি আছে এমন পণ্য",
+        "url": "/product/vitamin-c-brightening-serum",
+        "target": ""
+       }
+      },
+      {
+       "name": "নিয়াসিনামাইড",
+       "icon": "droplet",
+       "tone": "success",
+       "text": "ভিটামিন বি৩। লোমকূপ ছোট দেখায়, তেল নিয়ন্ত্রণ করে আর ত্বকের প্রাকৃতিক বাধা মজবুত করে।",
+       "good_for": "তৈলাক্ত ত্বক, ব্রণ",
+       "link": {
+        "title": "নিয়াসিনামাইড আছে এমন পণ্য",
+        "url": "/product/niacinamide-10-serum",
+        "target": ""
+       }
+      },
+      {
+       "name": "হায়ালুরোনিক অ্যাসিড",
+       "icon": "sparkles",
+       "tone": "accent",
+       "text": "নিজের ওজনের হাজার গুণ পানি ধরে রাখতে পারে। ত্বককে ভেতর থেকে আর্দ্র আর টানটান রাখে।",
+       "good_for": "শুষ্ক ত্বক, সূক্ষ্ম রেখা",
+       "link": {
+        "title": "হায়ালুরোনিক অ্যাসিড আছে এমন পণ্য",
+        "url": "/product/hyaluronic-moisturizer",
+        "target": ""
+       }
+      }
+     ]
+    },
+    "hb_offer_section": {
+     "enabled": 1,
+     "eyebrow": "উপহার অফার",
+     "ends_at": "@date:+10",
+     "title": "৳২,০০০-এর বেশি কেনাকাটায় ফ্রি ট্রাভেল কিট",
+     "text": "ক্লিনজার, সিরাম আর ময়েশ্চারাইজারের মিনি সাইজ, সুন্দর পাউচে। স্টক থাকা পর্যন্ত।",
+     "link": {
+      "title": "কেনাকাটা শুরু করুন",
+      "url": "/shop",
+      "target": ""
+     },
+     "image": "@image:cs-kit"
+    },
+    "hb_reviews_section": {
+     "enabled": 1,
+     "eyebrow": "রিভিউ",
+     "title": "তাঁরা যা বলছেন",
+     "source": "testimonials",
+     "testimonials": [
+      {
+       "name": "নুসরাত জাহান",
+       "skin_type": "তৈলাক্ত",
+       "rating": 5,
+       "verified": 1,
+       "text": "এই সানস্ক্রিনটা সত্যিই সাদা আস্তর ফেলে না। গরমেও মুখ তেলতেলে হয় না, মেকআপের নিচে দারুণ বসে।",
+       "product": [
+        "@product:cs-sunscreen"
+       ]
+      },
+      {
+       "name": "তাসনিম রহমান",
+       "skin_type": "শুষ্ক",
+       "rating": 5,
+       "verified": 1,
+       "text": "শীতে আমার ত্বক খুব টানটান হয়ে যেত। এক সপ্তাহ ব্যবহারের পর অনেক নরম আর আরামদায়ক লাগছে।",
+       "product": [
+        "@product:cs-moisturizer"
+       ]
+      },
+      {
+       "name": "ফারহানা আক্তার",
+       "skin_type": "মিশ্র",
+       "rating": 4,
+       "verified": 1,
+       "text": "দুই সপ্তাহে দাগ কিছুটা হালকা হয়েছে, ত্বকও উজ্জ্বল দেখাচ্ছে। প্যাকেজিংও সুন্দর।",
+       "product": [
+        "@product:cs-vitc-serum"
+       ]
+      },
+      {
+       "name": "সাদিয়া ইসলাম",
+       "skin_type": "সংবেদনশীল",
+       "rating": 5,
+       "verified": 1,
+       "text": "সংবেদনশীল ত্বকে কোনো জ্বালাপোড়া হয়নি। হালকা ফোম, ধোয়ার পর ত্বক শুকিয়ে যায় না।",
+       "product": [
+        "@product:cs-cleanser"
+       ]
+      },
+      {
+       "name": "মাহজাবীন চৌধুরী",
+       "skin_type": "স্বাভাবিক",
+       "rating": 5,
+       "verified": 1,
+       "text": "\"রুবি\" শেডটা একদম ছবির মতো। সারাদিন ছিল, খাওয়ার পরও খুব একটা ওঠেনি।",
+       "product": [
+        "@product:cs-lipstick"
+       ]
+      }
+     ]
+    },
+    "hb_gallery_section": {
+     "enabled": 1,
+     "eyebrow": "#লেখনীবিউটি",
+     "title": "আপনাদের তোলা ছবি",
+     "text": "ছবি শেয়ার করুন হ্যাশট্যাগ দিয়ে, বাছাই করা ছবি থাকবে এখানে।",
+     "link": "https://www.instagram.com/",
+     "images": [
+      "@image:cs-g1",
+      "@image:cs-g2",
+      "@image:cs-g3",
+      "@image:cs-g4",
+      "@image:cs-g5",
+      "@image:cs-g6"
+     ]
+    },
+    "hb_blog_section": {
+     "enabled": 1,
+     "title": "বিউটি টিপস",
+     "link_label": "সব লেখা",
+     "category": [
+      "@term:category:beauty-tips"
+     ],
+     "count": 3
+    },
+    "hb_subscribe_section": {
+     "enabled": 1,
+     "title": "বিউটি ক্লাবে যোগ দিন",
+     "text": "প্রথম অর্ডারে ১০% ছাড়, নতুন পণ্যের খবর আর ত্বকের যত্নের টিপস, মাসে দুবার।",
+     "success_message": "স্বাগতম! বিউটি ক্লাবে যোগ দেওয়ার জন্য ধন্যবাদ।",
+     "note": "আমরা আপনার ইমেইল কারো সঙ্গে শেয়ার করি না। যেকোনো সময় আনসাবস্ক্রাইব করতে পারবেন।"
+    }
+   },
+   "content": ""
+  },
+  {
+   "key": "about",
+   "title": "আমাদের সম্পর্কে",
+   "slug": "about",
+   "template": "templates/template-about.php",
+   "content": "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">আমাদের লক্ষ্য</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>ইংরেজিতে ওয়েব প্রযুক্তি নিয়ে লেখার অভাব নেই, কিন্তু মাতৃভাষায় গুছিয়ে লেখা নির্ভরযোগ্য উপকরণ এখনো কম। আমরা চাই বাংলাভাষী যে কেউ যেন <strong>হেডলেস ওয়ার্ডপ্রেস, GraphQL আর Next.js</strong> নিজের ভাষায় শিখতে পারেন।</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>লেখার পাশাপাশি আমাদের একটি ছোট দোকানও আছে। নোটবুক, কলম আর মগের মতো যেসব জিনিস আমরা নিজেরা প্রতিদিন ব্যবহার করি, সেগুলোই সেখানে রাখি। দোকানের আয় দিয়েই ব্লগটি বিজ্ঞাপনমুক্ত রাখা সম্ভব হয়।</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><!-- wp:paragraph -->\n<p>ভালো লেখা পাঠকের সময় বাঁচায়। আমরা প্রতিটি লেখা সেই মাপকাঠিতে যাচাই করি।</p>\n<!-- /wp:paragraph --></blockquote>\n<!-- /wp:quote -->",
+   "acfGroup": "group_lk_about_page",
+   "acf": {
+    "hero": {
+     "eyebrow": "আমাদের গল্প",
+     "title": "বাংলায় আধুনিক ওয়েব শেখার",
+     "highlight": "একটি খোলা খাতা",
+     "description": "লেখনী শুরু হয়েছিল নিজেদের শেখা টুকে রাখার জন্য। আজ এটি হাজারো ডেভেলপার ও ডিজাইনারের নিয়মিত পড়ার জায়গা।",
+     "primary_button": {
+      "title": "শপ দেখুন",
+      "url": "/shop",
+      "target": ""
+     },
+     "secondary_button": {
+      "title": "যোগাযোগ করুন",
+      "url": "/contact",
+      "target": ""
+     },
+     "image": "@image:cover-4"
+    },
+    "values_section": {
+     "title": "যা আমরা মেনে চলি",
+     "items": [
+      {
+       "icon": "book",
+       "title": "সহজ ভাষা",
+       "description": "কঠিন ধারণাকেও দৈনন্দিন উদাহরণ দিয়ে বোঝাই, যাতে নতুনরাও ভয় না পান।"
+      },
+      {
+       "icon": "zap",
+       "title": "হাতে-কলমে",
+       "description": "প্রতিটি লেখায় চালানো যায় এমন কোড থাকে। পড়ে শেষ নয়, বানিয়ে দেখুন।"
+      },
+      {
+       "icon": "heart",
+       "title": "পাঠকের পাশে",
+       "description": "মন্তব্যের উত্তর দিই, প্রশ্ন থেকে নতুন লেখার বিষয় বেছে নিই।"
+      }
+     ]
+    },
+    "stats": [
+     {
+      "value": "১২০+",
+      "label": "প্রকাশিত লেখা"
+     },
+     {
+      "value": "৪৫ হাজার",
+      "label": "মাসিক পাঠক"
+     },
+     {
+      "value": "৮,৫০০",
+      "label": "নিউজলেটার গ্রাহক"
+     },
+     {
+      "value": "৩,২০০",
+      "label": "খুশি ক্রেতা"
+     }
+    ],
+    "team_section": {
+     "title": "যাঁরা লেখেন",
+     "members": [
+      {
+       "photo": "@image:avatar-1",
+       "name": "রহিম আহমেদ",
+       "role": "ফ্রন্টএন্ড ডেভেলপার ও লেখক",
+       "link": "",
+       "bio": "কোড লেখেন, কোড নিয়ে লেখেন। টিউটোরিয়ালগুলোর বেশিরভাগ তাঁর হাতে তৈরি।"
+      },
+      {
+       "photo": "@image:avatar-2",
+       "name": "করিমা সুলতানা",
+       "role": "ডিজাইনার ও সম্পাদক",
+       "link": "",
+       "bio": "লেখনীর নকশা ও সম্পাদনা দেখেন। বাংলা টাইপোগ্রাফি তাঁর প্রিয় বিষয়।"
+      }
+     ]
+    },
+    "cta": {
+     "title": "কিছু বলতে চান?",
+     "text": "লেখার বিষয় প্রস্তাব, অতিথি লেখা কিংবা পাইকারি অর্ডার, যেকোনো প্রয়োজনে আমাদের লিখুন। সাধারণত এক কর্মদিবসের মধ্যে উত্তর দিই।",
+     "button": {
+      "title": "যোগাযোগ করুন",
+      "url": "/contact",
+      "target": ""
+     }
+    }
+   }
+  },
+  {
+   "key": "contact",
+   "title": "যোগাযোগ",
+   "slug": "contact",
+   "template": "templates/template-contact.php",
+   "content": "",
+   "acfGroup": "group_lk_contact_page",
+   "acf": {
+    "subtitle": "প্রশ্ন, পরামর্শ বা অর্ডার নিয়ে যেকোনো কথা। আমরা শুনতে আগ্রহী।",
+    "info_cards": [
+     {
+      "icon": "mail",
+      "label": "ইমেইল",
+      "value": "hello@lekhoni.example",
+      "link": "mailto:hello@lekhoni.example"
+     },
+     {
+      "icon": "phone",
+      "label": "ফোন",
+      "value": "০১৭১২-৩৪৫৬৭৮",
+      "link": "tel:+8801712345678"
+     },
+     {
+      "icon": "map-pin",
+      "label": "ঠিকানা",
+      "value": "বাড়ি ১২, সড়ক ৫, ধানমন্ডি, ঢাকা ১২০৫",
+      "link": ""
+     },
+     {
+      "icon": "clock",
+      "label": "উত্তর দেওয়ার সময়",
+      "value": "সাধারণত ২৪ ঘণ্টার মধ্যে",
+      "link": ""
+     }
+    ],
+    "form": {
+     "title": "আমাদের লিখুন",
+     "note": "তারকা চিহ্ন ছাড়া সব ঘর পূরণ করা আবশ্যক।",
+     "subjects": "সাধারণ জিজ্ঞাসা\nঅর্ডার ও ডেলিভারি\nঅতিথি লেখা\nপাইকারি অর্ডার",
+     "recipient": "",
+     "success_message": "বার্তা পাঠানো হয়েছে। শিগগিরই উত্তর দেব।"
+    },
+    "faq": {
+     "title": "সাধারণ জিজ্ঞাসা",
+     "items": [
+      {
+       "question": "অর্ডার পৌঁছাতে কত দিন লাগে?",
+       "answer": "ঢাকার ভেতরে ১ থেকে ২ কর্মদিবস, ঢাকার বাইরে ৩ থেকে ৫ কর্মদিবস লাগে। অর্ডার পাঠানোর পর এসএমএসে ট্র্যাকিং নম্বর পাবেন।"
+      },
+      {
+       "question": "পণ্য ফেরত দেওয়া যায় কি?",
+       "answer": "হ্যাঁ। পণ্য হাতে পাওয়ার ৭ দিনের মধ্যে অব্যবহৃত অবস্থায় ফেরত দিতে পারবেন। ত্রুটিপূর্ণ পণ্যের ক্ষেত্রে ডেলিভারি চার্জ আমরা বহন করি।"
+      },
+      {
+       "question": "আমি কি লেখনীতে অতিথি লেখা পাঠাতে পারি?",
+       "answer": "অবশ্যই। লেখার বিষয় ও একটি ছোট রূপরেখা যোগাযোগ ফর্মে পাঠান। সম্পাদকীয় দল দেখে আপনাকে জানাবে।"
+      },
+      {
+       "question": "কোন কোন পেমেন্ট পদ্ধতি চালু আছে?",
+       "answer": "ক্যাশ অন ডেলিভারি, বিকাশ, নগদ এবং ভিসা বা মাস্টারকার্ড দিয়ে পেমেন্ট করা যায়।"
+      }
+     ]
+    },
+    "map": {
+     "embed_url": "",
+     "label": "ধানমন্ডি, ঢাকা",
+     "note": "এখানে মানচিত্র বসবে"
+    }
+   }
+  },
+  {
+   "key": "blog",
+   "title": "ব্লগ",
+   "slug": "blog",
+   "template": "",
+   "content": ""
+  }
+ ],
+ "menus": [
+  {
+   "key": "primary",
+   "name": "প্রধান মেনু",
+   "location": "primary",
+   "items": [
+    {
+     "title": "হোম",
+     "url": "/"
+    },
+    {
+     "title": "শপ",
+     "url": "/shop",
+     "children": [
+      {
+       "term": "product_cat:skincare"
+      },
+      {
+       "term": "product_cat:makeup"
+      },
+      {
+       "term": "product_cat:haircare"
+      },
+      {
+       "term": "product_cat:fragrance"
+      },
+      {
+       "term": "product_cat:bodycare"
+      }
+     ]
+    },
+    {
+     "title": "ব্লগ",
+     "page": "blog"
+    },
+    {
+     "title": "আমাদের সম্পর্কে",
+     "page": "about"
+    },
+    {
+     "title": "যোগাযোগ",
+     "page": "contact"
+    }
+   ]
+  },
+  {
+   "key": "footer",
+   "name": "ফুটার মেনু",
+   "location": "footer",
+   "items": [
+    {
+     "title": "শপ",
+     "url": "/shop"
+    },
+    {
+     "title": "আমার অ্যাকাউন্ট",
+     "url": "/my-account"
+    },
+    {
+     "title": "ব্লগ",
+     "page": "blog"
+    },
+    {
+     "title": "আমাদের সম্পর্কে",
+     "page": "about"
+    },
+    {
+     "title": "যোগাযোগ",
+     "page": "contact"
+    }
+   ]
+  }
+ ],
+ "reading": {
+  "front": "home-cosmetics",
+  "posts": "blog"
+ },
+ "themeSettings": {
+  "social_links": [
+   {
+    "network": "facebook",
+    "url": "https://www.facebook.com/"
+   },
+   {
+    "network": "instagram",
+    "url": "https://www.instagram.com/"
+   },
+   {
+    "network": "youtube",
+    "url": "https://www.youtube.com/"
+   }
+  ],
+  "footer": {
+   "topics": {
+    "enabled": 1,
+    "title": "বিষয়",
+    "source": "product_categories",
+    "count": 8
+   }
+  },
+  "style": {
+   "preset": "cosmetics",
+   "accent_color": ""
+  },
+  "announcement": {
+   "enabled": 1,
+   "dismissible": 1,
+   "icon": "gift",
+   "text": "৳২,০০০-এর বেশি কেনাকাটায় ফ্রি ট্রাভেল কিট",
+   "link_label": "এখনই কিনুন",
+   "link_url": "/shop",
+   "starts_at": "",
+   "ends_at": ""
+  }
+ },
+ "store": {
+  "currency": "BDT",
+  "currency_position": "left",
+  "decimals": 0,
+  "thousand_separator": ",",
+  "decimal_separator": ".",
+  "default_country": "BD:BD-13",
+  "shipping_zone": {
+   "name": "বাংলাদেশ",
+   "country": "BD",
+   "flat_rate": {
+    "title": "হোম ডেলিভারি",
+    "cost": 60
+   },
+   "free_shipping": {
+    "title": "ফ্রি ডেলিভারি",
+    "min_amount": 1000
+   }
+  },
+  "cod": {
+   "title": "ক্যাশ অন ডেলিভারি",
+   "description": "পণ্য হাতে পেয়ে ডেলিভারি কর্মীকে নগদ টাকা দিন।"
+  },
+  "coupon": {
+   "code": "GLOW10",
+   "amount": 10,
+   "type": "percent",
+   "minimum": 1000,
+   "description": "ডেমো কুপন: ৳১,০০০-এর বেশি অর্ডারে ১০% ছাড়"
+  }
+ }
+}

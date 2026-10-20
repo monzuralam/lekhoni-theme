@@ -3,8 +3,11 @@
 /**
  * One-click demo import: the engine.
  *
- * Imports demo/content.json and demo/images/* (built by the storefront's
- * scripts/build-demo.mjs from the design files) into this site:
+ * Imports one demo package, demo/<id>/content.json with its images in
+ * demo/<id>/images/ and demo/shared/ (built by the storefront's
+ * scripts/build-demo.mjs from the design files), into this site. There is a
+ * package per homepage design: stationery (Home Shop), ecommerce
+ * (Home – E-commerce) and cosmetics (Home – Cosmetics). It imports:
  * images, authors, categories/tags/attributes, products (with variations and
  * reviews), posts, pages with their ACF fields, menus, Reading and Theme
  * Settings, and optionally WooCommerce store settings.
@@ -18,6 +21,8 @@
  * - Pages that already exist with the same slug (home, about, contact, blog)
  *   are adopted: their template and fields are set ("site" option), but they
  *   are never deleted.
+ * - Switching to another demo removes the installed one first ("replace"
+ *   option, on by default), so the shop doesn't mix two demos.
  *
  * @package WordPress
  * @subpackage Lekhoni
@@ -29,35 +34,87 @@ const LEKHONI_DEMO_ADOPTED = '_lekhoni_demo_adopted';
 const LEKHONI_DEMO_STATE   = 'lekhoni_demo_state';
 
 /**
- * The demo package (demo/content.json), or null when missing.
+ * The available demo packages (demo/<id>/content.json): id => package, in the
+ * order stationery, ecommerce, cosmetics, then any others.
  *
+ * @return array<string, array>
+ */
+function lekhoni_demo_packages()
+{
+    static $packages = null;
+    if (null !== $packages) {
+        return $packages;
+    }
+    $packages = array();
+    foreach ((array) glob(get_template_directory() . '/demo/*/content.json') as $file) {
+        $data = json_decode((string) file_get_contents($file), true);
+        $id   = basename(dirname($file));
+        if (is_array($data) && preg_match('/^[a-z0-9-]+$/', $id)) {
+            $packages[$id] = $data;
+        }
+    }
+    $order = array_flip(array('stationery', 'ecommerce', 'cosmetics'));
+    uksort(
+        $packages,
+        static function ($a, $b) use ($order) {
+            return ($order[$a] ?? 99) <=> ($order[$b] ?? 99) ?: strcmp($a, $b);
+        }
+    );
+    return $packages;
+}
+
+/**
+ * One demo package, or null when it doesn't exist. Without an id: the
+ * installed demo, else the first one.
+ *
+ * @param string|null $id Package id.
  * @return array|null
  */
-function lekhoni_demo_package()
+function lekhoni_demo_package($id = null)
 {
-    static $package = null;
-    if (null === $package) {
-        $file    = get_template_directory() . '/demo/content.json';
-        $package = is_readable($file) ? json_decode((string) file_get_contents($file), true) : false;
+    $packages = lekhoni_demo_packages();
+    if (null === $id) {
+        $id = lekhoni_demo_installed() ?: (string) array_key_first($packages);
     }
-    return is_array($package) ? $package : null;
+    return $packages[$id] ?? null;
+}
+
+/**
+ * The id of the demo that is installed, or '' (imports made before there
+ * were several demos were the stationery one).
+ *
+ * @return string
+ */
+function lekhoni_demo_installed()
+{
+    $state = lekhoni_demo_state();
+    if (! empty($state['demo'])) {
+        return (string) $state['demo'];
+    }
+    return ! empty($state['imported']) ? 'stationery' : '';
 }
 
 /**
  * Import options with defaults.
  *
- * - site:  use the demo homepage fields, Reading settings, menu locations and
- *          Theme Settings (overwrites those settings)
- * - store: WooCommerce currency ৳, Bangladesh shipping zone, cash on delivery, demo coupon
+ * - demo:    package id (lekhoni_demo_packages()); unknown ids use the first one
+ * - site:    use the demo homepage fields, Reading settings, menu locations and
+ *            Theme Settings (overwrites those settings)
+ * - store:   WooCommerce currency ৳, Bangladesh shipping zone, cash on delivery, demo coupon
+ * - replace: remove an installed, different demo first
  *
  * @param array $options Raw options.
- * @return array{site: bool, store: bool}
+ * @return array{demo: string, site: bool, store: bool, replace: bool}
  */
 function lekhoni_demo_options($options)
 {
+    $packages = lekhoni_demo_packages();
+    $demo     = isset($options['demo']) ? sanitize_key((string) $options['demo']) : '';
     return array(
-        'site'  => ! empty($options['site']),
-        'store' => ! empty($options['store']),
+        'demo'    => isset($packages[$demo]) ? $demo : (string) array_key_first($packages),
+        'site'    => ! empty($options['site']),
+        'store'   => ! empty($options['store']),
+        'replace' => ! empty($options['replace']),
     );
 }
 
@@ -271,6 +328,7 @@ function lekhoni_demo_update_fields($group, $values, $target)
 function lekhoni_demo_steps()
 {
     return array(
+        'cleanup'  => 'Removing the previous demo',
         'images'   => 'Images',
         'terms'    => 'Authors, categories, tags and attributes',
         'products' => 'Products, variations and reviews',
@@ -292,9 +350,10 @@ function lekhoni_demo_steps()
  */
 function lekhoni_demo_run_step($step, $offset, $options)
 {
-    $package = lekhoni_demo_package();
+    $options = lekhoni_demo_options($options);
+    $package = lekhoni_demo_package($options['demo']);
     if (! $package) {
-        throw new RuntimeException('demo/content.json is missing or unreadable.');
+        throw new RuntimeException('No demo package found in the theme\'s demo/ folder.');
     }
     if (function_exists('set_time_limit')) {
         set_time_limit(120); // phpcs:ignore Squiz.PHP.DiscouragedFunctions
@@ -304,9 +363,9 @@ function lekhoni_demo_run_step($step, $offset, $options)
     add_filter('pre_option_comments_notify', '__return_zero');
     add_filter('pre_option_moderation_notify', '__return_zero');
 
-    $options = lekhoni_demo_options($options);
-
     switch ($step) {
+        case 'cleanup':
+            return lekhoni_demo_step_cleanup($options);
         case 'images':
             return lekhoni_demo_step_images($package, $offset);
         case 'terms':
@@ -338,6 +397,22 @@ function lekhoni_demo_done($message, $total = 0)
 }
 
 /**
+ * Removes the installed demo when another one is being imported ("replace").
+ *
+ * @param array $options Options.
+ * @return array
+ */
+function lekhoni_demo_step_cleanup($options)
+{
+    $installed = lekhoni_demo_installed();
+    if (! $options['replace'] || '' === $installed || $installed === $options['demo']) {
+        return lekhoni_demo_done('Nothing to remove first');
+    }
+    lekhoni_demo_remove();
+    return lekhoni_demo_done(sprintf('Removed the previous demo (%s)', $installed));
+}
+
+/**
  * Images, 6 per request (thumbnails take a moment each).
  *
  * @param array $package Package.
@@ -358,7 +433,8 @@ function lekhoni_demo_step_images($package, $offset)
             continue;
         }
         $image  = $images[$key];
-        $source = get_template_directory() . '/demo/images/' . basename($image['file']);
+        // "<id>/images/x.jpg" or "shared/x.jpg", relative to demo/
+        $source = get_template_directory() . '/demo/' . ltrim(str_replace('..', '', (string) $image['file']), '/');
         if (! is_readable($source)) {
             throw new RuntimeException('Missing demo image: ' . $image['file']);
         }
@@ -426,6 +502,13 @@ function lekhoni_demo_save_term($taxonomy, $term)
     if (! empty($term['image'])) {
         update_term_meta($id, 'thumbnail_id', lekhoni_demo_find('image', $term['image']));
     }
+    // inc/shop-fields.php: department icon and swatch colour
+    if (! empty($term['icon'])) {
+        update_term_meta($id, 'lekhoni_icon', sanitize_key($term['icon']));
+    }
+    if (! empty($term['swatch']) && preg_match('/^#[0-9a-f]{3,8}$/i', $term['swatch'])) {
+        update_term_meta($id, 'lekhoni_swatch', $term['swatch']);
+    }
     return $id;
 }
 
@@ -489,7 +572,7 @@ function lekhoni_demo_step_terms($package)
             register_taxonomy($taxonomy, array('product'), array('hierarchical' => false, 'show_ui' => false, 'query_var' => true, 'rewrite' => false));
         }
         foreach ($attribute['terms'] as $order => $term) {
-            $id = lekhoni_demo_save_term($taxonomy, array('key' => $attribute['key'] . '-' . $term['slug'], 'name' => $term['name'], 'slug' => $term['slug']));
+            $id = lekhoni_demo_save_term($taxonomy, array('key' => $attribute['key'] . '-' . $term['slug'], 'name' => $term['name'], 'slug' => $term['slug'], 'swatch' => $term['swatch'] ?? ''));
             update_term_meta($id, 'order', $order);
         }
     }
@@ -582,6 +665,7 @@ function lekhoni_demo_save_product($data)
     $product->set_reviews_allowed(true);
     $product->set_total_sales((int) ($data['sales'] ?? 0));
     $product->set_category_ids(array_filter(array_map(static fn ($key) => lekhoni_demo_find('term', $key, 'product_cat'), $data['categories'])));
+    $product->set_tag_ids(array_filter(array_map(static fn ($key) => lekhoni_demo_find('term', $key, 'product_tag'), $data['tags'] ?? array())));
     $product->set_image_id(lekhoni_demo_find('image', $data['image']));
     $product->set_gallery_image_ids(array_filter(array_map(static fn ($key) => lekhoni_demo_find('image', $key), $data['gallery'] ?? array())));
     lekhoni_demo_set_sku($product, $data['sku']);
@@ -932,7 +1016,7 @@ function lekhoni_demo_step_finish($options)
     }
     delete_transient('wc_term_counts');
     flush_rewrite_rules(false);
-    lekhoni_demo_update_state(array('imported' => time(), 'options' => $options));
+    lekhoni_demo_update_state(array('imported' => time(), 'demo' => $options['demo'], 'options' => $options));
     lekhoni_demo_revalidate_all();
     return lekhoni_demo_done('Done');
 }

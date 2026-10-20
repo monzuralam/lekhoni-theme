@@ -1,0 +1,1915 @@
+{
+ "version": 2,
+ "id": "stationery",
+ "meta": {
+  "title": "স্টেশনারি শপ",
+  "name": "Stationery shop",
+  "description": "The original লেখনী store: notebooks, pens, mugs and gift boxes, with a flash sale, featured tabs, a product spotlight and reviews. Template \"Home Shop\", Stationery style.",
+  "design": "home-shop.html",
+  "counts": {
+   "products": 12,
+   "categories": 8,
+   "posts": 12,
+   "pages": 4,
+   "images": 32
+  }
+ },
+ "generated": "2026-10-20",
+ "images": {
+  "avatar-1": {
+   "file": "shared/avatar-1.jpg",
+   "alt": "রহিম আহমেদ",
+   "width": 320,
+   "height": 320
+  },
+  "avatar-2": {
+   "file": "shared/avatar-2.jpg",
+   "alt": "করিমা সুলতানা",
+   "width": 320,
+   "height": 320
+  },
+  "category-1": {
+   "file": "stationery/images/category-1.jpg",
+   "alt": "নোটবুক",
+   "width": 600,
+   "height": 600
+  },
+  "category-2": {
+   "file": "stationery/images/category-2.jpg",
+   "alt": "কলম",
+   "width": 600,
+   "height": 600
+  },
+  "category-3": {
+   "file": "stationery/images/category-3.jpg",
+   "alt": "মগ",
+   "width": 600,
+   "height": 600
+  },
+  "category-4": {
+   "file": "stationery/images/category-4.jpg",
+   "alt": "ব্যাগ",
+   "width": 600,
+   "height": 600
+  },
+  "category-5": {
+   "file": "stationery/images/category-5.jpg",
+   "alt": "স্টিকার",
+   "width": 600,
+   "height": 600
+  },
+  "category-6": {
+   "file": "stationery/images/category-6.jpg",
+   "alt": "গিফট বক্স",
+   "width": 600,
+   "height": 600
+  },
+  "cover-1": {
+   "file": "shared/cover-1.jpg",
+   "alt": "ব্রাউজারে খোলা ওয়েবসাইটের নকশা",
+   "width": 1200,
+   "height": 675
+  },
+  "cover-2": {
+   "file": "shared/cover-2.jpg",
+   "alt": "কোড এডিটরের জানালা",
+   "width": 1200,
+   "height": 675
+  },
+  "cover-3": {
+   "file": "shared/cover-3.jpg",
+   "alt": "ধাপে ধাপে সাজানো কম্পোনেন্টের ছবি",
+   "width": 1200,
+   "height": 675
+  },
+  "cover-4": {
+   "file": "shared/cover-4.jpg",
+   "alt": "বড় অক্ষরে সাজানো টাইপোগ্রাফির নকশা",
+   "width": 1200,
+   "height": 675
+  },
+  "hero-1": {
+   "file": "stationery/images/hero-1.png",
+   "alt": "নোটবুক, কলম আর মগে সাজানো লেখার টেবিল",
+   "width": 1350,
+   "height": 1050
+  },
+  "hero-2": {
+   "file": "stationery/images/hero-2.png",
+   "alt": "ফিতা বাঁধা উপহারের বক্স",
+   "width": 1350,
+   "height": 1050
+  },
+  "hero-3": {
+   "file": "stationery/images/hero-3.png",
+   "alt": "কাঠের অর্গানাইজার আর প্ল্যানারে গোছানো ডেস্ক",
+   "width": 1350,
+   "height": 1050
+  },
+  "product-1": {
+   "file": "stationery/images/product-1.jpg",
+   "alt": "হার্ডকভার নোটবুক",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-1-alt": {
+   "file": "stationery/images/product-1-alt.jpg",
+   "alt": "হার্ডকভার নোটবুক, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-2": {
+   "file": "stationery/images/product-2.jpg",
+   "alt": "রঙিন কলমের সেট",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-2-alt": {
+   "file": "stationery/images/product-2-alt.jpg",
+   "alt": "রঙিন কলমের সেট, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-3": {
+   "file": "stationery/images/product-3.jpg",
+   "alt": "সিরামিক মগ",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-3-alt": {
+   "file": "stationery/images/product-3-alt.jpg",
+   "alt": "সিরামিক মগ, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-4": {
+   "file": "stationery/images/product-4.jpg",
+   "alt": "ক্যানভাসের টোট ব্যাগ",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-4-alt": {
+   "file": "stationery/images/product-4-alt.jpg",
+   "alt": "ক্যানভাসের টোট ব্যাগ, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-5": {
+   "file": "stationery/images/product-5.jpg",
+   "alt": "ভিনাইল স্টিকারের প্যাক",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-5-alt": {
+   "file": "stationery/images/product-5-alt.jpg",
+   "alt": "ভিনাইল স্টিকারের প্যাক, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-6": {
+   "file": "stationery/images/product-6.jpg",
+   "alt": "কাঠের ডেস্ক অর্গানাইজার",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-6-alt": {
+   "file": "stationery/images/product-6-alt.jpg",
+   "alt": "কাঠের ডেস্ক অর্গানাইজার, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-7": {
+   "file": "stationery/images/product-7.jpg",
+   "alt": "গোলাপি মোড়কের গিফট বক্স",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-7-blue": {
+   "file": "stationery/images/product-7-blue.jpg",
+   "alt": "নীল মোড়কের গিফট বক্স",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-7-green": {
+   "file": "stationery/images/product-7-green.jpg",
+   "alt": "সবুজ মোড়কের গিফট বক্স",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-8": {
+   "file": "stationery/images/product-8.jpg",
+   "alt": "সাপ্তাহিক প্ল্যানার",
+   "width": 1000,
+   "height": 1000
+  },
+  "product-8-alt": {
+   "file": "stationery/images/product-8-alt.jpg",
+   "alt": "সাপ্তাহিক প্ল্যানার, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  }
+ },
+ "authors": [
+  {
+   "key": "rahim",
+   "login": "rahim-ahmed",
+   "email": "rahim.demo@example.com",
+   "first": "রহিম",
+   "last": "আহমেদ",
+   "bio": "কোড লেখেন, কোড নিয়ে লেখেন। লেখনীর টিউটোরিয়ালগুলোর বেশিরভাগ তাঁর হাতে তৈরি।",
+   "profile": {
+    "job_title": "ফ্রন্টএন্ড ডেভেলপার ও লেখক",
+    "experience": "৮ বছর"
+   }
+  },
+  {
+   "key": "karima",
+   "login": "karima-sultana",
+   "email": "karima.demo@example.com",
+   "first": "করিমা",
+   "last": "সুলতানা",
+   "bio": "লেখনীর নকশা ও সম্পাদনা দেখেন। বাংলা টাইপোগ্রাফি তাঁর প্রিয় বিষয়।",
+   "profile": {
+    "job_title": "ডিজাইনার ও সম্পাদক",
+    "experience": "৬ বছর"
+   }
+  }
+ ],
+ "terms": {
+  "product_cat": [
+   {
+    "key": "notebooks",
+    "name": "নোটবুক",
+    "slug": "notebooks",
+    "image": "category-1",
+    "description": "হার্ডকভার নোটবুক আর জার্নাল, প্রতিদিনের লেখার জন্য।"
+   },
+   {
+    "key": "pens",
+    "name": "কলম",
+    "slug": "pens",
+    "image": "category-2",
+    "description": "জেল, বলপয়েন্ট আর ফাউন্টেন পেন।"
+   },
+   {
+    "key": "mugs",
+    "name": "মগ",
+    "slug": "mugs",
+    "image": "category-3",
+    "description": "সিরামিক আর ট্রাভেল মগ।"
+   },
+   {
+    "key": "bags",
+    "name": "ব্যাগ",
+    "slug": "bags",
+    "image": "category-4",
+    "description": "মজবুত ক্যানভাসের টোট ব্যাগ।"
+   },
+   {
+    "key": "stickers",
+    "name": "স্টিকার",
+    "slug": "stickers",
+    "image": "category-5",
+    "description": "ল্যাপটপ আর নোটবুক সাজানোর ওয়াটারপ্রুফ স্টিকার।"
+   },
+   {
+    "key": "gift-boxes",
+    "name": "গিফট বক্স",
+    "slug": "gift-boxes",
+    "image": "category-6",
+    "description": "প্রিয়জনের জন্য সাজানো উপহারের বক্স।"
+   },
+   {
+    "key": "desk-accessories",
+    "name": "ডেস্ক অ্যাক্সেসরিজ",
+    "slug": "desk-accessories",
+    "image": "product-6",
+    "description": "ডেস্ক গোছানোর অর্গানাইজার আর অ্যাক্সেসরিজ।"
+   },
+   {
+    "key": "planners",
+    "name": "প্ল্যানার",
+    "slug": "planners",
+    "image": "product-8",
+    "description": "সাপ্তাহিক আর মাসিক পরিকল্পনার ডায়েরি।"
+   }
+  ],
+  "product_tag": [],
+  "category": [
+   {
+    "key": "wordpress",
+    "name": "ওয়ার্ডপ্রেস",
+    "slug": "wordpress"
+   },
+   {
+    "key": "graphql",
+    "name": "GraphQL",
+    "slug": "graphql"
+   },
+   {
+    "key": "nextjs",
+    "name": "Next.js",
+    "slug": "nextjs"
+   },
+   {
+    "key": "design",
+    "name": "ডিজাইন",
+    "slug": "design"
+   },
+   {
+    "key": "buying-guide",
+    "name": "কেনার গাইড",
+    "slug": "buying-guide"
+   }
+  ],
+  "post_tag": [
+   {
+    "key": "headless",
+    "name": "হেডলেস",
+    "slug": "headless"
+   },
+   {
+    "key": "wpgraphql",
+    "name": "WPGraphQL",
+    "slug": "wpgraphql"
+   },
+   {
+    "key": "react",
+    "name": "React",
+    "slug": "react"
+   },
+   {
+    "key": "typography",
+    "name": "টাইপোগ্রাফি",
+    "slug": "typography"
+   },
+   {
+    "key": "woocommerce",
+    "name": "WooCommerce",
+    "slug": "woocommerce"
+   },
+   {
+    "key": "seo",
+    "name": "SEO",
+    "slug": "seo"
+   },
+   {
+    "key": "notebook",
+    "name": "নোটবুক",
+    "slug": "notebook"
+   },
+   {
+    "key": "pen",
+    "name": "কলম",
+    "slug": "pen"
+   },
+   {
+    "key": "gift",
+    "name": "উপহার",
+    "slug": "gift"
+   }
+  ]
+ },
+ "attributes": [
+  {
+   "key": "ruling",
+   "name": "রুলিং",
+   "slug": "ruling",
+   "terms": [
+    {
+     "name": "রুলড",
+     "slug": "ruled"
+    },
+    {
+     "name": "ডটেড",
+     "slug": "dotted"
+    },
+    {
+     "name": "সাদা",
+     "slug": "plain"
+    }
+   ]
+  },
+  {
+   "key": "wrap-color",
+   "name": "মোড়কের রং",
+   "slug": "wrap-color",
+   "terms": [
+    {
+     "name": "গোলাপি",
+     "slug": "pink"
+    },
+    {
+     "name": "সবুজ",
+     "slug": "green"
+    },
+    {
+     "name": "নীল",
+     "slug": "blue"
+    }
+   ]
+  },
+  {
+   "key": "box-size",
+   "name": "বক্সের আকার",
+   "slug": "box-size",
+   "terms": [
+    {
+     "name": "ছোট",
+     "slug": "small"
+    },
+    {
+     "name": "মাঝারি",
+     "slug": "medium"
+    },
+    {
+     "name": "বড়",
+     "slug": "large"
+    }
+   ]
+  }
+ ],
+ "products": [
+  {
+   "key": "classic-notebook",
+   "type": "variable",
+   "name": "লেখনী ক্লাসিক নোটবুক",
+   "slug": "lekhoni-classic-notebook",
+   "sku": "LK-NB-001",
+   "categories": [
+    "notebooks"
+   ],
+   "image": "product-1",
+   "gallery": [
+    "product-1-alt"
+   ],
+   "short": "১৬০ পাতার হার্ডকভার নোটবুক। ১০০ জিএসএম মসৃণ কাগজে কালি ছড়ায় না, সঙ্গে ফিতা বুকমার্ক।",
+   "description": "<h3>যত্নে তৈরি, প্রতিদিনের জন্য</h3><p>লেখনী ক্লাসিক নোটবুক বানানো হয়েছে তাঁদের কথা ভেবে, যাঁরা এখনো হাতে লিখতে ভালোবাসেন। ১০০ জিএসএম মসৃণ কাগজে জেল, বলপয়েন্ট বা ফাউন্টেন পেন, যেকোনো কলমেই লেখা যায় স্বচ্ছন্দে।</p><ul><li>সেলাই করা বাঁধাই, তাই পুরো খুলে সমান করে রাখা যায়</li><li>ফিতা বুকমার্ক ও ইলাস্টিক ব্যান্ড</li><li>পেছনের মলাটে ছোট কাগজ রাখার পকেট</li><li>পরিবেশবান্ধব, অ্যাসিড-মুক্ত কাগজ</li></ul><h3>যত্ন নেওয়ার নিয়ম</h3><p>সরাসরি রোদ ও আর্দ্রতা থেকে দূরে রাখুন। মলাটে দাগ লাগলে হালকা ভেজা কাপড় দিয়ে মুছে নিন।</p>",
+   "specs": [
+    [
+     "পাতার সংখ্যা",
+     "১৬০ পাতা (৮০ শিট)"
+    ],
+    [
+     "কাগজ",
+     "১০০ জিএসএম, অ্যাসিড-মুক্ত"
+    ],
+    [
+     "আকার",
+     "A5 (১৪.৮ × ২১ সেমি)"
+    ],
+    [
+     "মলাট",
+     "হার্ডকভার, কাপড়ের বাঁধাই"
+    ],
+    [
+     "তৈরি",
+     "বাংলাদেশ"
+    ]
+   ],
+   "weight": "0.32",
+   "attributes": [
+    {
+     "attribute": "ruling",
+     "terms": [
+      "ruled",
+      "dotted",
+      "plain"
+     ]
+    }
+   ],
+   "variations": [
+    {
+     "attributes": {
+      "ruling": "ruled"
+     },
+     "regular": 450,
+     "sale": 350,
+     "stock": 40,
+     "sku": "LK-NB-001-R"
+    },
+    {
+     "attributes": {
+      "ruling": "dotted"
+     },
+     "regular": 450,
+     "sale": 350,
+     "stock": 25,
+     "sku": "LK-NB-001-D",
+     "image": "product-1-alt"
+    },
+    {
+     "attributes": {
+      "ruling": "plain"
+     },
+     "regular": 450,
+     "sale": 350,
+     "stock": 4,
+     "sku": "LK-NB-001-P"
+    }
+   ],
+   "featured": true,
+   "sales": 124,
+   "reviews": [
+    {
+     "author": "সাদিয়া রহমান",
+     "email": "sadia.demo@example.com",
+     "rating": 5,
+     "title": "কাগজের মান অসাধারণ",
+     "text": "ফাউন্টেন পেন দিয়ে লিখি, কালি একদম ছড়ায় না। বাঁধাইও মজবুত, পুরো খুলে সমান করে রাখা যায়।",
+     "days": 11
+    },
+    {
+     "author": "আরিফুল ইসলাম",
+     "email": "ariful.demo@example.com",
+     "rating": 5,
+     "title": "অফিসের জন্য একদম ঠিক",
+     "text": "মিটিংয়ের নোট রাখার জন্য নিয়েছি। আকারটা ব্যাগে সহজে ধরে, ফিতা বুকমার্কটা কাজের।",
+     "days": 22
+    },
+    {
+     "author": "নুসরাত জাহান",
+     "email": "nusrat.demo@example.com",
+     "rating": 4,
+     "title": "ভালো, তবে রঙ আরো চাই",
+     "text": "মান নিয়ে কোনো অভিযোগ নেই। শুধু মলাটের আরো কয়েকটা রঙ থাকলে ভালো হতো।",
+     "days": 34
+    }
+   ]
+  },
+  {
+   "key": "gel-pen-set",
+   "name": "মসৃণ জেল কলম সেট (৫টি)",
+   "slug": "smooth-gel-pen-set",
+   "sku": "LK-PN-002",
+   "categories": [
+    "pens"
+   ],
+   "image": "product-2",
+   "gallery": [
+    "product-2-alt"
+   ],
+   "regular": 260,
+   "sale": 220,
+   "stock": 60,
+   "short": "পাঁচ রঙের জেল কলম। ০.৫ মিমি নিব, দ্রুত শুকায় এবং দীর্ঘ সময় লিখলেও হাত ব্যথা করে না।",
+   "description": "<p>নোট নেওয়া, রঙ দিয়ে দাগানো কিংবা জার্নাল সাজানো, সবকিছুর জন্য পাঁচটি উজ্জ্বল রং। নরম রাবার গ্রিপ লম্বা সময় লেখাতেও আরাম দেয়।</p><ul><li>০.৫ মিমি সূক্ষ্ম নিব</li><li>দ্রুত শুকানো কালি, হাতে লাগে না</li><li>কালো, নীল, লাল, সবুজ ও বেগুনি</li></ul>",
+   "specs": [
+    [
+     "নিব",
+     "০.৫ মিমি"
+    ],
+    [
+     "কালি",
+     "জেল, দ্রুত শুকায়"
+    ],
+    [
+     "সংখ্যা",
+     "৫টি কলম"
+    ]
+   ],
+   "weight": "0.08",
+   "sales": 89,
+   "reviews": [
+    {
+     "author": "মিতু আক্তার",
+     "email": "mitu.demo@example.com",
+     "rating": 5,
+     "title": "রংগুলো সুন্দর",
+     "text": "জার্নাল সাজাতে কিনেছি। রংগুলো উজ্জ্বল, কালি একবারও আটকায়নি।",
+     "days": 6
+    },
+    {
+     "author": "তানভীর হাসান",
+     "email": "tanvir.demo@example.com",
+     "rating": 4,
+     "title": "দামে ভালো",
+     "text": "লেখা মসৃণ। কালোটা একটু তাড়াতাড়ি শেষ হয়েছে, বাকিগুলো ঠিক আছে।",
+     "days": 19
+    }
+   ]
+  },
+  {
+   "key": "ceramic-mug",
+   "name": "সিরামিক মগ \"চা ও কোড\"",
+   "slug": "ceramic-mug-cha-o-code",
+   "sku": "LK-MG-003",
+   "categories": [
+    "mugs"
+   ],
+   "image": "product-3",
+   "gallery": [
+    "product-3-alt"
+   ],
+   "regular": 550,
+   "sale": 450,
+   "saleDays": 10,
+   "stock": 35,
+   "short": "৩৫০ মিলি সিরামিক মগ। মাইক্রোওয়েভ ও ডিশওয়াশারে ব্যবহার করা যায়, প্রিন্ট ওঠে না।",
+   "description": "<p>সকালের চা আর রাতের কোডিং, দুটোরই সঙ্গী। মোটা দেয়ালের সিরামিক মগে চা অনেকক্ষণ গরম থাকে।</p><ul><li>৩৫০ মিলি</li><li>মাইক্রোওয়েভ ও ডিশওয়াশার নিরাপদ</li><li>উচ্চ তাপে পোড়ানো প্রিন্ট, ধুলেও ওঠে না</li></ul>",
+   "specs": [
+    [
+     "ধারণক্ষমতা",
+     "৩৫০ মিলি"
+    ],
+    [
+     "উপকরণ",
+     "সিরামিক"
+    ],
+    [
+     "যত্ন",
+     "ডিশওয়াশারে ধোয়া যায়"
+    ]
+   ],
+   "weight": "0.35",
+   "featured": true,
+   "sales": 210,
+   "reviews": [
+    {
+     "author": "তানভীর হাসান",
+     "email": "tanvir.demo@example.com",
+     "rating": 5,
+     "title": "ডেস্কের প্রিয় মগ",
+     "text": "প্রিন্টটা দারুণ, অফিসে সবাই জিজ্ঞেস করে কোথা থেকে কিনেছি।",
+     "days": 4
+    },
+    {
+     "author": "সাদিয়া রহমান",
+     "email": "sadia.demo@example.com",
+     "rating": 5,
+     "title": "উপহার দিয়েছি",
+     "text": "ভাইকে উপহার দিয়েছি, প্যাকিং খুব যত্ন করে করা ছিল।",
+     "days": 27
+    }
+   ]
+  },
+  {
+   "key": "canvas-tote",
+   "name": "ক্যানভাস টোট ব্যাগ",
+   "slug": "canvas-tote-bag",
+   "sku": "LK-BG-004",
+   "categories": [
+    "bags"
+   ],
+   "image": "product-4",
+   "gallery": [
+    "product-4-alt"
+   ],
+   "regular": 380,
+   "stock": 50,
+   "short": "মজবুত সুতি ক্যানভাসের ব্যাগ। ল্যাপটপ, খাতা আর বাজার, সব এক ব্যাগেই ধরে।",
+   "description": "<p>মোটা সুতি ক্যানভাসে তৈরি, দুই স্তরের সেলাই করা হাতল। ভেতরে ছোট পকেটে চাবি আর ফোন রাখা যায়।</p><ul><li>১৫ ইঞ্চি পর্যন্ত ল্যাপটপ ধরে</li><li>ভেতরে জিপার পকেট</li><li>ধুয়ে আবার ব্যবহার করা যায়</li></ul>",
+   "specs": [
+    [
+     "উপকরণ",
+     "১২ আউন্স সুতি ক্যানভাস"
+    ],
+    [
+     "মাপ",
+     "৩৮ × ৪২ সেমি"
+    ],
+    [
+     "হাতল",
+     "৬০ সেমি"
+    ]
+   ],
+   "weight": "0.28",
+   "sales": 56,
+   "reviews": [
+    {
+     "author": "নুসরাত জাহান",
+     "email": "nusrat.demo@example.com",
+     "rating": 5,
+     "title": "বেশ মজবুত",
+     "text": "প্রতিদিন অফিসে নিই, তিন মাসেও সেলাই একটুও খোলেনি।",
+     "days": 15
+    }
+   ]
+  },
+  {
+   "key": "sticker-pack",
+   "name": "ডেভেলপার স্টিকার প্যাক",
+   "slug": "developer-sticker-pack",
+   "sku": "LK-ST-005",
+   "categories": [
+    "stickers"
+   ],
+   "image": "product-5",
+   "gallery": [
+    "product-5-alt"
+   ],
+   "regular": 150,
+   "sale": 120,
+   "saleDays": 7,
+   "stock": 120,
+   "short": "১২টি ওয়াটারপ্রুফ ভিনাইল স্টিকার। ল্যাপটপ, বোতল বা নোটবুকে লাগানোর জন্য।",
+   "description": "<p>বাংলা হরফ আর কোডের মজার মিশেলে আঁকা বারোটি স্টিকার। ম্যাট ভিনাইলে ছাপা, পানি বা রোদে রং ফিকে হয় না।</p><ul><li>১২টি আলাদা নকশা</li><li>ওয়াটারপ্রুফ ম্যাট ভিনাইল</li><li>তুলে ফেললে আঠার দাগ থাকে না</li></ul>",
+   "specs": [
+    [
+     "সংখ্যা",
+     "১২টি স্টিকার"
+    ],
+    [
+     "উপকরণ",
+     "ম্যাট ভিনাইল"
+    ],
+    [
+     "আকার",
+     "৫ থেকে ৮ সেমি"
+    ]
+   ],
+   "weight": "0.03",
+   "featured": true,
+   "sales": 302,
+   "reviews": [
+    {
+     "author": "আরিফুল ইসলাম",
+     "email": "ariful.demo@example.com",
+     "rating": 5,
+     "title": "ল্যাপটপ এখন রঙিন",
+     "text": "নকশাগুলো মজার, ছাপার মানও ভালো। আরেক প্যাক অর্ডার করব।",
+     "days": 3
+    },
+    {
+     "author": "মিতু আক্তার",
+     "email": "mitu.demo@example.com",
+     "rating": 4,
+     "title": "সুন্দর",
+     "text": "সবগুলোই পছন্দ হয়েছে, শুধু আরেকটু বড় হলে ভালো হতো।",
+     "days": 41
+    }
+   ]
+  },
+  {
+   "key": "desk-organizer",
+   "name": "কাঠের ডেস্ক অর্গানাইজার",
+   "slug": "wooden-desk-organizer",
+   "sku": "LK-DK-006",
+   "categories": [
+    "desk-accessories"
+   ],
+   "image": "product-6",
+   "gallery": [
+    "product-6-alt"
+   ],
+   "regular": 850,
+   "stock": 15,
+   "short": "মেহগনি কাঠের তৈরি অর্গানাইজার। কলম, ফোন আর ছোট নোটের জন্য আলাদা খোপ।",
+   "description": "<p>এক টুকরো মেহগনি কাঠ থেকে খোদাই করা অর্গানাইজার। কলম, ফোন, স্টিকি নোট আর চশমা, সব থাকে হাতের কাছে।</p><h3>যত্ন নেওয়ার নিয়ম</h3><p>শুকনো কাপড়ে মুছুন। মাঝে মাঝে কাঠের তেল লাগালে রং উজ্জ্বল থাকে।</p>",
+   "specs": [
+    [
+     "উপকরণ",
+     "মেহগনি কাঠ"
+    ],
+    [
+     "মাপ",
+     "২৪ × ১০ × ৯ সেমি"
+    ],
+    [
+     "খোপ",
+     "৪টি"
+    ]
+   ],
+   "weight": "0.6",
+   "sales": 41,
+   "reviews": [
+    {
+     "author": "তানভীর হাসান",
+     "email": "tanvir.demo@example.com",
+     "rating": 4,
+     "title": "ডেস্ক গোছানো থাকে",
+     "text": "কাঠের ফিনিশিং সুন্দর। ফোনের খোপটা আরেকটু চওড়া হলে ভালো হতো।",
+     "days": 9
+    }
+   ]
+  },
+  {
+   "key": "gift-box",
+   "type": "variable",
+   "name": "প্রিমিয়াম গিফট বক্স",
+   "slug": "premium-gift-box",
+   "sku": "LK-GB-007",
+   "categories": [
+    "gift-boxes"
+   ],
+   "image": "product-7",
+   "gallery": [
+    "product-7-green",
+    "product-7-blue"
+   ],
+   "short": "নোটবুক, কলম সেট, মগ আর স্টিকার একসঙ্গে। সুন্দর মোড়কে, শুভেচ্ছা কার্ডসহ।",
+   "description": "<p>প্রিয়জনের জন্য যত্নে সাজানো উপহার। বাছাই করা পণ্য, পছন্দের মোড়ক আর হাতে লেখা শুভেচ্ছা কার্ড, অর্ডার করলেই পৌঁছে যাবে।</p><ul><li>নোটবুক, কলম সেট, মগ ও স্টিকার প্যাক একসঙ্গে</li><li>হাতে লেখা শুভেচ্ছা কার্ড যোগ করার সুযোগ</li><li>আলাদা কিনলে যা খরচ, তার চেয়ে ৳২৫০ সাশ্রয়</li></ul>",
+   "specs": [
+    [
+     "ভেতরে যা আছে",
+     "নোটবুক, জেল কলম সেট, মগ, স্টিকার প্যাক"
+    ],
+    [
+     "শুভেচ্ছা কার্ড",
+     "বিনামূল্যে"
+    ]
+   ],
+   "weight": "1.1",
+   "attributes": [
+    {
+     "attribute": "wrap-color",
+     "terms": [
+      "pink",
+      "green",
+      "blue"
+     ]
+    },
+    {
+     "attribute": "box-size",
+     "terms": [
+      "small",
+      "medium",
+      "large"
+     ]
+    }
+   ],
+   "variations": [
+    {
+     "attributes": {
+      "wrap-color": "pink",
+      "box-size": "small"
+     },
+     "regular": 1100,
+     "sale": 950,
+     "saleDays": 14,
+     "stock": 12,
+     "sku": "LK-GB-007-PS",
+     "image": "product-7"
+    },
+    {
+     "attributes": {
+      "wrap-color": "pink",
+      "box-size": "medium"
+     },
+     "regular": 1500,
+     "sale": 1250,
+     "saleDays": 14,
+     "stock": 12,
+     "sku": "LK-GB-007-PM",
+     "image": "product-7"
+    },
+    {
+     "attributes": {
+      "wrap-color": "pink",
+      "box-size": "large"
+     },
+     "regular": 1900,
+     "sale": 1650,
+     "saleDays": 14,
+     "stock": 6,
+     "sku": "LK-GB-007-PL",
+     "image": "product-7"
+    },
+    {
+     "attributes": {
+      "wrap-color": "green",
+      "box-size": "small"
+     },
+     "regular": 1100,
+     "sale": 950,
+     "saleDays": 14,
+     "stock": 12,
+     "sku": "LK-GB-007-GS",
+     "image": "product-7-green"
+    },
+    {
+     "attributes": {
+      "wrap-color": "green",
+      "box-size": "medium"
+     },
+     "regular": 1500,
+     "sale": 1250,
+     "saleDays": 14,
+     "stock": 12,
+     "sku": "LK-GB-007-GM",
+     "image": "product-7-green"
+    },
+    {
+     "attributes": {
+      "wrap-color": "green",
+      "box-size": "large"
+     },
+     "regular": 1900,
+     "sale": 1650,
+     "saleDays": 14,
+     "stock": 6,
+     "sku": "LK-GB-007-GL",
+     "image": "product-7-green"
+    },
+    {
+     "attributes": {
+      "wrap-color": "blue",
+      "box-size": "small"
+     },
+     "regular": 1100,
+     "sale": 950,
+     "saleDays": 14,
+     "stock": 12,
+     "sku": "LK-GB-007-BS",
+     "image": "product-7-blue"
+    },
+    {
+     "attributes": {
+      "wrap-color": "blue",
+      "box-size": "medium"
+     },
+     "regular": 1500,
+     "sale": 1250,
+     "saleDays": 14,
+     "stock": 12,
+     "sku": "LK-GB-007-BM",
+     "image": "product-7-blue"
+    },
+    {
+     "attributes": {
+      "wrap-color": "blue",
+      "box-size": "large"
+     },
+     "regular": 1900,
+     "sale": 1650,
+     "saleDays": 14,
+     "stock": 6,
+     "sku": "LK-GB-007-BL",
+     "image": "product-7-blue"
+    }
+   ],
+   "featured": true,
+   "sales": 77,
+   "reviews": [
+    {
+     "author": "সাদিয়া রহমান",
+     "email": "sadia.demo@example.com",
+     "rating": 5,
+     "title": "উপহারটা সবার পছন্দ হয়েছে",
+     "text": "বোনের জন্মদিনে পাঠিয়েছিলাম। মোড়ক আর কার্ড দেখে সে খুবই খুশি।",
+     "days": 8
+    },
+    {
+     "author": "আরিফুল ইসলাম",
+     "email": "ariful.demo@example.com",
+     "rating": 5,
+     "title": "সময়মতো পৌঁছেছে",
+     "text": "পরের দিনই ডেলিভারি পেয়েছি, সবকিছু সুন্দরভাবে সাজানো ছিল।",
+     "days": 25
+    }
+   ]
+  },
+  {
+   "key": "weekly-planner",
+   "name": "২০২৭ সাপ্তাহিক প্ল্যানার",
+   "slug": "weekly-planner-2027",
+   "sku": "LK-PL-008",
+   "categories": [
+    "planners"
+   ],
+   "image": "product-8",
+   "gallery": [
+    "product-8-alt"
+   ],
+   "regular": 550,
+   "stock": 0,
+   "short": "সপ্তাহভিত্তিক পরিকল্পনার ডায়েরি। লক্ষ্য, অভ্যাস ট্র্যাকার আর মাসিক পর্যালোচনার পাতা আছে।",
+   "description": "<p>প্রতিটি সপ্তাহ দুই পাতায়, সঙ্গে মাসের শুরুতে লক্ষ্য ঠিক করার আর শেষে পর্যালোচনার পাতা। অভ্যাস ট্র্যাকার দিয়ে ছোট ছোট অগ্রগতিও চোখে পড়বে।</p>",
+   "specs": [
+    [
+     "পাতা",
+     "১৯২ পাতা"
+    ],
+    [
+     "আকার",
+     "A5"
+    ],
+    [
+     "সময়কাল",
+     "জানুয়ারি থেকে ডিসেম্বর ২০২৭"
+    ]
+   ],
+   "weight": "0.4",
+   "sales": 38,
+   "reviews": [
+    {
+     "author": "নুসরাত জাহান",
+     "email": "nusrat.demo@example.com",
+     "rating": 4,
+     "title": "গোছানো নকশা",
+     "text": "অভ্যাস ট্র্যাকারটা খুব কাজের। নতুন স্টক এলে আরেকটা নেব।",
+     "days": 52
+    }
+   ]
+  },
+  {
+   "key": "dotted-journal",
+   "name": "ডটেড জার্নাল A5",
+   "slug": "dotted-journal-a5",
+   "sku": "LK-NB-009",
+   "categories": [
+    "notebooks"
+   ],
+   "image": "product-1-alt",
+   "gallery": [
+    "product-1"
+   ],
+   "regular": 480,
+   "sale": 420,
+   "saleDays": 5,
+   "stock": 30,
+   "short": "ডট গ্রিড পাতার জার্নাল। বুলেট জার্নাল, স্কেচ আর ওয়্যারফ্রেম আঁকার জন্য উপযুক্ত।",
+   "description": "<p>৫ মিমি ডট গ্রিডে লেখা, আঁকা আর তালিকা বানানো, সবই সহজ। নম্বর দেওয়া পাতা আর সূচিপত্রের পাতা আছে।</p>",
+   "specs": [
+    [
+     "পাতার সংখ্যা",
+     "১৯২ পাতা"
+    ],
+    [
+     "গ্রিড",
+     "৫ মিমি ডট"
+    ],
+    [
+     "কাগজ",
+     "১২০ জিএসএম"
+    ]
+   ],
+   "weight": "0.36",
+   "sales": 64,
+   "reviews": [
+    {
+     "author": "মিতু আক্তার",
+     "email": "mitu.demo@example.com",
+     "rating": 5,
+     "title": "বুলেট জার্নালের জন্য সেরা",
+     "text": "ডটগুলো হালকা, লেখার পর চোখে পড়ে না। কাগজও মোটা।",
+     "days": 13
+    }
+   ]
+  },
+  {
+   "key": "fountain-pen",
+   "name": "ক্লাসিক ফাউন্টেন পেন",
+   "slug": "classic-fountain-pen",
+   "sku": "LK-PN-010",
+   "categories": [
+    "pens"
+   ],
+   "image": "product-2",
+   "gallery": [
+    "product-2-alt"
+   ],
+   "regular": 800,
+   "sale": 680,
+   "saleDays": 12,
+   "stock": 18,
+   "short": "স্টিলের নিবসহ ফাউন্টেন পেন। রিফিলযোগ্য কনভার্টার আর দুটি কালির কার্তুজ সঙ্গে।",
+   "description": "<p>হাতের লেখায় ফিরে যাওয়ার সবচেয়ে সুন্দর উপায়। মাঝারি স্টিলের নিব মসৃণভাবে চলে, কনভার্টার দিয়ে বোতলের কালিও ভরা যায়।</p>",
+   "specs": [
+    [
+     "নিব",
+     "মাঝারি, স্টেইনলেস স্টিল"
+    ],
+    [
+     "ভরার পদ্ধতি",
+     "কার্তুজ বা কনভার্টার"
+    ],
+    [
+     "সঙ্গে",
+     "২টি কালো কার্তুজ"
+    ]
+   ],
+   "weight": "0.05",
+   "sales": 52,
+   "reviews": [
+    {
+     "author": "তানভীর হাসান",
+     "email": "tanvir.demo@example.com",
+     "rating": 5,
+     "title": "প্রথম ফাউন্টেন পেন",
+     "text": "নতুনদের জন্য দারুণ। কালি আটকায় না, লিখতে আরাম।",
+     "days": 17
+    }
+   ]
+  },
+  {
+   "key": "travel-mug",
+   "name": "ট্রাভেল মগ ৪০০ মিলি",
+   "slug": "travel-mug-400ml",
+   "sku": "LK-MG-011",
+   "categories": [
+    "mugs"
+   ],
+   "image": "product-3-alt",
+   "gallery": [
+    "product-3"
+   ],
+   "regular": 720,
+   "stock": 22,
+   "short": "ডাবল-ওয়াল স্টিলের মগ। ছয় ঘণ্টা পর্যন্ত গরম থাকে, ঢাকনা থেকে চুইয়ে পড়ে না।",
+   "description": "<p>অফিস, ক্লাস কিংবা দীর্ঘ যাত্রা, গরম চা থাকবে গরম আর ঠান্ডা পানি থাকবে ঠান্ডা। এক হাতে খোলা যায় এমন ঢাকনা।</p>",
+   "specs": [
+    [
+     "ধারণক্ষমতা",
+     "৪০০ মিলি"
+    ],
+    [
+     "উপকরণ",
+     "ডাবল-ওয়াল স্টেইনলেস স্টিল"
+    ],
+    [
+     "তাপ ধরে রাখে",
+     "৬ ঘণ্টা পর্যন্ত"
+    ]
+   ],
+   "weight": "0.3",
+   "sales": 93,
+   "reviews": [
+    {
+     "author": "আরিফুল ইসলাম",
+     "email": "ariful.demo@example.com",
+     "rating": 4,
+     "title": "চা গরম থাকে",
+     "text": "সকালে ভরে নিলে দুপুর পর্যন্ত গরম থাকে। ঢাকনাটা একটু শক্ত।",
+     "days": 30
+    }
+   ]
+  },
+  {
+   "key": "mini-tote",
+   "name": "মিনি টোট ব্যাগ",
+   "slug": "mini-tote-bag",
+   "sku": "LK-BG-012",
+   "categories": [
+    "bags"
+   ],
+   "image": "product-4-alt",
+   "gallery": [
+    "product-4"
+   ],
+   "regular": 320,
+   "sale": 260,
+   "stock": 3,
+   "short": "ছোট আকারের ক্যানভাস ব্যাগ। টিফিন বক্স বা বই বহনের জন্য হালকা ও মজবুত।",
+   "description": "<p>টিফিন বক্স, একটি বই আর পানির বোতল, এর বেশি লাগে না এমন দিনের জন্য।</p>",
+   "specs": [
+    [
+     "উপকরণ",
+     "সুতি ক্যানভাস"
+    ],
+    [
+     "মাপ",
+     "২৮ × ৩০ সেমি"
+    ]
+   ],
+   "weight": "0.18",
+   "sales": 27,
+   "reviews": [
+    {
+     "author": "সাদিয়া রহমান",
+     "email": "sadia.demo@example.com",
+     "rating": 4,
+     "title": "ছোট কিন্তু কাজের",
+     "text": "টিফিন আর বই নিয়ে যাওয়ার জন্য একদম ঠিক মাপ।",
+     "days": 20
+    }
+   ]
+  }
+ ],
+ "posts": [
+  {
+   "key": "what-is-headless-wordpress",
+   "title": "হেডলেস ওয়ার্ডপ্রেস কী এবং কেন ব্যবহার করবেন",
+   "slug": "what-is-headless-wordpress",
+   "category": "wordpress",
+   "tags": [
+    "headless",
+    "wpgraphql"
+   ],
+   "image": "cover-1",
+   "author": "rahim",
+   "days": 15,
+   "sticky": true,
+   "excerpt": "কনটেন্ট থাকবে ওয়ার্ডপ্রেসে, আর সাইট চলবে Next.js-এ। এই ব্যবস্থায় গতি, নিরাপত্তা আর ডিজাইনের স্বাধীনতা কীভাবে বাড়ে, সহজ ভাষায় জেনে নিন।",
+   "content": "<p>ওয়ার্ডপ্রেস দিয়ে সাইট বানানো মানেই থিম, প্লাগইন আর PHP টেমপ্লেট, এমনটাই আমরা জানি। কিন্তু গত কয়েক বছরে আরেকটি ধারা জনপ্রিয় হয়েছে: <strong>হেডলেস ওয়ার্ডপ্রেস</strong>। এখানে ওয়ার্ডপ্রেস শুধু কনটেন্ট সামলায়, আর দর্শক যে সাইট দেখেন সেটা তৈরি হয় আলাদা একটি ফ্রন্টএন্ড দিয়ে।</p>\n<p>এই লেখায় আমরা দেখব হেডলেস বলতে আসলে কী বোঝায়, কখন এটি কাজে লাগে এবং কখন লাগে না। শেষে থাকবে শুরু করার একটি ছোট চেকলিস্ট।</p>\n<h2>হেডলেস বলতে কী বোঝায়</h2>\n<p>সাধারণ ওয়ার্ডপ্রেসে \"মাথা\" হলো থিম, অর্থাৎ যে অংশ HTML তৈরি করে। হেডলেস ব্যবস্থায় সেই মাথা সরিয়ে ফেলা হয়। ওয়ার্ডপ্রেস তখন একটি কনটেন্ট API হিসেবে কাজ করে, আর <code>Next.js</code>-এর মতো ফ্রেমওয়ার্ক সেই API থেকে ডেটা নিয়ে পাতা সাজায়।</p>\n<blockquote>\n<p>কনটেন্ট এক জায়গায় লিখুন, দেখান যেখানে খুশি: ওয়েবসাইটে, মোবাইল অ্যাপে কিংবা স্মার্ট ডিসপ্লেতে।</p>\n<cite>হেডলেস ধারণার মূল কথা</cite>\n</blockquote>\n<h3>REST নাকি GraphQL</h3>\n<p>ওয়ার্ডপ্রেসে REST API আগে থেকেই আছে। তবে <mark>WPGraphQL</mark> প্লাগইন ব্যবহার করলে এক অনুরোধেই ঠিক যতটুকু ডেটা দরকার ততটুকু আনা যায়। নিচের কোয়েরিটি সাম্প্রতিক ছয়টি পোস্ট আনে:</p>\n<pre><code>query RecentPosts {\nposts(first: 6) {\nnodes {\ntitle\nuri\nexcerpt\nfeaturedImage {\nnode { sourceUrl altText }\n}\n}\n}\n}</code></pre>\n<h2>কেন হেডলেস ব্যবহার করবেন</h2>\n<p>সব প্রকল্পে হেডলেস দরকার হয় না। তবে নিচের সুবিধাগুলো আপনার কাছে গুরুত্বপূর্ণ হলে ভেবে দেখতে পারেন:</p>\n<ul>\n<li><strong>গতি:</strong> পাতা আগে থেকেই তৈরি থাকে, তাই দর্শকের কাছে পৌঁছায় চোখের পলকে।</li>\n<li><strong>নিরাপত্তা:</strong> ওয়ার্ডপ্রেস অ্যাডমিন জনসাধারণের সাইট থেকে আলাদা থাকে।</li>\n<li><strong>ডিজাইনের স্বাধীনতা:</strong> থিমের সীমাবদ্ধতা নেই, কম্পোনেন্ট দিয়ে যা খুশি বানানো যায়।</li>\n<li><strong>পরিচিত এডিটর:</strong> লেখকরা আগের মতোই ব্লক এডিটরে লেখেন।</li>\n</ul>\n<figure>\n<img src=\"{{image-url:cover-2}}\" alt=\"ব্রাউজার উইন্ডোতে একটি ওয়েব পাতার নকশা\" width=\"1200\" height=\"675\" loading=\"lazy\">\n<figcaption class=\"wp-element-caption\">ফ্রন্টএন্ড আলাদা হলে ডিজাইন নিয়ে পরীক্ষা করা সহজ হয়।</figcaption>\n</figure>\n<h3>কখন হেডলেস ঠিক পছন্দ নয়</h3>\n<p>ছোট ব্যক্তিগত ব্লগ, কিংবা যেখানে অনেক প্লাগইনের ফ্রন্টএন্ড ফিচার দরকার, সেখানে প্রচলিত থিমই সহজ সমাধান। হেডলেসে দুটি আলাদা সিস্টেম দেখাশোনা করতে হয়, সেটা মাথায় রাখুন।</p>\n<h2>শুরু করার ধাপ</h2>\n<ol>\n<li>ওয়ার্ডপ্রেসে WPGraphQL প্লাগইন ইনস্টল ও চালু করুন।</li>\n<li>দোকান থাকলে WooGraphQL যোগ করুন।</li>\n<li><kbd>npx create-next-app</kbd> দিয়ে নতুন Next.js প্রকল্প খুলুন।</li>\n<li>একটি ছোট <code>fetchGraphQL()</code> ফাংশন লিখে প্রথম কোয়েরি চালান।</li>\n<li>পোস্ট প্রকাশের ওয়েবহুক দিয়ে রিভ্যালিডেশন সেট করুন।</li>\n</ol>\n<h2>এক নজরে কিছু ছবি</h2>\n<p>ছবিতে ক্লিক করলে বড় করে দেখা যাবে, তীর চিহ্ন দিয়ে পরের ছবিতে যাওয়া যাবে।</p>\n<figure class=\"wp-block-gallery\">\n<figure><img data-caption=\"ডেটার গ্রাফ: নোড ও সংযোগ\" src=\"{{image-url:cover-1}}\" alt=\"নোড ও সংযোগের চিত্র\" width=\"1200\" height=\"675\" loading=\"lazy\"></figure>\n<figure><img data-caption=\"ব্রাউজারে সাজানো পাতা\" src=\"{{image-url:cover-2}}\" alt=\"ব্রাউজার উইন্ডোর নকশা\" width=\"1200\" height=\"675\" loading=\"lazy\"></figure>\n<figure><img data-caption=\"স্তরে স্তরে সাজানো কম্পোনেন্ট\" src=\"{{image-url:cover-3}}\" alt=\"স্তরযুক্ত কার্ডের চিত্র\" width=\"1200\" height=\"675\" loading=\"lazy\"></figure>\n<figure><img data-caption=\"টাইপোগ্রাফির নমুনা\" src=\"{{image-url:cover-4}}\" alt=\"বড় অক্ষরের নকশা\" width=\"1200\" height=\"675\" loading=\"lazy\"></figure>\n</figure>\n<h2>শেষ কথা</h2>\n<p>হেডলেস ওয়ার্ডপ্রেস কোনো জাদু নয়, এটি একটি স্থাপত্য-সিদ্ধান্ত। আপনার দলে জাভাস্ক্রিপ্ট জানা মানুষ থাকলে এবং গতি ও ডিজাইনের স্বাধীনতা জরুরি হলে এটি দারুণ কাজ করে। পরের লেখায় আমরা WPGraphQL দিয়ে প্রথম কোয়েরি লিখব।</p>"
+  },
+  {
+   "key": "first-wpgraphql-query",
+   "title": "WPGraphQL দিয়ে প্রথম কোয়েরি লেখা",
+   "slug": "first-wpgraphql-query",
+   "category": "graphql",
+   "tags": [
+    "wpgraphql"
+   ],
+   "image": "cover-2",
+   "author": "karima",
+   "days": 19,
+   "excerpt": "প্লাগইন চালু করা থেকে শুরু করে পোস্টের তালিকা আনা পর্যন্ত, GraphiQL IDE-তে হাতে-কলমে প্রথম কোয়েরি লিখে ফেলুন।",
+   "content": "<p>WPGraphQL চালু করলেই ওয়ার্ডপ্রেসের সব কনটেন্ট একটি GraphQL এন্ডপয়েন্টে পাওয়া যায়। কোয়েরি লেখার আগে দেখে নেওয়া যাক কোথা থেকে শুরু করবেন।</p>\n<h2>প্লাগইন চালু করুন</h2>\n<p>প্লাগইন যোগ করার পর অ্যাডমিন মেনুতে GraphQL নামে নতুন একটি অংশ আসবে। সেখানে GraphiQL IDE খুললেই বাঁ দিকে পুরো স্কিমা দেখা যায়।</p>\n<h2>প্রথম কোয়েরি</h2>\n<pre><code>query RecentPosts {\n  posts(first: 3) {\n    nodes { title uri }\n  }\n}</code></pre>\n<p>চালালেই ডান দিকে তিনটি পোস্টের শিরোনাম আর লিংক আসবে। ঠিক যা চেয়েছেন, তার বেশি কিছু নয়, এটাই GraphQL-এর সুবিধা।</p>"
+  },
+  {
+   "key": "nextjs-app-router-blog",
+   "title": "Next.js App Router-এ ব্লগ তৈরি: ধাপে ধাপে",
+   "slug": "nextjs-app-router-blog",
+   "category": "nextjs",
+   "tags": [
+    "react",
+    "headless"
+   ],
+   "image": "cover-3",
+   "author": "rahim",
+   "days": 24,
+   "excerpt": "সার্ভার কম্পোনেন্ট, ডায়নামিক রাউট আর generateStaticParams ব্যবহার করে একটি পূর্ণাঙ্গ ব্লগের কাঠামো দাঁড় করানোর গাইড।",
+   "content": "<p>App Router-এ প্রতিটি ফোল্ডার একটি রাউট, আর পাতাগুলো ডিফল্টভাবে সার্ভার কম্পোনেন্ট। ব্লগের জন্য এর চেয়ে সুবিধাজনক কাঠামো খুব কমই আছে।</p>\n<h2>রাউটের কাঠামো</h2>\n<ul><li><code>app/blog/page.tsx</code>: সব লেখার তালিকা</li><li><code>app/blog/[slug]/page.tsx</code>: একটি লেখা</li><li><code>app/blog/[slug]/loading.tsx</code>: লোড হওয়ার সময়ের কাঠামো</li></ul>\n<h2>আগে থেকে পাতা তৈরি</h2>\n<p><code>generateStaticParams</code> দিয়ে সব লেখার slug আগে থেকে জানিয়ে দিলে বিল্ডের সময়ই পাতাগুলো তৈরি হয়ে থাকে। নতুন লেখা এলে রিভ্যালিডেশন বাকিটা সামলায়।</p>"
+  },
+  {
+   "key": "bangla-web-fonts",
+   "title": "বাংলা ওয়েবসাইটের জন্য সঠিক ফন্ট বাছাই",
+   "slug": "bangla-web-fonts",
+   "category": "design",
+   "tags": [
+    "typography"
+   ],
+   "image": "cover-4",
+   "author": "karima",
+   "days": 31,
+   "excerpt": "যুক্তাক্ষর, লাইন-হাইট আর ওজনের ভারসাম্য ঠিক না হলে বাংলা লেখা পড়তে কষ্ট হয়। কোন ফন্ট কোথায় মানায়, দেখে নিন।",
+   "content": "<p>বাংলা হরফের মাত্রা, যুক্তাক্ষর আর কার-চিহ্ন লাতিন হরফের চেয়ে বেশি জায়গা নেয়। তাই ইংরেজি সাইটের সেটিং হুবহু বসালে লেখা ঘিঞ্জি দেখায়।</p>\n<h2>শিরোনাম আর মূল লেখা আলাদা করুন</h2>\n<p>শিরোনামে সেরিফ ধাঁচের ফন্ট আর মূল লেখায় পরিষ্কার স্যান্স-সেরিফ ভালো মানায়। দুটোর ওজন আর উচ্চতা যেন কাছাকাছি থাকে।</p>\n<h2>লাইন-হাইট বাড়ান</h2>\n<p>বাংলা মূল লেখায় ১.৭ থেকে ১.৮ লাইন-হাইট রাখলে ওপর-নিচের কার-চিহ্ন একে অপরের গায়ে লাগে না।</p>"
+  },
+  {
+   "key": "woographql-headless-shop",
+   "title": "WooGraphQL দিয়ে হেডলেস দোকান: কার্ট থেকে চেকআউট",
+   "slug": "woographql-headless-shop",
+   "category": "graphql",
+   "tags": [
+    "woocommerce",
+    "wpgraphql"
+   ],
+   "image": "cover-2",
+   "author": "rahim",
+   "days": 38,
+   "excerpt": "সেশন টোকেন সামলানো, addToCart মিউটেশন আর চেকআউটের ধাপগুলো একটি বাস্তব উদাহরণ দিয়ে বোঝানো হয়েছে।",
+   "content": "<p>হেডলেস দোকানে কার্ট থাকে সার্ভারে, আর ব্রাউজার শুধু একটি সেশন টোকেন রাখে। সেই টোকেনই প্রতিটি অনুরোধে বলে দেয় কার্টটি কার।</p>\n<h2>সেশন টোকেন</h2>\n<p>প্রথম <code>addToCart</code> মিউটেশনের উত্তরে <code>woocommerce-session</code> হেডার আসে। সেটি httpOnly কুকিতে রেখে পরের সব অনুরোধে পাঠালেই কার্ট টিকে থাকে।</p>\n<h2>চেকআউট</h2>\n<p><code>checkout</code> মিউটেশনে ঠিকানা, পেমেন্ট পদ্ধতি আর শিপিং দিলেই অর্ডার তৈরি হয়। লগইন করা ক্রেতার অর্ডার তাঁর অ্যাকাউন্টে যুক্ত হয়ে যায়।</p>"
+  },
+  {
+   "key": "isr-on-demand-revalidation",
+   "title": "ISR ও অন-ডিমান্ড রিভ্যালিডেশন সহজ ভাষায়",
+   "slug": "isr-on-demand-revalidation",
+   "category": "nextjs",
+   "tags": [
+    "headless"
+   ],
+   "image": "cover-3",
+   "author": "karima",
+   "days": 45,
+   "excerpt": "নতুন পোস্ট প্রকাশের সঙ্গে সঙ্গে সাইট আপডেট হবে, অথচ পুরো সাইট আবার বিল্ড করতে হবে না। ওয়েবহুক দিয়ে সেটা কীভাবে করবেন।",
+   "content": "<p>আগে থেকে তৈরি পাতা দ্রুত, কিন্তু পুরোনো হয়ে যেতে পারে। রিভ্যালিডেশন এই দুইয়ের মাঝে ভারসাম্য আনে।</p>\n<h2>সময় ধরে রিভ্যালিডেশন</h2>\n<p>প্রতি কয়েক মিনিটে পাতা নতুন করে তৈরি হয়। সহজ, তবে পরিবর্তন দেখতে কিছুক্ষণ অপেক্ষা করতে হয়।</p>\n<h2>অন-ডিমান্ড রিভ্যালিডেশন</h2>\n<p>ওয়ার্ডপ্রেসে লেখা সেভ হলেই একটি ওয়েবহুক ফ্রন্টএন্ডকে জানায়, আর শুধু সংশ্লিষ্ট ডেটা নতুন করে আনা হয়। পরিবর্তন দেখা যায় সঙ্গে সঙ্গেই।</p>"
+  },
+  {
+   "key": "tailwind-v4-design-tokens",
+   "title": "Tailwind CSS v4-এ ডিজাইন টোকেন সাজানো",
+   "slug": "tailwind-v4-design-tokens",
+   "category": "design",
+   "tags": [
+    "typography"
+   ],
+   "image": "cover-4",
+   "author": "rahim",
+   "days": 53,
+   "excerpt": "কনফিগ ফাইল ছাড়াই @theme দিয়ে রঙ, ফন্ট আর ব্রেকপয়েন্ট সাজান, আর টোকেন বদলে ডার্ক মোড চালু করুন।",
+   "content": "<p>Tailwind v4-এ টোকেন থাকে সরাসরি CSS-এ। <code>@theme</code> ব্লকে রঙ বা ফন্ট লিখলেই সেগুলো ইউটিলিটি ক্লাস হয়ে যায়।</p>\n<h2>রঙের টোকেন</h2>\n<pre><code>@theme {\n  --color-ink: #1f2937;\n  --color-accent: #0f766e;\n}</code></pre>\n<h2>ডার্ক মোড</h2>\n<p>একই টোকেন ডার্ক মোডে নতুন মান পেলেই পুরো সাইটের রং বদলে যায়। আলাদা আলাদা ক্লাস লিখতে হয় না।</p>"
+  },
+  {
+   "key": "headless-seo",
+   "title": "হেডলেস সাইটে SEO: মেটাডেটা থেকে সাইটম্যাপ",
+   "slug": "headless-seo",
+   "category": "wordpress",
+   "tags": [
+    "seo",
+    "headless"
+   ],
+   "image": "cover-1",
+   "author": "karima",
+   "days": 60,
+   "excerpt": "ওয়ার্ডপ্রেসের SEO প্লাগইনের ডেটা GraphQL দিয়ে এনে Next.js-এর Metadata API-তে বসানোর পুরো প্রক্রিয়া।",
+   "content": "<p>হেডলেস সাইটে থিম নেই, তাই SEO প্লাগইন নিজে থেকে মেটা ট্যাগ বসাতে পারে না। কাজটি করতে হয় ফ্রন্টএন্ডে।</p>\n<h2>মেটাডেটা</h2>\n<p>প্রতিটি পাতার <code>generateMetadata</code> ফাংশনে শিরোনাম, বিবরণ আর Open Graph ছবি দিন। ডেটা আসবে GraphQL থেকে।</p>\n<h2>সাইটম্যাপ</h2>\n<p><code>app/sitemap.ts</code> ফাইলে সব পোস্ট আর পণ্যের লিংক তালিকা করে দিলেই সার্চ ইঞ্জিন নতুন পাতা খুঁজে পায়।</p>"
+  },
+  {
+   "key": "acf-fields-in-graphql",
+   "title": "ACF ফিল্ড GraphQL-এ আনার সহজ উপায়",
+   "slug": "acf-fields-in-graphql",
+   "category": "graphql",
+   "tags": [
+    "wpgraphql"
+   ],
+   "image": "cover-2",
+   "author": "rahim",
+   "days": 68,
+   "excerpt": "কাস্টম ফিল্ড গ্রুপ স্কিমায় দেখানো, ফ্র্যাগমেন্ট দিয়ে গুছিয়ে আনা এবং কম্পোনেন্টে ব্যবহার করার কৌশল।",
+   "content": "<p>WPGraphQL for ACF চালু থাকলে প্রতিটি ফিল্ড গ্রুপ GraphQL-এ একটি টাইপ হয়ে যায়। শুধু গ্রুপের সেটিংয়ে \"Show in GraphQL\" চালু রাখতে হয়।</p>\n<h2>ফ্র্যাগমেন্ট</h2>\n<p>একই ফিল্ড কয়েক জায়গায় লাগলে ফ্র্যাগমেন্ট লিখে রাখুন। কোয়েরি ছোট থাকে, ভুলও কম হয়।</p>\n<h2>ছবি আর সম্পর্ক</h2>\n<p>ছবি আর সম্পর্কিত পোস্ট আসে <code>node</code> বা <code>nodes</code> হিসেবে, তাই প্রয়োজনীয় ফিল্ডগুলো আলাদা করে চেয়ে নিতে হয়।</p>"
+  },
+  {
+   "key": "how-to-choose-a-notebook",
+   "title": "কেনার আগে পড়ুন: ভালো নোটবুক চেনার ৫ উপায়",
+   "slug": "how-to-choose-a-notebook",
+   "category": "buying-guide",
+   "tags": [
+    "notebook"
+   ],
+   "image": "cover-4",
+   "author": "karima",
+   "days": 11,
+   "excerpt": "কাগজের ওজন, বাঁধাই আর রুলিং দেখে কীভাবে বুঝবেন নোটবুকটি আপনার কাজের জন্য ঠিক কি না।",
+   "content": "<p>দেখতে সব নোটবুক প্রায় একই রকম। কিন্তু কয়েকটি জিনিস খেয়াল করলেই বোঝা যায় কোনটি দীর্ঘদিন সঙ্গী হবে।</p>\n<h2>যা দেখবেন</h2>\n<ol><li><strong>কাগজের ওজন:</strong> ৮০ জিএসএমের বেশি হলে কালি অন্য পাতায় যায় না।</li><li><strong>বাঁধাই:</strong> সেলাই করা বাঁধাই পুরো খুলে সমান রাখা যায়।</li><li><strong>রুলিং:</strong> লেখার জন্য রুলড, আঁকা ও তালিকার জন্য ডটেড।</li><li><strong>আকার:</strong> ব্যাগে রাখার জন্য A5 সবচেয়ে সুবিধাজনক।</li><li><strong>মলাট:</strong> হার্ডকভার হাতে রেখে লেখার সময় ভরসা দেয়।</li></ol>\n<p>আমাদের <a href=\"/product/lekhoni-classic-notebook\">ক্লাসিক নোটবুকে</a> এই পাঁচটিই মিলবে।</p>"
+  },
+  {
+   "key": "which-pen-suits-you",
+   "title": "কোন কলম আপনার লেখার জন্য মানানসই",
+   "slug": "which-pen-suits-you",
+   "category": "buying-guide",
+   "tags": [
+    "pen"
+   ],
+   "image": "cover-1",
+   "author": "rahim",
+   "days": 13,
+   "excerpt": "জেল, বলপয়েন্ট না ফাউন্টেন? লেখার ধরন আর কাগজ অনুযায়ী কলম বাছাইয়ের সহজ নিয়ম।",
+   "content": "<p>কলম বাছাই নির্ভর করে আপনি কী লেখেন, কত দ্রুত লেখেন আর কোন কাগজে লেখেন তার ওপর।</p>\n<h2>তিন ধরনের কলম</h2>\n<ul><li><strong>বলপয়েন্ট:</strong> সব কাগজে চলে, কালি দ্রুত শুকায়</li><li><strong>জেল:</strong> মসৃণ আর উজ্জ্বল, নোট আর জার্নালের জন্য ভালো</li><li><strong>ফাউন্টেন:</strong> হাতের লেখা সুন্দর করে, তবে ভালো কাগজ চায়</li></ul>\n<p>প্রতিদিনের নোটের জন্য <a href=\"/product/smooth-gel-pen-set\">জেল কলম সেট</a>, আর লেখার আনন্দের জন্য <a href=\"/product/classic-fountain-pen\">ফাউন্টেন পেন</a> চেষ্টা করে দেখুন।</p>"
+  },
+  {
+   "key": "gift-box-guide",
+   "title": "উপহারে কী দেবেন: গিফট বক্স সাজানোর গাইড",
+   "slug": "gift-box-guide",
+   "category": "buying-guide",
+   "tags": [
+    "gift"
+   ],
+   "image": "cover-3",
+   "author": "karima",
+   "days": 17,
+   "excerpt": "বাজেট অনুযায়ী তিন রকম গিফট বক্সের আইডিয়া, সঙ্গে মোড়ক আর শুভেচ্ছা কার্ডের পরামর্শ।",
+   "content": "<p>ভালো উপহার দামি হতে হবে এমন নয়। প্রাপকের পছন্দ মাথায় রেখে কয়েকটি জিনিস একসঙ্গে সাজালেই তা মনে রাখার মতো হয়।</p>\n<h2>বাজেট অনুযায়ী তিন আইডিয়া</h2>\n<ul><li><strong>৳১,০০০-এর মধ্যে:</strong> নোটবুক, জেল কলম সেট আর স্টিকার</li><li><strong>৳১,৫০০-এর মধ্যে:</strong> সঙ্গে একটি সিরামিক মগ</li><li><strong>৳২,০০০-এর মধ্যে:</strong> ফাউন্টেন পেন আর প্ল্যানারসহ বড় বক্স</li></ul>\n<h2>মোড়ক আর কার্ড</h2>\n<p>প্রাপকের প্রিয় রঙের মোড়ক বেছে নিন, আর কার্ডে দুই লাইন নিজের হাতে লিখুন। আমাদের <a href=\"/product/premium-gift-box\">প্রিমিয়াম গিফট বক্সে</a> তিন রঙ আর তিন আকার আছে।</p>"
+  }
+ ],
+ "pages": [
+  {
+   "key": "home",
+   "title": "Home",
+   "slug": "home",
+   "template": "templates/template-home.php",
+   "content": "",
+   "acfGroup": "group_6aca0d1273713",
+   "acf": {
+    "slider_section": {
+     "slider_items": [
+      {
+       "eyebrow": "নতুন কালেকশন ২০২৬",
+       "title": "লেখার টেবিল সাজান নিজের মতো করে",
+       "description": "নোটবুক, মগ আর কলম। প্রতিদিনের লেখালেখির সঙ্গী এখন এক জায়গায়।",
+       "image": "@image:hero-1",
+       "buy_now_url": "/product/lekhoni-classic-notebook",
+       "collection_url": "/product-category/notebooks"
+      },
+      {
+       "eyebrow": "উপহারের মৌসুম",
+       "title": "প্রিয়জনের জন্য যত্নে সাজানো গিফট বক্স",
+       "description": "সুন্দর মোড়ক, শুভেচ্ছা কার্ড আর বাছাই করা পণ্য। অর্ডার করলেই পৌঁছে যাবে।",
+       "image": "@image:hero-2",
+       "buy_now_url": "/product/premium-gift-box",
+       "collection_url": "/product-category/gift-boxes"
+      },
+      {
+       "eyebrow": "ডেস্ক সেটআপ",
+       "title": "গোছানো ডেস্ক, গোছানো ভাবনা",
+       "description": "কাঠের অর্গানাইজার আর সাপ্তাহিক প্ল্যানারে কাজ এগোবে পরিকল্পনা মেনে।",
+       "image": "@image:hero-3",
+       "buy_now_url": "/product/wooden-desk-organizer",
+       "collection_url": "/product-category/desk-accessories"
+      }
+     ]
+    },
+    "trust_section": {
+     "items": [
+      {
+       "icon": "truck",
+       "title": "দ্রুত ডেলিভারি",
+       "description": "ঢাকায় ২৪ ঘণ্টায়, সারা দেশে ৩ থেকে ৫ দিনে"
+      },
+      {
+       "icon": "shield-check",
+       "title": "ক্যাশ অন ডেলিভারি",
+       "description": "পণ্য হাতে পেয়ে তারপর মূল্য পরিশোধ"
+      },
+      {
+       "icon": "rotate-ccw",
+       "title": "৭ দিনে সহজ রিটার্ন",
+       "description": "পছন্দ না হলে ফেরত দিন, কোনো প্রশ্ন ছাড়াই"
+      },
+      {
+       "icon": "headset",
+       "title": "২৪/৭ সাপোর্ট",
+       "description": "যেকোনো প্রয়োজনে ফোন বা মেসেজ করুন"
+      }
+     ]
+    },
+    "category_section": {
+     "categories": [
+      "@term:product_cat:notebooks",
+      "@term:product_cat:pens",
+      "@term:product_cat:mugs",
+      "@term:product_cat:bags",
+      "@term:product_cat:stickers",
+      "@term:product_cat:gift-boxes"
+     ]
+    },
+    "flash_sale_section": {
+     "title": "ডিল অফ দ্য ডে",
+     "ends_at": "@date:+3",
+     "products": [
+      "@product:sticker-pack",
+      "@product:ceramic-mug",
+      "@product:classic-notebook",
+      "@product:fountain-pen",
+      "@product:dotted-journal",
+      "@product:gift-box"
+     ]
+    },
+    "featured_section": {
+     "title": "নির্বাচিত পণ্য",
+     "new_label": "নতুন এসেছে",
+     "best_label": "বেস্টসেলার",
+     "sale_label": "অফারে",
+     "new_products": [
+      "@product:canvas-tote",
+      "@product:desk-organizer",
+      "@product:travel-mug",
+      "@product:weekly-planner"
+     ],
+     "best_products": [
+      "@product:sticker-pack",
+      "@product:ceramic-mug",
+      "@product:classic-notebook",
+      "@product:gel-pen-set"
+     ],
+     "sale_products": [
+      "@product:dotted-journal",
+      "@product:fountain-pen",
+      "@product:mini-tote",
+      "@product:gift-box"
+     ]
+    },
+    "promo_section": {
+     "title": "চলতি অফার",
+     "banners": [
+      {
+       "eyebrow": "সীমিত সময়ের অফার",
+       "title": "স্টেশনারি কালেকশন: ২০% ছাড়",
+       "style": "accent",
+       "text": "নোটবুক, কলম আর প্ল্যানারে বিশেষ ছাড় চলছে এই মাসজুড়ে।",
+       "link": {
+        "title": "অফার দেখুন",
+        "url": "/shop",
+        "target": ""
+       },
+       "image": "@image:product-2"
+      },
+      {
+       "eyebrow": "উপহার",
+       "title": "গিফট বক্স: প্রিয়জনের জন্য",
+       "style": "sale",
+       "text": "জন্মদিন কিংবা সাফল্য উদ্‌যাপন, তৈরি বক্সেই উপহার প্রস্তুত।",
+       "link": {
+        "title": "গিফট বক্স দেখুন",
+        "url": "/product-category/gift-boxes",
+        "target": ""
+       },
+       "image": "@image:product-7"
+      }
+     ]
+    },
+    "spotlight_section": {
+     "eyebrow": "এই সপ্তাহের সেরা",
+     "product": [
+      "@product:gift-box"
+     ],
+     "highlights": [
+      {
+       "text": "নোটবুক, কলম সেট, মগ ও স্টিকার প্যাক একসঙ্গে"
+      },
+      {
+       "text": "হাতে লেখা শুভেচ্ছা কার্ড যোগ করার সুযোগ"
+      },
+      {
+       "text": "আলাদা কিনলে যা খরচ, তার চেয়ে ৳২৫০ সাশ্রয়"
+      }
+     ]
+    },
+    "best_sellers_section": {
+     "title": "বেস্টসেলার",
+     "products": [
+      "@product:sticker-pack",
+      "@product:ceramic-mug",
+      "@product:classic-notebook",
+      "@product:travel-mug",
+      "@product:gel-pen-set",
+      "@product:gift-box",
+      "@product:dotted-journal",
+      "@product:canvas-tote"
+     ]
+    },
+    "reviews_section": {
+     "title": "ক্রেতারা যা বলছেন",
+     "source": "auto",
+     "testimonials": [
+      {
+       "name": "সাদিয়া রহমান",
+       "location": "ঢাকা",
+       "rating": 5,
+       "verified": 1,
+       "text": "বোনের জন্মদিনে গিফট বক্স পাঠিয়েছিলাম। মোড়ক আর কার্ড দেখে সে খুবই খুশি।"
+      },
+      {
+       "name": "আরিফুল ইসলাম",
+       "location": "চট্টগ্রাম",
+       "rating": 5,
+       "verified": 1,
+       "text": "নোটবুকের কাগজের মান অসাধারণ। ফাউন্টেন পেনেও কালি ছড়ায় না।"
+      },
+      {
+       "name": "নুসরাত জাহান",
+       "location": "সিলেট",
+       "rating": 4,
+       "verified": 1,
+       "text": "ডেলিভারি সময়মতো পেয়েছি, প্যাকিংও যত্ন করে করা। আবার কিনব।"
+      }
+     ]
+    },
+    "brands_section": {
+     "title": "যেসব ব্র্যান্ড আমাদের সঙ্গে আছে",
+     "brands": [
+      {
+       "name": "কাগজকলম",
+       "logo": "",
+       "link": ""
+      },
+      {
+       "name": "নীলখাতা",
+       "logo": "",
+       "link": ""
+      },
+      {
+       "name": "চায়ের কাপ",
+       "logo": "",
+       "link": ""
+      },
+      {
+       "name": "সুতোবোনা",
+       "logo": "",
+       "link": ""
+      },
+      {
+       "name": "কাঠঠোকরা",
+       "logo": "",
+       "link": ""
+      },
+      {
+       "name": "ঝরনা কালি",
+       "logo": "",
+       "link": ""
+      }
+     ]
+    },
+    "blog_section": {
+     "title": "কেনার আগে পড়ুন",
+     "link_label": "সব গাইড",
+     "category": [
+      "@term:category:buying-guide"
+     ],
+     "count": 3
+    },
+    "subscribe_section": {
+     "title": "নতুন অফারের খবর সরাসরি ইনবক্সে",
+     "text": "নতুন পণ্য, ছাড় আর লেখার খবর সবার আগে পেতে সাবস্ক্রাইব করুন।",
+     "success_message": "সাবস্ক্রাইব করার জন্য ধন্যবাদ!",
+     "note": "মাসে দু-একটির বেশি ইমেইল নয়। যেকোনো সময় আনসাবস্ক্রাইব করা যায়।"
+    }
+   }
+  },
+  {
+   "key": "about",
+   "title": "আমাদের সম্পর্কে",
+   "slug": "about",
+   "template": "templates/template-about.php",
+   "content": "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">আমাদের লক্ষ্য</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>ইংরেজিতে ওয়েব প্রযুক্তি নিয়ে লেখার অভাব নেই, কিন্তু মাতৃভাষায় গুছিয়ে লেখা নির্ভরযোগ্য উপকরণ এখনো কম। আমরা চাই বাংলাভাষী যে কেউ যেন <strong>হেডলেস ওয়ার্ডপ্রেস, GraphQL আর Next.js</strong> নিজের ভাষায় শিখতে পারেন।</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>লেখার পাশাপাশি আমাদের একটি ছোট দোকানও আছে। নোটবুক, কলম আর মগের মতো যেসব জিনিস আমরা নিজেরা প্রতিদিন ব্যবহার করি, সেগুলোই সেখানে রাখি। দোকানের আয় দিয়েই ব্লগটি বিজ্ঞাপনমুক্ত রাখা সম্ভব হয়।</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><!-- wp:paragraph -->\n<p>ভালো লেখা পাঠকের সময় বাঁচায়। আমরা প্রতিটি লেখা সেই মাপকাঠিতে যাচাই করি।</p>\n<!-- /wp:paragraph --></blockquote>\n<!-- /wp:quote -->",
+   "acfGroup": "group_lk_about_page",
+   "acf": {
+    "hero": {
+     "eyebrow": "আমাদের গল্প",
+     "title": "বাংলায় আধুনিক ওয়েব শেখার",
+     "highlight": "একটি খোলা খাতা",
+     "description": "লেখনী শুরু হয়েছিল নিজেদের শেখা টুকে রাখার জন্য। আজ এটি হাজারো ডেভেলপার ও ডিজাইনারের নিয়মিত পড়ার জায়গা।",
+     "primary_button": {
+      "title": "শপ দেখুন",
+      "url": "/shop",
+      "target": ""
+     },
+     "secondary_button": {
+      "title": "যোগাযোগ করুন",
+      "url": "/contact",
+      "target": ""
+     },
+     "image": "@image:cover-4"
+    },
+    "values_section": {
+     "title": "যা আমরা মেনে চলি",
+     "items": [
+      {
+       "icon": "book",
+       "title": "সহজ ভাষা",
+       "description": "কঠিন ধারণাকেও দৈনন্দিন উদাহরণ দিয়ে বোঝাই, যাতে নতুনরাও ভয় না পান।"
+      },
+      {
+       "icon": "zap",
+       "title": "হাতে-কলমে",
+       "description": "প্রতিটি লেখায় চালানো যায় এমন কোড থাকে। পড়ে শেষ নয়, বানিয়ে দেখুন।"
+      },
+      {
+       "icon": "heart",
+       "title": "পাঠকের পাশে",
+       "description": "মন্তব্যের উত্তর দিই, প্রশ্ন থেকে নতুন লেখার বিষয় বেছে নিই।"
+      }
+     ]
+    },
+    "stats": [
+     {
+      "value": "১২০+",
+      "label": "প্রকাশিত লেখা"
+     },
+     {
+      "value": "৪৫ হাজার",
+      "label": "মাসিক পাঠক"
+     },
+     {
+      "value": "৮,৫০০",
+      "label": "নিউজলেটার গ্রাহক"
+     },
+     {
+      "value": "৩,২০০",
+      "label": "খুশি ক্রেতা"
+     }
+    ],
+    "team_section": {
+     "title": "যাঁরা লেখেন",
+     "members": [
+      {
+       "photo": "@image:avatar-1",
+       "name": "রহিম আহমেদ",
+       "role": "ফ্রন্টএন্ড ডেভেলপার ও লেখক",
+       "link": "",
+       "bio": "কোড লেখেন, কোড নিয়ে লেখেন। টিউটোরিয়ালগুলোর বেশিরভাগ তাঁর হাতে তৈরি।"
+      },
+      {
+       "photo": "@image:avatar-2",
+       "name": "করিমা সুলতানা",
+       "role": "ডিজাইনার ও সম্পাদক",
+       "link": "",
+       "bio": "লেখনীর নকশা ও সম্পাদনা দেখেন। বাংলা টাইপোগ্রাফি তাঁর প্রিয় বিষয়।"
+      }
+     ]
+    },
+    "cta": {
+     "title": "কিছু বলতে চান?",
+     "text": "লেখার বিষয় প্রস্তাব, অতিথি লেখা কিংবা পাইকারি অর্ডার, যেকোনো প্রয়োজনে আমাদের লিখুন। সাধারণত এক কর্মদিবসের মধ্যে উত্তর দিই।",
+     "button": {
+      "title": "যোগাযোগ করুন",
+      "url": "/contact",
+      "target": ""
+     }
+    }
+   }
+  },
+  {
+   "key": "contact",
+   "title": "যোগাযোগ",
+   "slug": "contact",
+   "template": "templates/template-contact.php",
+   "content": "",
+   "acfGroup": "group_lk_contact_page",
+   "acf": {
+    "subtitle": "প্রশ্ন, পরামর্শ বা অর্ডার নিয়ে যেকোনো কথা। আমরা শুনতে আগ্রহী।",
+    "info_cards": [
+     {
+      "icon": "mail",
+      "label": "ইমেইল",
+      "value": "hello@lekhoni.example",
+      "link": "mailto:hello@lekhoni.example"
+     },
+     {
+      "icon": "phone",
+      "label": "ফোন",
+      "value": "০১৭১২-৩৪৫৬৭৮",
+      "link": "tel:+8801712345678"
+     },
+     {
+      "icon": "map-pin",
+      "label": "ঠিকানা",
+      "value": "বাড়ি ১২, সড়ক ৫, ধানমন্ডি, ঢাকা ১২০৫",
+      "link": ""
+     },
+     {
+      "icon": "clock",
+      "label": "উত্তর দেওয়ার সময়",
+      "value": "সাধারণত ২৪ ঘণ্টার মধ্যে",
+      "link": ""
+     }
+    ],
+    "form": {
+     "title": "আমাদের লিখুন",
+     "note": "তারকা চিহ্ন ছাড়া সব ঘর পূরণ করা আবশ্যক।",
+     "subjects": "সাধারণ জিজ্ঞাসা\nঅর্ডার ও ডেলিভারি\nঅতিথি লেখা\nপাইকারি অর্ডার",
+     "recipient": "",
+     "success_message": "বার্তা পাঠানো হয়েছে। শিগগিরই উত্তর দেব।"
+    },
+    "faq": {
+     "title": "সাধারণ জিজ্ঞাসা",
+     "items": [
+      {
+       "question": "অর্ডার পৌঁছাতে কত দিন লাগে?",
+       "answer": "ঢাকার ভেতরে ১ থেকে ২ কর্মদিবস, ঢাকার বাইরে ৩ থেকে ৫ কর্মদিবস লাগে। অর্ডার পাঠানোর পর এসএমএসে ট্র্যাকিং নম্বর পাবেন।"
+      },
+      {
+       "question": "পণ্য ফেরত দেওয়া যায় কি?",
+       "answer": "হ্যাঁ। পণ্য হাতে পাওয়ার ৭ দিনের মধ্যে অব্যবহৃত অবস্থায় ফেরত দিতে পারবেন। ত্রুটিপূর্ণ পণ্যের ক্ষেত্রে ডেলিভারি চার্জ আমরা বহন করি।"
+      },
+      {
+       "question": "আমি কি লেখনীতে অতিথি লেখা পাঠাতে পারি?",
+       "answer": "অবশ্যই। লেখার বিষয় ও একটি ছোট রূপরেখা যোগাযোগ ফর্মে পাঠান। সম্পাদকীয় দল দেখে আপনাকে জানাবে।"
+      },
+      {
+       "question": "কোন কোন পেমেন্ট পদ্ধতি চালু আছে?",
+       "answer": "ক্যাশ অন ডেলিভারি, বিকাশ, নগদ এবং ভিসা বা মাস্টারকার্ড দিয়ে পেমেন্ট করা যায়।"
+      }
+     ]
+    },
+    "map": {
+     "embed_url": "",
+     "label": "ধানমন্ডি, ঢাকা",
+     "note": "এখানে মানচিত্র বসবে"
+    }
+   }
+  },
+  {
+   "key": "blog",
+   "title": "ব্লগ",
+   "slug": "blog",
+   "template": "",
+   "content": ""
+  }
+ ],
+ "menus": [
+  {
+   "key": "primary",
+   "name": "প্রধান মেনু",
+   "location": "primary",
+   "items": [
+    {
+     "title": "হোম",
+     "url": "/"
+    },
+    {
+     "title": "শপ",
+     "url": "/shop",
+     "children": [
+      {
+       "term": "product_cat:notebooks"
+      },
+      {
+       "term": "product_cat:pens"
+      },
+      {
+       "term": "product_cat:mugs"
+      },
+      {
+       "term": "product_cat:bags"
+      },
+      {
+       "term": "product_cat:gift-boxes"
+      }
+     ]
+    },
+    {
+     "title": "ব্লগ",
+     "page": "blog"
+    },
+    {
+     "title": "আমাদের সম্পর্কে",
+     "page": "about"
+    },
+    {
+     "title": "যোগাযোগ",
+     "page": "contact"
+    }
+   ]
+  },
+  {
+   "key": "footer",
+   "name": "ফুটার মেনু",
+   "location": "footer",
+   "items": [
+    {
+     "title": "শপ",
+     "url": "/shop"
+    },
+    {
+     "title": "আমার অ্যাকাউন্ট",
+     "url": "/my-account"
+    },
+    {
+     "title": "ব্লগ",
+     "page": "blog"
+    },
+    {
+     "title": "আমাদের সম্পর্কে",
+     "page": "about"
+    },
+    {
+     "title": "যোগাযোগ",
+     "page": "contact"
+    }
+   ]
+  }
+ ],
+ "reading": {
+  "front": "home",
+  "posts": "blog"
+ },
+ "themeSettings": {
+  "social_links": [
+   {
+    "network": "facebook",
+    "url": "https://www.facebook.com/"
+   },
+   {
+    "network": "instagram",
+    "url": "https://www.instagram.com/"
+   },
+   {
+    "network": "youtube",
+    "url": "https://www.youtube.com/"
+   }
+  ],
+  "footer": {
+   "topics": {
+    "enabled": 1,
+    "title": "বিষয়",
+    "source": "product_categories",
+    "count": 8
+   }
+  },
+  "style": {
+   "preset": "default",
+   "accent_color": ""
+  },
+  "announcement": {
+   "enabled": 1,
+   "dismissible": 1,
+   "icon": "truck",
+   "text": "৳১,০০০-এর বেশি অর্ডারে ফ্রি ডেলিভারি",
+   "link_label": "আজই অর্ডার করুন",
+   "link_url": "/shop",
+   "starts_at": "",
+   "ends_at": ""
+  }
+ },
+ "store": {
+  "currency": "BDT",
+  "currency_position": "left",
+  "decimals": 0,
+  "thousand_separator": ",",
+  "decimal_separator": ".",
+  "default_country": "BD:BD-13",
+  "shipping_zone": {
+   "name": "বাংলাদেশ",
+   "country": "BD",
+   "flat_rate": {
+    "title": "হোম ডেলিভারি",
+    "cost": 60
+   },
+   "free_shipping": {
+    "title": "ফ্রি ডেলিভারি",
+    "min_amount": 1000
+   }
+  },
+  "cod": {
+   "title": "ক্যাশ অন ডেলিভারি",
+   "description": "পণ্য হাতে পেয়ে ডেলিভারি কর্মীকে নগদ টাকা দিন।"
+  },
+  "coupon": {
+   "code": "LEKHONI10",
+   "amount": 10,
+   "type": "percent",
+   "minimum": 500,
+   "description": "ডেমো কুপন: ৳৫০০-এর বেশি অর্ডারে ১০% ছাড়"
+  }
+ }
+}

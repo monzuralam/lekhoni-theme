@@ -1,198 +1,230 @@
 {
- "version": 1,
- "generated": "2026-10-13",
+ "version": 2,
+ "id": "ecommerce",
+ "meta": {
+  "title": "ই-কমার্স মার্ট",
+  "name": "E-commerce store",
+  "description": "A multi-department store: electronics, fashion, home and beauty, with a department menu, deals of the day, category rows and a coupon banner. Template \"Home – E-commerce\", E-commerce style.",
+  "design": "home-ecommerce.html",
+  "counts": {
+   "products": 17,
+   "categories": 6,
+   "posts": 12,
+   "pages": 4,
+   "images": 35
+  }
+ },
+ "generated": "2026-10-20",
  "images": {
-  "hero-1": {
-   "file": "hero-1.png",
-   "alt": "নোটবুক, কলম আর মগে সাজানো লেখার টেবিল",
-   "width": 1350,
-   "height": 1050
-  },
-  "hero-2": {
-   "file": "hero-2.png",
-   "alt": "ফিতা বাঁধা উপহারের বক্স",
-   "width": 1350,
-   "height": 1050
-  },
-  "hero-3": {
-   "file": "hero-3.png",
-   "alt": "কাঠের অর্গানাইজার আর প্ল্যানারে গোছানো ডেস্ক",
-   "width": 1350,
-   "height": 1050
-  },
-  "category-1": {
-   "file": "category-1.jpg",
-   "alt": "নোটবুক",
-   "width": 600,
-   "height": 600
-  },
-  "category-2": {
-   "file": "category-2.jpg",
-   "alt": "কলম",
-   "width": 600,
-   "height": 600
-  },
-  "category-3": {
-   "file": "category-3.jpg",
-   "alt": "মগ",
-   "width": 600,
-   "height": 600
-  },
-  "category-4": {
-   "file": "category-4.jpg",
-   "alt": "ব্যাগ",
-   "width": 600,
-   "height": 600
-  },
-  "category-5": {
-   "file": "category-5.jpg",
-   "alt": "স্টিকার",
-   "width": 600,
-   "height": 600
-  },
-  "category-6": {
-   "file": "category-6.jpg",
-   "alt": "গিফট বক্স",
-   "width": 600,
-   "height": 600
-  },
-  "product-1": {
-   "file": "product-1.jpg",
-   "alt": "হার্ডকভার নোটবুক",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-1-alt": {
-   "file": "product-1-alt.jpg",
-   "alt": "হার্ডকভার নোটবুক, অন্য রঙে",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-2": {
-   "file": "product-2.jpg",
-   "alt": "রঙিন কলমের সেট",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-2-alt": {
-   "file": "product-2-alt.jpg",
-   "alt": "রঙিন কলমের সেট, অন্য রঙে",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-3": {
-   "file": "product-3.jpg",
-   "alt": "সিরামিক মগ",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-3-alt": {
-   "file": "product-3-alt.jpg",
-   "alt": "সিরামিক মগ, অন্য রঙে",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-4": {
-   "file": "product-4.jpg",
-   "alt": "ক্যানভাসের টোট ব্যাগ",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-4-alt": {
-   "file": "product-4-alt.jpg",
-   "alt": "ক্যানভাসের টোট ব্যাগ, অন্য রঙে",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-5": {
-   "file": "product-5.jpg",
-   "alt": "ভিনাইল স্টিকারের প্যাক",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-5-alt": {
-   "file": "product-5-alt.jpg",
-   "alt": "ভিনাইল স্টিকারের প্যাক, অন্য রঙে",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-6": {
-   "file": "product-6.jpg",
-   "alt": "কাঠের ডেস্ক অর্গানাইজার",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-6-alt": {
-   "file": "product-6-alt.jpg",
-   "alt": "কাঠের ডেস্ক অর্গানাইজার, অন্য রঙে",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-7": {
-   "file": "product-7.jpg",
-   "alt": "গোলাপি মোড়কের গিফট বক্স",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-7-green": {
-   "file": "product-7-green.jpg",
-   "alt": "সবুজ মোড়কের গিফট বক্স",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-7-blue": {
-   "file": "product-7-blue.jpg",
-   "alt": "নীল মোড়কের গিফট বক্স",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-8": {
-   "file": "product-8.jpg",
-   "alt": "সাপ্তাহিক প্ল্যানার",
-   "width": 1000,
-   "height": 1000
-  },
-  "product-8-alt": {
-   "file": "product-8-alt.jpg",
-   "alt": "সাপ্তাহিক প্ল্যানার, অন্য রঙে",
-   "width": 1000,
-   "height": 1000
-  },
-  "cover-1": {
-   "file": "cover-1.jpg",
-   "alt": "ব্রাউজারে খোলা ওয়েবসাইটের নকশা",
-   "width": 1200,
-   "height": 675
-  },
-  "cover-2": {
-   "file": "cover-2.jpg",
-   "alt": "কোড এডিটরের জানালা",
-   "width": 1200,
-   "height": 675
-  },
-  "cover-3": {
-   "file": "cover-3.jpg",
-   "alt": "ধাপে ধাপে সাজানো কম্পোনেন্টের ছবি",
-   "width": 1200,
-   "height": 675
-  },
-  "cover-4": {
-   "file": "cover-4.jpg",
-   "alt": "বড় অক্ষরে সাজানো টাইপোগ্রাফির নকশা",
-   "width": 1200,
-   "height": 675
-  },
   "avatar-1": {
-   "file": "avatar-1.jpg",
+   "file": "shared/avatar-1.jpg",
    "alt": "রহিম আহমেদ",
    "width": 320,
    "height": 320
   },
   "avatar-2": {
-   "file": "avatar-2.jpg",
+   "file": "shared/avatar-2.jpg",
    "alt": "করিমা সুলতানা",
    "width": 320,
    "height": 320
+  },
+  "cover-1": {
+   "file": "shared/cover-1.jpg",
+   "alt": "ব্রাউজারে খোলা ওয়েবসাইটের নকশা",
+   "width": 1200,
+   "height": 675
+  },
+  "cover-2": {
+   "file": "shared/cover-2.jpg",
+   "alt": "কোড এডিটরের জানালা",
+   "width": 1200,
+   "height": 675
+  },
+  "cover-3": {
+   "file": "shared/cover-3.jpg",
+   "alt": "ধাপে ধাপে সাজানো কম্পোনেন্টের ছবি",
+   "width": 1200,
+   "height": 675
+  },
+  "cover-4": {
+   "file": "shared/cover-4.jpg",
+   "alt": "বড় অক্ষরে সাজানো টাইপোগ্রাফির নকশা",
+   "width": 1200,
+   "height": 675
+  },
+  "ec-banner-1": {
+   "file": "ecommerce/images/ec-banner-1.jpg",
+   "alt": "স্মার্টওয়াচ",
+   "width": 600,
+   "height": 600
+  },
+  "ec-banner-2": {
+   "file": "ecommerce/images/ec-banner-2.jpg",
+   "alt": "ব্লুটুথ স্পিকার",
+   "width": 600,
+   "height": 600
+  },
+  "ec-bedsheet": {
+   "file": "ecommerce/images/ec-bedsheet.jpg",
+   "alt": "সুতি বেডশিট সেট",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-dept-1": {
+   "file": "ecommerce/images/ec-dept-1.jpg",
+   "alt": "হেডফোন আর ফোন",
+   "width": 600,
+   "height": 800
+  },
+  "ec-dept-2": {
+   "file": "ecommerce/images/ec-dept-2.jpg",
+   "alt": "শার্ট আর স্নিকার্স",
+   "width": 600,
+   "height": 800
+  },
+  "ec-handbag": {
+   "file": "ecommerce/images/ec-handbag.jpg",
+   "alt": "চামড়ার হ্যান্ডব্যাগ",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-headphones": {
+   "file": "ecommerce/images/ec-headphones.jpg",
+   "alt": "ওয়্যারলেস হেডফোন",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-headphones-alt": {
+   "file": "ecommerce/images/ec-headphones-alt.jpg",
+   "alt": "ওয়্যারলেস হেডফোন, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-hero-1": {
+   "file": "ecommerce/images/ec-hero-1.png",
+   "alt": "হেডফোন আর স্মার্টফোন",
+   "width": 1350,
+   "height": 1050
+  },
+  "ec-hero-2": {
+   "file": "ecommerce/images/ec-hero-2.png",
+   "alt": "স্নিকার্স আর হ্যান্ডব্যাগ",
+   "width": 1350,
+   "height": 1050
+  },
+  "ec-hero-3": {
+   "file": "ecommerce/images/ec-hero-3.png",
+   "alt": "ইলেকট্রিক কেটলি আর ফ্রাইপ্যান",
+   "width": 1350,
+   "height": 1050
+  },
+  "ec-kettle": {
+   "file": "ecommerce/images/ec-kettle.jpg",
+   "alt": "ইলেকট্রিক কেটলি",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-lamp": {
+   "file": "ecommerce/images/ec-lamp.jpg",
+   "alt": "টেবিল ল্যাম্প",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-lipstick": {
+   "file": "ecommerce/images/ec-lipstick.jpg",
+   "alt": "ম্যাট লিপস্টিক",
+   "width": 1000,
+   "height": 1250
+  },
+  "ec-notebook": {
+   "file": "ecommerce/images/ec-notebook.jpg",
+   "alt": "হার্ডকভার নোটবুক",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-pan": {
+   "file": "ecommerce/images/ec-pan.jpg",
+   "alt": "নন-স্টিক ফ্রাইপ্যান",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-pens": {
+   "file": "ecommerce/images/ec-pens.jpg",
+   "alt": "জেল কলমের সেট",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-phone": {
+   "file": "ecommerce/images/ec-phone.jpg",
+   "alt": "স্মার্টফোন",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-phone-alt": {
+   "file": "ecommerce/images/ec-phone-alt.jpg",
+   "alt": "স্মার্টফোন, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-powerbank": {
+   "file": "ecommerce/images/ec-powerbank.jpg",
+   "alt": "পাওয়ার ব্যাংক",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-serum": {
+   "file": "ecommerce/images/ec-serum.jpg",
+   "alt": "ভিটামিন সি সিরাম",
+   "width": 1000,
+   "height": 1250
+  },
+  "ec-shirt": {
+   "file": "ecommerce/images/ec-shirt.jpg",
+   "alt": "নীল সুতি শার্ট",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-shirt-alt": {
+   "file": "ecommerce/images/ec-shirt-alt.jpg",
+   "alt": "সুতি শার্ট, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-sneaker": {
+   "file": "ecommerce/images/ec-sneaker.jpg",
+   "alt": "লাল রানিং স্নিকার্স",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-sneaker-alt": {
+   "file": "ecommerce/images/ec-sneaker-alt.jpg",
+   "alt": "রানিং স্নিকার্স, অন্য রঙে",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-speaker": {
+   "file": "ecommerce/images/ec-speaker.jpg",
+   "alt": "ব্লুটুথ স্পিকার",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-sunglasses": {
+   "file": "ecommerce/images/ec-sunglasses.jpg",
+   "alt": "পোলারাইজড সানগ্লাস",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-watch": {
+   "file": "ecommerce/images/ec-watch.jpg",
+   "alt": "স্মার্টওয়াচ",
+   "width": 1000,
+   "height": 1000
+  },
+  "ec-watch-pink": {
+   "file": "ecommerce/images/ec-watch-pink.jpg",
+   "alt": "গোলাপি স্মার্টওয়াচ",
+   "width": 1000,
+   "height": 1000
   }
  },
  "authors": [
@@ -224,62 +256,55 @@
  "terms": {
   "product_cat": [
    {
-    "key": "notebooks",
-    "name": "নোটবুক",
-    "slug": "notebooks",
-    "image": "category-1",
-    "description": "হার্ডকভার নোটবুক আর জার্নাল, প্রতিদিনের লেখার জন্য।"
+    "key": "electronics",
+    "name": "ইলেকট্রনিক্স",
+    "slug": "electronics",
+    "icon": "smartphone",
+    "image": "ec-headphones",
+    "description": "ফোন, অডিও, স্মার্টওয়াচ আর গ্যাজেট।"
    },
    {
-    "key": "pens",
-    "name": "কলম",
-    "slug": "pens",
-    "image": "category-2",
-    "description": "জেল, বলপয়েন্ট আর ফাউন্টেন পেন।"
+    "key": "fashion",
+    "name": "ফ্যাশন",
+    "slug": "fashion",
+    "icon": "shirt",
+    "image": "ec-shirt",
+    "description": "পোশাক, জুতা, ব্যাগ আর অ্যাক্সেসরিজ।"
    },
    {
-    "key": "mugs",
-    "name": "মগ",
-    "slug": "mugs",
-    "image": "category-3",
-    "description": "সিরামিক আর ট্রাভেল মগ।"
+    "key": "home-kitchen",
+    "name": "ঘর ও রান্না",
+    "slug": "home-kitchen",
+    "icon": "home",
+    "image": "ec-kettle",
+    "description": "রান্নাঘর, বাতি আর বিছানার দরকারি জিনিস।"
    },
    {
-    "key": "bags",
-    "name": "ব্যাগ",
-    "slug": "bags",
-    "image": "category-4",
-    "description": "মজবুত ক্যানভাসের টোট ব্যাগ।"
+    "key": "beauty",
+    "name": "বিউটি",
+    "slug": "beauty",
+    "icon": "sparkles",
+    "image": "ec-serum",
+    "description": "স্কিনকেয়ার আর মেকআপ।"
    },
    {
-    "key": "stickers",
-    "name": "স্টিকার",
-    "slug": "stickers",
-    "image": "category-5",
-    "description": "ল্যাপটপ আর নোটবুক সাজানোর ওয়াটারপ্রুফ স্টিকার।"
+    "key": "sports",
+    "name": "খেলাধুলা",
+    "slug": "sports",
+    "icon": "activity",
+    "image": "ec-sneaker",
+    "description": "দৌড়, ব্যায়াম আর ফিটনেসের সঙ্গী।"
    },
    {
-    "key": "gift-boxes",
-    "name": "গিফট বক্স",
-    "slug": "gift-boxes",
-    "image": "category-6",
-    "description": "প্রিয়জনের জন্য সাজানো উপহারের বক্স।"
-   },
-   {
-    "key": "desk-accessories",
-    "name": "ডেস্ক অ্যাক্সেসরিজ",
-    "slug": "desk-accessories",
-    "image": "product-6",
-    "description": "ডেস্ক গোছানোর অর্গানাইজার আর অ্যাক্সেসরিজ।"
-   },
-   {
-    "key": "planners",
-    "name": "প্ল্যানার",
-    "slug": "planners",
-    "image": "product-8",
-    "description": "সাপ্তাহিক আর মাসিক পরিকল্পনার ডায়েরি।"
+    "key": "books-stationery",
+    "name": "বই ও স্টেশনারি",
+    "slug": "books-stationery",
+    "icon": "book",
+    "image": "ec-notebook",
+    "description": "নোটবুক, কলম আর পড়ার জিনিস।"
    }
   ],
+  "product_tag": [],
   "category": [
    {
     "key": "wordpress",
@@ -357,808 +382,793 @@
  },
  "attributes": [
   {
-   "key": "ruling",
-   "name": "রুলিং",
-   "slug": "ruling",
+   "key": "color",
+   "name": "রং",
+   "slug": "color",
    "terms": [
     {
-     "name": "রুলড",
-     "slug": "ruled"
-    },
-    {
-     "name": "ডটেড",
-     "slug": "dotted"
-    },
-    {
-     "name": "সাদা",
-     "slug": "plain"
-    }
-   ]
-  },
-  {
-   "key": "wrap-color",
-   "name": "মোড়কের রং",
-   "slug": "wrap-color",
-   "terms": [
-    {
-     "name": "গোলাপি",
-     "slug": "pink"
-    },
-    {
-     "name": "সবুজ",
-     "slug": "green"
+     "name": "কালো",
+     "slug": "black",
+     "swatch": "#1f2937"
     },
     {
      "name": "নীল",
-     "slug": "blue"
+     "slug": "blue",
+     "swatch": "#2563eb"
+    },
+    {
+     "name": "গোলাপি",
+     "slug": "pink",
+     "swatch": "#ec4899"
     }
    ]
   },
   {
-   "key": "box-size",
-   "name": "বক্সের আকার",
-   "slug": "box-size",
+   "key": "size",
+   "name": "সাইজ",
+   "slug": "size",
    "terms": [
     {
-     "name": "ছোট",
-     "slug": "small"
+     "name": "S",
+     "slug": "s"
     },
     {
-     "name": "মাঝারি",
-     "slug": "medium"
+     "name": "M",
+     "slug": "m"
     },
     {
-     "name": "বড়",
-     "slug": "large"
+     "name": "L",
+     "slug": "l"
+    },
+    {
+     "name": "XL",
+     "slug": "xl"
     }
    ]
   }
  ],
  "products": [
   {
-   "key": "classic-notebook",
-   "type": "variable",
-   "name": "লেখনী ক্লাসিক নোটবুক",
-   "slug": "lekhoni-classic-notebook",
-   "sku": "LK-NB-001",
+   "key": "ec-headphones",
+   "name": "নয়েজ ক্যানসেলিং ওয়্যারলেস হেডফোন",
+   "slug": "wireless-anc-headphones",
+   "sku": "EC-AU-001",
    "categories": [
-    "notebooks"
+    "electronics"
    ],
-   "image": "product-1",
+   "image": "ec-headphones",
    "gallery": [
-    "product-1-alt"
+    "ec-headphones-alt"
    ],
-   "short": "১৬০ পাতার হার্ডকভার নোটবুক। ১০০ জিএসএম মসৃণ কাগজে কালি ছড়ায় না, সঙ্গে ফিতা বুকমার্ক।",
-   "description": "<h3>যত্নে তৈরি, প্রতিদিনের জন্য</h3><p>লেখনী ক্লাসিক নোটবুক বানানো হয়েছে তাঁদের কথা ভেবে, যাঁরা এখনো হাতে লিখতে ভালোবাসেন। ১০০ জিএসএম মসৃণ কাগজে জেল, বলপয়েন্ট বা ফাউন্টেন পেন, যেকোনো কলমেই লেখা যায় স্বচ্ছন্দে।</p><ul><li>সেলাই করা বাঁধাই, তাই পুরো খুলে সমান করে রাখা যায়</li><li>ফিতা বুকমার্ক ও ইলাস্টিক ব্যান্ড</li><li>পেছনের মলাটে ছোট কাগজ রাখার পকেট</li><li>পরিবেশবান্ধব, অ্যাসিড-মুক্ত কাগজ</li></ul><h3>যত্ন নেওয়ার নিয়ম</h3><p>সরাসরি রোদ ও আর্দ্রতা থেকে দূরে রাখুন। মলাটে দাগ লাগলে হালকা ভেজা কাপড় দিয়ে মুছে নিন।</p>",
+   "regular": 3200,
+   "sale": 2490,
+   "saleDays": 3,
+   "stock": 14,
+   "featured": true,
+   "sales": 312,
+   "short": "৪০ ঘণ্টা ব্যাটারি, অ্যাক্টিভ নয়েজ ক্যানসেলিং আর ভাঁজ করা যায় এমন নকশা।",
+   "description": "<p>বাসের হর্ন কিংবা অফিসের কোলাহল, এক বোতামে সব চুপ। নরম কুশন কানে চাপ দেয় না, তাই সারাদিন পরে থাকা যায়।</p><ul><li>অ্যাক্টিভ নয়েজ ক্যানসেলিং</li><li>৪০ ঘণ্টা ব্যাটারি, ১০ মিনিটে ৫ ঘণ্টার চার্জ</li><li>ব্লুটুথ ৫.৩, দুটি ডিভাইসে একসঙ্গে</li></ul><h3>ওয়ারেন্টি ও সার্ভিস</h3><p>১ বছরের অফিশিয়াল ওয়ারেন্টি।</p>",
    "specs": [
     [
-     "পাতার সংখ্যা",
-     "১৬০ পাতা (৮০ শিট)"
+     "ব্যাটারি",
+     "৪০ ঘণ্টা"
     ],
     [
-     "কাগজ",
-     "১০০ জিএসএম, অ্যাসিড-মুক্ত"
+     "সংযোগ",
+     "ব্লুটুথ ৫.৩, ৩.৫ মিমি"
     ],
     [
-     "আকার",
-     "A5 (১৪.৮ × ২১ সেমি)"
+     "ওজন",
+     "২৫০ গ্রাম"
     ],
     [
-     "মলাট",
-     "হার্ডকভার, কাপড়ের বাঁধাই"
+     "ওয়ারেন্টি",
+     "১ বছর"
+    ]
+   ],
+   "weight": "0.25",
+   "reviews": [
+    {
+     "author": "রাফি হাসান",
+     "email": "rafi.demo@example.com",
+     "rating": 5,
+     "title": "দামে সেরা",
+     "text": "নয়েজ ক্যানসেলিং সত্যিই কাজ করে। অফিসে এখন শান্তিতে কাজ করি।",
+     "days": 6
+    },
+    {
+     "author": "মীম চৌধুরী",
+     "email": "mim.demo@example.com",
+     "rating": 4,
+     "title": "আরামদায়ক",
+     "text": "লম্বা সময় পরলেও কান ব্যথা করে না। কেসটা আরেকটু ছোট হলে ভালো হতো।",
+     "days": 18
+    }
+   ]
+  },
+  {
+   "key": "ec-watch",
+   "type": "variable",
+   "name": "স্মার্টওয়াচ সিরিজ ৫ (AMOLED)",
+   "slug": "smartwatch-series-5",
+   "sku": "EC-WT-002",
+   "categories": [
+    "electronics",
+    "sports"
+   ],
+   "image": "ec-watch",
+   "gallery": [
+    "ec-watch-pink"
+   ],
+   "featured": true,
+   "sales": 198,
+   "short": "১.৯৬ ইঞ্চি AMOLED ডিসপ্লে, হার্ট রেট ও ঘুম ট্র্যাকিং, ৭ দিনের ব্যাটারি।",
+   "description": "<p>হাঁটা, দৌড়, ঘুম আর হৃৎস্পন্দন, সারাদিনের হিসাব কবজিতে। ফোনের কল আর মেসেজও দেখা যায় সরাসরি।</p><ul><li>১০০টির বেশি স্পোর্টস মোড</li><li>পানি প্রতিরোধী (5ATM)</li><li>৭ দিনের ব্যাটারি</li></ul><h3>ওয়ারেন্টি ও সার্ভিস</h3><p>১ বছরের অফিশিয়াল ওয়ারেন্টি।</p>",
+   "specs": [
+    [
+     "ডিসপ্লে",
+     "১.৯৬ ইঞ্চি AMOLED"
+    ],
+    [
+     "ব্যাটারি",
+     "৭ দিন"
+    ],
+    [
+     "পানি প্রতিরোধ",
+     "5ATM"
+    ]
+   ],
+   "weight": "0.05",
+   "attributes": [
+    {
+     "attribute": "color",
+     "terms": [
+      "black",
+      "blue",
+      "pink"
+     ]
+    }
+   ],
+   "variations": [
+    {
+     "attributes": {
+      "color": "black"
+     },
+     "regular": 4800,
+     "sale": 3990,
+     "stock": 12,
+     "sku": "EC-WT-002-K"
+    },
+    {
+     "attributes": {
+      "color": "blue"
+     },
+     "regular": 4800,
+     "sale": 3990,
+     "stock": 9,
+     "sku": "EC-WT-002-B"
+    },
+    {
+     "attributes": {
+      "color": "pink"
+     },
+     "regular": 4800,
+     "sale": 3990,
+     "stock": 5,
+     "sku": "EC-WT-002-P",
+     "image": "ec-watch-pink"
+    }
+   ],
+   "reviews": [
+    {
+     "author": "সোহেল রানা",
+     "email": "sohel.demo@example.com",
+     "rating": 5,
+     "title": "ব্যাটারি দারুণ",
+     "text": "এক চার্জে পুরো সপ্তাহ চলে। ঘুমের হিসাবটা বেশ নির্ভুল।",
+     "days": 9
+    },
+    {
+     "author": "তানিয়া আক্তার",
+     "email": "tania.demo@example.com",
+     "rating": 4,
+     "title": "দেখতে সুন্দর",
+     "text": "গোলাপি রংটা খুব মানিয়েছে। স্ট্র্যাপ আরেকটু নরম হলে ভালো হতো।",
+     "days": 25
+    }
+   ]
+  },
+  {
+   "key": "ec-speaker",
+   "name": "পোর্টেবল ব্লুটুথ স্পিকার মিনি",
+   "slug": "portable-bluetooth-speaker",
+   "sku": "EC-AU-003",
+   "categories": [
+    "electronics"
+   ],
+   "image": "ec-speaker",
+   "regular": 1800,
+   "sale": 1450,
+   "saleDays": 3,
+   "stock": 18,
+   "sales": 141,
+   "short": "পানি প্রতিরোধী, ১২ ঘণ্টা প্লেব্যাক আর জোরালো বেস।",
+   "description": "<p>পিকনিক, ছাদ কিংবা গোসলখানা, যেখানে খুশি গান। IPX7 পানি প্রতিরোধী, ঝুলিয়ে রাখার ফিতাসহ।</p><h3>ওয়ারেন্টি ও সার্ভিস</h3><p>৬ মাসের ওয়ারেন্টি।</p>",
+   "specs": [
+    [
+     "প্লেব্যাক",
+     "১২ ঘণ্টা"
+    ],
+    [
+     "পানি প্রতিরোধ",
+     "IPX7"
+    ],
+    [
+     "আউটপুট",
+     "১০ ওয়াট"
+    ]
+   ],
+   "weight": "0.4",
+   "reviews": [
+    {
+     "author": "রাফি হাসান",
+     "email": "rafi.demo@example.com",
+     "rating": 4,
+     "title": "ছোট কিন্তু জোরালো",
+     "text": "আকারের তুলনায় আওয়াজ অনেক। বেসও ভালো।",
+     "days": 14
+    }
+   ]
+  },
+  {
+   "key": "ec-powerbank",
+   "name": "ফাস্ট চার্জিং পাওয়ার ব্যাংক ২০০০০ mAh",
+   "slug": "power-bank-20000",
+   "sku": "EC-AC-004",
+   "categories": [
+    "electronics"
+   ],
+   "image": "ec-powerbank",
+   "regular": 1890,
+   "stock": 40,
+   "sales": 405,
+   "short": "২২.৫ ওয়াট ফাস্ট চার্জিং, একসঙ্গে দুটি ডিভাইস চার্জ।",
+   "description": "<p>ফোন তিনবার পুরো চার্জ হয় এক চার্জে। USB-C দিয়ে দ্রুত নিজেও চার্জ হয়।</p><h3>ওয়ারেন্টি ও সার্ভিস</h3><p>১ বছরের ওয়ারেন্টি।</p>",
+   "specs": [
+    [
+     "ক্ষমতা",
+     "২০০০০ mAh"
+    ],
+    [
+     "আউটপুট",
+     "২২.৫ ওয়াট"
+    ],
+    [
+     "পোর্ট",
+     "USB-C, ২ × USB-A"
+    ]
+   ],
+   "weight": "0.42",
+   "reviews": [
+    {
+     "author": "সোহেল রানা",
+     "email": "sohel.demo@example.com",
+     "rating": 5,
+     "title": "ভ্রমণের সঙ্গী",
+     "text": "তিন দিনের ট্যুরে ফোন আর ঘড়ি দুটোই চার্জ দিয়েছি।",
+     "days": 30
+    },
+    {
+     "author": "মীম চৌধুরী",
+     "email": "mim.demo@example.com",
+     "rating": 5,
+     "title": "দ্রুত চার্জ",
+     "text": "আধা ঘণ্টায় ফোন অর্ধেক চার্জ হয়ে যায়।",
+     "days": 41
+    }
+   ]
+  },
+  {
+   "key": "ec-phone",
+   "name": "স্মার্টফোন X১০ (৮/১২৮ জিবি)",
+   "slug": "smartphone-x10",
+   "sku": "EC-PH-005",
+   "categories": [
+    "electronics"
+   ],
+   "image": "ec-phone",
+   "gallery": [
+    "ec-phone-alt"
+   ],
+   "regular": 21500,
+   "sale": 18990,
+   "saleDays": 5,
+   "stock": 8,
+   "featured": true,
+   "sales": 512,
+   "short": "৬.৬ ইঞ্চি ডিসপ্লে, ৫০ মেগাপিক্সেল ক্যামেরা আর ৫০০০ mAh ব্যাটারি।",
+   "description": "<p>উজ্জ্বল ৯০ হার্জ ডিসপ্লে, রাতেও পরিষ্কার ছবি আর সারাদিনের ব্যাটারি।</p><ul><li>৮ জিবি র‍্যাম, ১২৮ জিবি স্টোরেজ</li><li>৩৩ ওয়াট ফাস্ট চার্জিং</li></ul><h3>ওয়ারেন্টি ও সার্ভিস</h3><p>১ বছরের অফিশিয়াল ওয়ারেন্টি।</p>",
+   "specs": [
+    [
+     "ডিসপ্লে",
+     "৬.৬ ইঞ্চি, ৯০ হার্জ"
+    ],
+    [
+     "ক্যামেরা",
+     "৫০ + ২ মেগাপিক্সেল"
+    ],
+    [
+     "ব্যাটারি",
+     "৫০০০ mAh"
+    ]
+   ],
+   "weight": "0.19",
+   "reviews": [
+    {
+     "author": "তানিয়া আক্তার",
+     "email": "tania.demo@example.com",
+     "rating": 5,
+     "title": "ক্যামেরা চমৎকার",
+     "text": "রাতের ছবিও বেশ পরিষ্কার আসে। ব্যাটারি দেড় দিন চলে।",
+     "days": 4
+    },
+    {
+     "author": "রাফি হাসান",
+     "email": "rafi.demo@example.com",
+     "rating": 4,
+     "title": "দামে ভালো",
+     "text": "এই দামে এমন ডিসপ্লে পাওয়া কঠিন।",
+     "days": 16
+    }
+   ]
+  },
+  {
+   "key": "ec-shirt",
+   "type": "variable",
+   "name": "পুরুষদের কটন ক্যাজুয়াল শার্ট",
+   "slug": "mens-cotton-casual-shirt",
+   "sku": "EC-FS-006",
+   "categories": [
+    "fashion"
+   ],
+   "image": "ec-shirt",
+   "gallery": [
+    "ec-shirt-alt"
+   ],
+   "sales": 88,
+   "short": "১০০% সুতি কাপড়, আরামদায়ক রেগুলার ফিট।",
+   "description": "<p>অফিস কিংবা আড্ডা, দুই জায়গাতেই মানানসই। নরম সুতি কাপড় গরমেও আরাম দেয়।</p><h3>যত্ন</h3><p>ঠান্ডা পানিতে ধুয়ে ছায়ায় শুকান।</p>",
+   "specs": [
+    [
+     "কাপড়",
+     "১০০% সুতি"
+    ],
+    [
+     "ফিট",
+     "রেগুলার"
     ],
     [
      "তৈরি",
      "বাংলাদেশ"
     ]
    ],
-   "weight": "0.32",
+   "weight": "0.25",
    "attributes": [
     {
-     "attribute": "ruling",
+     "attribute": "size",
      "terms": [
-      "ruled",
-      "dotted",
-      "plain"
+      "s",
+      "m",
+      "l",
+      "xl"
      ]
     }
    ],
    "variations": [
     {
      "attributes": {
-      "ruling": "ruled"
+      "size": "s"
      },
-     "regular": 450,
-     "sale": 350,
-     "stock": 40,
-     "sku": "LK-NB-001-R"
+     "regular": 1200,
+     "sale": 950,
+     "stock": 10,
+     "sku": "EC-FS-006-S"
     },
     {
      "attributes": {
-      "ruling": "dotted"
+      "size": "m"
      },
-     "regular": 450,
-     "sale": 350,
-     "stock": 25,
-     "sku": "LK-NB-001-D",
-     "image": "product-1-alt"
+     "regular": 1200,
+     "sale": 950,
+     "stock": 15,
+     "sku": "EC-FS-006-M"
     },
     {
      "attributes": {
-      "ruling": "plain"
+      "size": "l"
      },
-     "regular": 450,
-     "sale": 350,
-     "stock": 4,
-     "sku": "LK-NB-001-P"
+     "regular": 1200,
+     "sale": 950,
+     "stock": 12,
+     "sku": "EC-FS-006-L"
+    },
+    {
+     "attributes": {
+      "size": "xl"
+     },
+     "regular": 1200,
+     "sale": 950,
+     "stock": 3,
+     "sku": "EC-FS-006-XL"
     }
    ],
-   "featured": true,
-   "sales": 124,
    "reviews": [
     {
-     "author": "সাদিয়া রহমান",
-     "email": "sadia.demo@example.com",
-     "rating": 5,
-     "title": "কাগজের মান অসাধারণ",
-     "text": "ফাউন্টেন পেন দিয়ে লিখি, কালি একদম ছড়ায় না। বাঁধাইও মজবুত, পুরো খুলে সমান করে রাখা যায়।",
-     "days": 11
-    },
-    {
-     "author": "আরিফুল ইসলাম",
-     "email": "ariful.demo@example.com",
-     "rating": 5,
-     "title": "অফিসের জন্য একদম ঠিক",
-     "text": "মিটিংয়ের নোট রাখার জন্য নিয়েছি। আকারটা ব্যাগে সহজে ধরে, ফিতা বুকমার্কটা কাজের।",
-     "days": 22
-    },
-    {
-     "author": "নুসরাত জাহান",
-     "email": "nusrat.demo@example.com",
+     "author": "সোহেল রানা",
+     "email": "sohel.demo@example.com",
      "rating": 4,
-     "title": "ভালো, তবে রঙ আরো চাই",
-     "text": "মান নিয়ে কোনো অভিযোগ নেই। শুধু মলাটের আরো কয়েকটা রঙ থাকলে ভালো হতো।",
-     "days": 34
+     "title": "কাপড় ভালো",
+     "text": "ধোয়ার পরও রং ঠিক আছে। সাইজ চার্ট মেনে নিলে ঠিকঠাক হয়।",
+     "days": 12
     }
    ]
   },
   {
-   "key": "gel-pen-set",
-   "name": "মসৃণ জেল কলম সেট (৫টি)",
-   "slug": "smooth-gel-pen-set",
-   "sku": "LK-PN-002",
+   "key": "ec-sneaker",
+   "name": "হালকা রানিং স্নিকার্স",
+   "slug": "lightweight-running-sneakers",
+   "sku": "EC-FS-007",
    "categories": [
-    "pens"
+    "fashion",
+    "sports"
    ],
-   "image": "product-2",
+   "image": "ec-sneaker",
    "gallery": [
-    "product-2-alt"
+    "ec-sneaker-alt"
    ],
+   "regular": 3400,
+   "sale": 2850,
+   "saleDays": 3,
+   "stock": 22,
+   "featured": true,
+   "sales": 233,
+   "short": "নরম কুশন সোল, শ্বাস নিতে পারে এমন মেশ আপার।",
+   "description": "<p>সকালের দৌড় থেকে সারাদিনের হাঁটাহাঁটি, পায়ে থাকবে হালকা আর আরাম।</p>",
+   "specs": [
+    [
+     "আপার",
+     "মেশ"
+    ],
+    [
+     "সোল",
+     "EVA কুশন"
+    ],
+    [
+     "ওজন",
+     "প্রতি জোড়া ৫২০ গ্রাম"
+    ]
+   ],
+   "weight": "0.6",
+   "reviews": [
+    {
+     "author": "রাফি হাসান",
+     "email": "rafi.demo@example.com",
+     "rating": 5,
+     "title": "দৌড়ের জন্য দারুণ",
+     "text": "খুব হালকা, পাঁচ কিলোমিটার দৌড়েও পা ব্যথা করেনি।",
+     "days": 8
+    },
+    {
+     "author": "তানিয়া আক্তার",
+     "email": "tania.demo@example.com",
+     "rating": 5,
+     "title": "রংটা সুন্দর",
+     "text": "অফিসেও পরি, সবাই প্রশংসা করে।",
+     "days": 21
+    }
+   ]
+  },
+  {
+   "key": "ec-handbag",
+   "name": "লেদার টোট হ্যান্ডব্যাগ",
+   "slug": "leather-tote-handbag",
+   "sku": "EC-FS-008",
+   "categories": [
+    "fashion"
+   ],
+   "image": "ec-handbag",
+   "regular": 2200,
+   "stock": 11,
+   "sales": 67,
+   "short": "আসল চামড়া, ভেতরে তিনটি পকেট আর মজবুত হাতল।",
+   "description": "<p>ল্যাপটপ, ডায়েরি আর দিনের সব দরকারি জিনিস একসঙ্গে। ব্যবহারে ব্যবহারে চামড়ার রং আরো সুন্দর হয়।</p>",
+   "specs": [
+    [
+     "উপকরণ",
+     "আসল চামড়া"
+    ],
+    [
+     "মাপ",
+     "৩৮ × ২৮ × ১২ সেমি"
+    ]
+   ],
+   "weight": "0.7",
+   "reviews": [
+    {
+     "author": "মীম চৌধুরী",
+     "email": "mim.demo@example.com",
+     "rating": 5,
+     "title": "মান অসাধারণ",
+     "text": "সেলাই খুব যত্নে করা। ১৪ ইঞ্চি ল্যাপটপ ধরে যায়।",
+     "days": 33
+    }
+   ]
+  },
+  {
+   "key": "ec-sunglasses",
+   "name": "পোলারাইজড সানগ্লাস ক্লাসিক",
+   "slug": "polarized-classic-sunglasses",
+   "sku": "EC-FS-009",
+   "categories": [
+    "fashion"
+   ],
+   "image": "ec-sunglasses",
+   "regular": 990,
+   "sale": 790,
+   "stock": 30,
+   "sales": 54,
+   "short": "UV৪০০ সুরক্ষা, হালকা ফ্রেম।",
+   "description": "<p>রোদে চোখ আরাম পায়, ঝলক কমে। হালকা ফ্রেম সারাদিন পরলেও ভারী লাগে না।</p>",
+   "specs": [
+    [
+     "লেন্স",
+     "পোলারাইজড, UV৪০০"
+    ],
+    [
+     "ফ্রেম",
+     "TR90"
+    ]
+   ],
+   "weight": "0.03"
+  },
+  {
+   "key": "ec-pan",
+   "name": "নন-স্টিক ফ্রাইপ্যান ২৬ সেমি",
+   "slug": "non-stick-frypan-26cm",
+   "sku": "EC-HK-010",
+   "categories": [
+    "home-kitchen"
+   ],
+   "image": "ec-pan",
+   "regular": 1500,
+   "sale": 1250,
+   "saleDays": 3,
+   "stock": 16,
+   "sales": 176,
+   "short": "গ্রানাইট কোটিং, গ্যাস ও ইন্ডাকশনে চলে।",
+   "description": "<p>অল্প তেলে রান্না, খাবার লেগে যায় না, ধোয়াও সহজ।</p><h3>যত্ন</h3><p>ধাতব খুন্তি ব্যবহার না করাই ভালো।</p>",
+   "specs": [
+    [
+     "মাপ",
+     "২৬ সেমি"
+    ],
+    [
+     "কোটিং",
+     "গ্রানাইট নন-স্টিক"
+    ],
+    [
+     "চুলা",
+     "গ্যাস, ইন্ডাকশন"
+    ]
+   ],
+   "weight": "0.9",
+   "reviews": [
+    {
+     "author": "তানিয়া আক্তার",
+     "email": "tania.demo@example.com",
+     "rating": 5,
+     "title": "খাবার লেগে যায় না",
+     "text": "ডিম ভাজি থেকে মাছ, সব সহজে উল্টানো যায়।",
+     "days": 10
+    }
+   ]
+  },
+  {
+   "key": "ec-lamp",
+   "name": "LED টেবিল ল্যাম্প (৩ মোড)",
+   "slug": "led-table-lamp",
+   "sku": "EC-HK-011",
+   "categories": [
+    "home-kitchen",
+    "books-stationery"
+   ],
+   "image": "ec-lamp",
+   "regular": 990,
+   "stock": 4,
+   "sales": 92,
+   "short": "চোখের আরামের জন্য তিন রঙের আলো, USB চার্জিং।",
+   "description": "<p>পড়া, লেখা বা রাতের কাজ, আলো বদলান দরকারমতো। এক চার্জে ১০ ঘণ্টা।</p>",
+   "specs": [
+    [
+     "আলো",
+     "৩ রং, ৫ মাত্রা"
+    ],
+    [
+     "ব্যাটারি",
+     "১০ ঘণ্টা"
+    ]
+   ],
+   "weight": "0.5"
+  },
+  {
+   "key": "ec-kettle",
+   "name": "ইলেকট্রিক কেটলি ১.৮ লিটার",
+   "slug": "electric-kettle-1-8l",
+   "sku": "EC-HK-012",
+   "categories": [
+    "home-kitchen"
+   ],
+   "image": "ec-kettle",
+   "regular": 1900,
+   "sale": 1650,
+   "stock": 20,
+   "featured": true,
+   "sales": 260,
+   "short": "স্টেইনলেস স্টিল, অটো শাট-অফ, ৫ মিনিটে পানি গরম।",
+   "description": "<p>সকালের চা থেকে নুডলস, পানি গরম হবে মিনিটেই। পানি ফুটলে নিজে থেকেই বন্ধ হয়।</p><h3>ওয়ারেন্টি ও সার্ভিস</h3><p>১ বছরের ওয়ারেন্টি।</p>",
+   "specs": [
+    [
+     "ধারণক্ষমতা",
+     "১.৮ লিটার"
+    ],
+    [
+     "ক্ষমতা",
+     "১৫০০ ওয়াট"
+    ]
+   ],
+   "weight": "1.1",
+   "reviews": [
+    {
+     "author": "সোহেল রানা",
+     "email": "sohel.demo@example.com",
+     "rating": 5,
+     "title": "খুব দ্রুত",
+     "text": "পাঁচ মিনিটেও লাগে না। ঢাকনা শক্ত করে আটকায়।",
+     "days": 19
+    }
+   ]
+  },
+  {
+   "key": "ec-bedsheet",
+   "name": "কটন বেডশিট সেট (কিং সাইজ)",
+   "slug": "cotton-bedsheet-set-king",
+   "sku": "EC-HK-013",
+   "categories": [
+    "home-kitchen"
+   ],
+   "image": "ec-bedsheet",
+   "regular": 1950,
+   "stock": 9,
+   "sales": 71,
+   "short": "একটি চাদর ও দুটি বালিশের কভার, রং ওঠে না।",
+   "description": "<p>নরম সুতির চাদর, ধোয়ার পরও কোমল থাকে।</p>",
+   "specs": [
+    [
+     "মাপ",
+     "৯০ × ১০০ ইঞ্চি"
+    ],
+    [
+     "সেটে",
+     "১ চাদর, ২ বালিশের কভার"
+    ]
+   ],
+   "weight": "1.2"
+  },
+  {
+   "key": "ec-serum",
+   "name": "ভিটামিন সি ব্রাইটেনিং সিরাম",
+   "slug": "ec-vitamin-c-serum",
+   "sku": "EC-BT-014",
+   "categories": [
+    "beauty"
+   ],
+   "image": "ec-serum",
+   "regular": 1500,
+   "sale": 1250,
+   "stock": 25,
+   "sales": 140,
+   "short": "১৫% ভিটামিন সি ত্বকের নিষ্প্রভতা আর দাগ কমায়।",
+   "description": "<p>সকালে ময়েশ্চারাইজারের আগে দুই-তিন ফোঁটা। নিয়মিত ব্যবহারে ত্বক উজ্জ্বল হয়।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "৩০ মিলি"
+    ],
+    [
+     "ত্বক",
+     "সব ধরনের"
+    ]
+   ],
+   "weight": "0.08"
+  },
+  {
+   "key": "ec-lipstick",
+   "name": "ভেলভেট ম্যাট লিপস্টিক",
+   "slug": "ec-velvet-matte-lipstick",
+   "sku": "EC-BT-015",
+   "categories": [
+    "beauty"
+   ],
+   "image": "ec-lipstick",
+   "regular": 650,
+   "stock": 35,
+   "sales": 98,
+   "short": "এক টানেই গাঢ় রং, ১২ ঘণ্টা টেকে।",
+   "description": "<p>হালকা টেক্সচার, ঠোঁট শুকায় না।</p>",
+   "specs": [
+    [
+     "পরিমাণ",
+     "৩.৫ গ্রাম"
+    ],
+    [
+     "ফিনিশ",
+     "ম্যাট"
+    ]
+   ],
+   "weight": "0.02"
+  },
+  {
+   "key": "ec-notebook",
+   "name": "হার্ডকভার নোটবুক A5",
+   "slug": "ec-hardcover-notebook-a5",
+   "sku": "EC-BS-016",
+   "categories": [
+    "books-stationery"
+   ],
+   "image": "ec-notebook",
+   "regular": 450,
+   "sale": 380,
+   "stock": 50,
+   "sales": 120,
+   "short": "১৬০ পাতা, ১০০ জিএসএম মসৃণ কাগজ।",
+   "description": "<p>অফিস, ক্লাস বা ডায়েরি, প্রতিদিনের লেখার জন্য।</p>",
+   "specs": [
+    [
+     "পাতা",
+     "১৬০"
+    ],
+    [
+     "কাগজ",
+     "১০০ জিএসএম"
+    ]
+   ],
+   "weight": "0.32"
+  },
+  {
+   "key": "ec-pens",
+   "name": "জেল কলম সেট (৫টি)",
+   "slug": "ec-gel-pen-set",
+   "sku": "EC-BS-017",
+   "categories": [
+    "books-stationery"
+   ],
+   "image": "ec-pens",
    "regular": 260,
-   "sale": 220,
-   "stock": 60,
-   "short": "পাঁচ রঙের জেল কলম। ০.৫ মিমি নিব, দ্রুত শুকায় এবং দীর্ঘ সময় লিখলেও হাত ব্যথা করে না।",
-   "description": "<p>নোট নেওয়া, রঙ দিয়ে দাগানো কিংবা জার্নাল সাজানো, সবকিছুর জন্য পাঁচটি উজ্জ্বল রং। নরম রাবার গ্রিপ লম্বা সময় লেখাতেও আরাম দেয়।</p><ul><li>০.৫ মিমি সূক্ষ্ম নিব</li><li>দ্রুত শুকানো কালি, হাতে লাগে না</li><li>কালো, নীল, লাল, সবুজ ও বেগুনি</li></ul>",
+   "stock": 80,
+   "sales": 75,
+   "short": "পাঁচ রঙের জেল কলম, ০.৫ মিমি নিব।",
+   "description": "<p>দ্রুত শুকানো কালি, নরম গ্রিপ।</p>",
    "specs": [
     [
      "নিব",
      "০.৫ মিমি"
     ],
     [
-     "কালি",
-     "জেল, দ্রুত শুকায়"
-    ],
-    [
      "সংখ্যা",
-     "৫টি কলম"
+     "৫টি"
     ]
    ],
-   "weight": "0.08",
-   "sales": 89,
-   "reviews": [
-    {
-     "author": "মিতু আক্তার",
-     "email": "mitu.demo@example.com",
-     "rating": 5,
-     "title": "রংগুলো সুন্দর",
-     "text": "জার্নাল সাজাতে কিনেছি। রংগুলো উজ্জ্বল, কালি একবারও আটকায়নি।",
-     "days": 6
-    },
-    {
-     "author": "তানভীর হাসান",
-     "email": "tanvir.demo@example.com",
-     "rating": 4,
-     "title": "দামে ভালো",
-     "text": "লেখা মসৃণ। কালোটা একটু তাড়াতাড়ি শেষ হয়েছে, বাকিগুলো ঠিক আছে।",
-     "days": 19
-    }
-   ]
-  },
-  {
-   "key": "ceramic-mug",
-   "name": "সিরামিক মগ \"চা ও কোড\"",
-   "slug": "ceramic-mug-cha-o-code",
-   "sku": "LK-MG-003",
-   "categories": [
-    "mugs"
-   ],
-   "image": "product-3",
-   "gallery": [
-    "product-3-alt"
-   ],
-   "regular": 550,
-   "sale": 450,
-   "saleDays": 10,
-   "stock": 35,
-   "short": "৩৫০ মিলি সিরামিক মগ। মাইক্রোওয়েভ ও ডিশওয়াশারে ব্যবহার করা যায়, প্রিন্ট ওঠে না।",
-   "description": "<p>সকালের চা আর রাতের কোডিং, দুটোরই সঙ্গী। মোটা দেয়ালের সিরামিক মগে চা অনেকক্ষণ গরম থাকে।</p><ul><li>৩৫০ মিলি</li><li>মাইক্রোওয়েভ ও ডিশওয়াশার নিরাপদ</li><li>উচ্চ তাপে পোড়ানো প্রিন্ট, ধুলেও ওঠে না</li></ul>",
-   "specs": [
-    [
-     "ধারণক্ষমতা",
-     "৩৫০ মিলি"
-    ],
-    [
-     "উপকরণ",
-     "সিরামিক"
-    ],
-    [
-     "যত্ন",
-     "ডিশওয়াশারে ধোয়া যায়"
-    ]
-   ],
-   "weight": "0.35",
-   "featured": true,
-   "sales": 210,
-   "reviews": [
-    {
-     "author": "তানভীর হাসান",
-     "email": "tanvir.demo@example.com",
-     "rating": 5,
-     "title": "ডেস্কের প্রিয় মগ",
-     "text": "প্রিন্টটা দারুণ, অফিসে সবাই জিজ্ঞেস করে কোথা থেকে কিনেছি।",
-     "days": 4
-    },
-    {
-     "author": "সাদিয়া রহমান",
-     "email": "sadia.demo@example.com",
-     "rating": 5,
-     "title": "উপহার দিয়েছি",
-     "text": "ভাইকে উপহার দিয়েছি, প্যাকিং খুব যত্ন করে করা ছিল।",
-     "days": 27
-    }
-   ]
-  },
-  {
-   "key": "canvas-tote",
-   "name": "ক্যানভাস টোট ব্যাগ",
-   "slug": "canvas-tote-bag",
-   "sku": "LK-BG-004",
-   "categories": [
-    "bags"
-   ],
-   "image": "product-4",
-   "gallery": [
-    "product-4-alt"
-   ],
-   "regular": 380,
-   "stock": 50,
-   "short": "মজবুত সুতি ক্যানভাসের ব্যাগ। ল্যাপটপ, খাতা আর বাজার, সব এক ব্যাগেই ধরে।",
-   "description": "<p>মোটা সুতি ক্যানভাসে তৈরি, দুই স্তরের সেলাই করা হাতল। ভেতরে ছোট পকেটে চাবি আর ফোন রাখা যায়।</p><ul><li>১৫ ইঞ্চি পর্যন্ত ল্যাপটপ ধরে</li><li>ভেতরে জিপার পকেট</li><li>ধুয়ে আবার ব্যবহার করা যায়</li></ul>",
-   "specs": [
-    [
-     "উপকরণ",
-     "১২ আউন্স সুতি ক্যানভাস"
-    ],
-    [
-     "মাপ",
-     "৩৮ × ৪২ সেমি"
-    ],
-    [
-     "হাতল",
-     "৬০ সেমি"
-    ]
-   ],
-   "weight": "0.28",
-   "sales": 56,
-   "reviews": [
-    {
-     "author": "নুসরাত জাহান",
-     "email": "nusrat.demo@example.com",
-     "rating": 5,
-     "title": "বেশ মজবুত",
-     "text": "প্রতিদিন অফিসে নিই, তিন মাসেও সেলাই একটুও খোলেনি।",
-     "days": 15
-    }
-   ]
-  },
-  {
-   "key": "sticker-pack",
-   "name": "ডেভেলপার স্টিকার প্যাক",
-   "slug": "developer-sticker-pack",
-   "sku": "LK-ST-005",
-   "categories": [
-    "stickers"
-   ],
-   "image": "product-5",
-   "gallery": [
-    "product-5-alt"
-   ],
-   "regular": 150,
-   "sale": 120,
-   "saleDays": 7,
-   "stock": 120,
-   "short": "১২টি ওয়াটারপ্রুফ ভিনাইল স্টিকার। ল্যাপটপ, বোতল বা নোটবুকে লাগানোর জন্য।",
-   "description": "<p>বাংলা হরফ আর কোডের মজার মিশেলে আঁকা বারোটি স্টিকার। ম্যাট ভিনাইলে ছাপা, পানি বা রোদে রং ফিকে হয় না।</p><ul><li>১২টি আলাদা নকশা</li><li>ওয়াটারপ্রুফ ম্যাট ভিনাইল</li><li>তুলে ফেললে আঠার দাগ থাকে না</li></ul>",
-   "specs": [
-    [
-     "সংখ্যা",
-     "১২টি স্টিকার"
-    ],
-    [
-     "উপকরণ",
-     "ম্যাট ভিনাইল"
-    ],
-    [
-     "আকার",
-     "৫ থেকে ৮ সেমি"
-    ]
-   ],
-   "weight": "0.03",
-   "featured": true,
-   "sales": 302,
-   "reviews": [
-    {
-     "author": "আরিফুল ইসলাম",
-     "email": "ariful.demo@example.com",
-     "rating": 5,
-     "title": "ল্যাপটপ এখন রঙিন",
-     "text": "নকশাগুলো মজার, ছাপার মানও ভালো। আরেক প্যাক অর্ডার করব।",
-     "days": 3
-    },
-    {
-     "author": "মিতু আক্তার",
-     "email": "mitu.demo@example.com",
-     "rating": 4,
-     "title": "সুন্দর",
-     "text": "সবগুলোই পছন্দ হয়েছে, শুধু আরেকটু বড় হলে ভালো হতো।",
-     "days": 41
-    }
-   ]
-  },
-  {
-   "key": "desk-organizer",
-   "name": "কাঠের ডেস্ক অর্গানাইজার",
-   "slug": "wooden-desk-organizer",
-   "sku": "LK-DK-006",
-   "categories": [
-    "desk-accessories"
-   ],
-   "image": "product-6",
-   "gallery": [
-    "product-6-alt"
-   ],
-   "regular": 850,
-   "stock": 15,
-   "short": "মেহগনি কাঠের তৈরি অর্গানাইজার। কলম, ফোন আর ছোট নোটের জন্য আলাদা খোপ।",
-   "description": "<p>এক টুকরো মেহগনি কাঠ থেকে খোদাই করা অর্গানাইজার। কলম, ফোন, স্টিকি নোট আর চশমা, সব থাকে হাতের কাছে।</p><h3>যত্ন নেওয়ার নিয়ম</h3><p>শুকনো কাপড়ে মুছুন। মাঝে মাঝে কাঠের তেল লাগালে রং উজ্জ্বল থাকে।</p>",
-   "specs": [
-    [
-     "উপকরণ",
-     "মেহগনি কাঠ"
-    ],
-    [
-     "মাপ",
-     "২৪ × ১০ × ৯ সেমি"
-    ],
-    [
-     "খোপ",
-     "৪টি"
-    ]
-   ],
-   "weight": "0.6",
-   "sales": 41,
-   "reviews": [
-    {
-     "author": "তানভীর হাসান",
-     "email": "tanvir.demo@example.com",
-     "rating": 4,
-     "title": "ডেস্ক গোছানো থাকে",
-     "text": "কাঠের ফিনিশিং সুন্দর। ফোনের খোপটা আরেকটু চওড়া হলে ভালো হতো।",
-     "days": 9
-    }
-   ]
-  },
-  {
-   "key": "gift-box",
-   "type": "variable",
-   "name": "প্রিমিয়াম গিফট বক্স",
-   "slug": "premium-gift-box",
-   "sku": "LK-GB-007",
-   "categories": [
-    "gift-boxes"
-   ],
-   "image": "product-7",
-   "gallery": [
-    "product-7-green",
-    "product-7-blue"
-   ],
-   "short": "নোটবুক, কলম সেট, মগ আর স্টিকার একসঙ্গে। সুন্দর মোড়কে, শুভেচ্ছা কার্ডসহ।",
-   "description": "<p>প্রিয়জনের জন্য যত্নে সাজানো উপহার। বাছাই করা পণ্য, পছন্দের মোড়ক আর হাতে লেখা শুভেচ্ছা কার্ড, অর্ডার করলেই পৌঁছে যাবে।</p><ul><li>নোটবুক, কলম সেট, মগ ও স্টিকার প্যাক একসঙ্গে</li><li>হাতে লেখা শুভেচ্ছা কার্ড যোগ করার সুযোগ</li><li>আলাদা কিনলে যা খরচ, তার চেয়ে ৳২৫০ সাশ্রয়</li></ul>",
-   "specs": [
-    [
-     "ভেতরে যা আছে",
-     "নোটবুক, জেল কলম সেট, মগ, স্টিকার প্যাক"
-    ],
-    [
-     "শুভেচ্ছা কার্ড",
-     "বিনামূল্যে"
-    ]
-   ],
-   "weight": "1.1",
-   "attributes": [
-    {
-     "attribute": "wrap-color",
-     "terms": [
-      "pink",
-      "green",
-      "blue"
-     ]
-    },
-    {
-     "attribute": "box-size",
-     "terms": [
-      "small",
-      "medium",
-      "large"
-     ]
-    }
-   ],
-   "variations": [
-    {
-     "attributes": {
-      "wrap-color": "pink",
-      "box-size": "small"
-     },
-     "regular": 1100,
-     "sale": 950,
-     "saleDays": 14,
-     "stock": 12,
-     "sku": "LK-GB-007-PS",
-     "image": "product-7"
-    },
-    {
-     "attributes": {
-      "wrap-color": "pink",
-      "box-size": "medium"
-     },
-     "regular": 1500,
-     "sale": 1250,
-     "saleDays": 14,
-     "stock": 12,
-     "sku": "LK-GB-007-PM",
-     "image": "product-7"
-    },
-    {
-     "attributes": {
-      "wrap-color": "pink",
-      "box-size": "large"
-     },
-     "regular": 1900,
-     "sale": 1650,
-     "saleDays": 14,
-     "stock": 6,
-     "sku": "LK-GB-007-PL",
-     "image": "product-7"
-    },
-    {
-     "attributes": {
-      "wrap-color": "green",
-      "box-size": "small"
-     },
-     "regular": 1100,
-     "sale": 950,
-     "saleDays": 14,
-     "stock": 12,
-     "sku": "LK-GB-007-GS",
-     "image": "product-7-green"
-    },
-    {
-     "attributes": {
-      "wrap-color": "green",
-      "box-size": "medium"
-     },
-     "regular": 1500,
-     "sale": 1250,
-     "saleDays": 14,
-     "stock": 12,
-     "sku": "LK-GB-007-GM",
-     "image": "product-7-green"
-    },
-    {
-     "attributes": {
-      "wrap-color": "green",
-      "box-size": "large"
-     },
-     "regular": 1900,
-     "sale": 1650,
-     "saleDays": 14,
-     "stock": 6,
-     "sku": "LK-GB-007-GL",
-     "image": "product-7-green"
-    },
-    {
-     "attributes": {
-      "wrap-color": "blue",
-      "box-size": "small"
-     },
-     "regular": 1100,
-     "sale": 950,
-     "saleDays": 14,
-     "stock": 12,
-     "sku": "LK-GB-007-BS",
-     "image": "product-7-blue"
-    },
-    {
-     "attributes": {
-      "wrap-color": "blue",
-      "box-size": "medium"
-     },
-     "regular": 1500,
-     "sale": 1250,
-     "saleDays": 14,
-     "stock": 12,
-     "sku": "LK-GB-007-BM",
-     "image": "product-7-blue"
-    },
-    {
-     "attributes": {
-      "wrap-color": "blue",
-      "box-size": "large"
-     },
-     "regular": 1900,
-     "sale": 1650,
-     "saleDays": 14,
-     "stock": 6,
-     "sku": "LK-GB-007-BL",
-     "image": "product-7-blue"
-    }
-   ],
-   "featured": true,
-   "sales": 77,
-   "reviews": [
-    {
-     "author": "সাদিয়া রহমান",
-     "email": "sadia.demo@example.com",
-     "rating": 5,
-     "title": "উপহারটা সবার পছন্দ হয়েছে",
-     "text": "বোনের জন্মদিনে পাঠিয়েছিলাম। মোড়ক আর কার্ড দেখে সে খুবই খুশি।",
-     "days": 8
-    },
-    {
-     "author": "আরিফুল ইসলাম",
-     "email": "ariful.demo@example.com",
-     "rating": 5,
-     "title": "সময়মতো পৌঁছেছে",
-     "text": "পরের দিনই ডেলিভারি পেয়েছি, সবকিছু সুন্দরভাবে সাজানো ছিল।",
-     "days": 25
-    }
-   ]
-  },
-  {
-   "key": "weekly-planner",
-   "name": "২০২৭ সাপ্তাহিক প্ল্যানার",
-   "slug": "weekly-planner-2027",
-   "sku": "LK-PL-008",
-   "categories": [
-    "planners"
-   ],
-   "image": "product-8",
-   "gallery": [
-    "product-8-alt"
-   ],
-   "regular": 550,
-   "stock": 0,
-   "short": "সপ্তাহভিত্তিক পরিকল্পনার ডায়েরি। লক্ষ্য, অভ্যাস ট্র্যাকার আর মাসিক পর্যালোচনার পাতা আছে।",
-   "description": "<p>প্রতিটি সপ্তাহ দুই পাতায়, সঙ্গে মাসের শুরুতে লক্ষ্য ঠিক করার আর শেষে পর্যালোচনার পাতা। অভ্যাস ট্র্যাকার দিয়ে ছোট ছোট অগ্রগতিও চোখে পড়বে।</p>",
-   "specs": [
-    [
-     "পাতা",
-     "১৯২ পাতা"
-    ],
-    [
-     "আকার",
-     "A5"
-    ],
-    [
-     "সময়কাল",
-     "জানুয়ারি থেকে ডিসেম্বর ২০২৭"
-    ]
-   ],
-   "weight": "0.4",
-   "sales": 38,
-   "reviews": [
-    {
-     "author": "নুসরাত জাহান",
-     "email": "nusrat.demo@example.com",
-     "rating": 4,
-     "title": "গোছানো নকশা",
-     "text": "অভ্যাস ট্র্যাকারটা খুব কাজের। নতুন স্টক এলে আরেকটা নেব।",
-     "days": 52
-    }
-   ]
-  },
-  {
-   "key": "dotted-journal",
-   "name": "ডটেড জার্নাল A5",
-   "slug": "dotted-journal-a5",
-   "sku": "LK-NB-009",
-   "categories": [
-    "notebooks"
-   ],
-   "image": "product-1-alt",
-   "gallery": [
-    "product-1"
-   ],
-   "regular": 480,
-   "sale": 420,
-   "saleDays": 5,
-   "stock": 30,
-   "short": "ডট গ্রিড পাতার জার্নাল। বুলেট জার্নাল, স্কেচ আর ওয়্যারফ্রেম আঁকার জন্য উপযুক্ত।",
-   "description": "<p>৫ মিমি ডট গ্রিডে লেখা, আঁকা আর তালিকা বানানো, সবই সহজ। নম্বর দেওয়া পাতা আর সূচিপত্রের পাতা আছে।</p>",
-   "specs": [
-    [
-     "পাতার সংখ্যা",
-     "১৯২ পাতা"
-    ],
-    [
-     "গ্রিড",
-     "৫ মিমি ডট"
-    ],
-    [
-     "কাগজ",
-     "১২০ জিএসএম"
-    ]
-   ],
-   "weight": "0.36",
-   "sales": 64,
-   "reviews": [
-    {
-     "author": "মিতু আক্তার",
-     "email": "mitu.demo@example.com",
-     "rating": 5,
-     "title": "বুলেট জার্নালের জন্য সেরা",
-     "text": "ডটগুলো হালকা, লেখার পর চোখে পড়ে না। কাগজও মোটা।",
-     "days": 13
-    }
-   ]
-  },
-  {
-   "key": "fountain-pen",
-   "name": "ক্লাসিক ফাউন্টেন পেন",
-   "slug": "classic-fountain-pen",
-   "sku": "LK-PN-010",
-   "categories": [
-    "pens"
-   ],
-   "image": "product-2",
-   "gallery": [
-    "product-2-alt"
-   ],
-   "regular": 800,
-   "sale": 680,
-   "saleDays": 12,
-   "stock": 18,
-   "short": "স্টিলের নিবসহ ফাউন্টেন পেন। রিফিলযোগ্য কনভার্টার আর দুটি কালির কার্তুজ সঙ্গে।",
-   "description": "<p>হাতের লেখায় ফিরে যাওয়ার সবচেয়ে সুন্দর উপায়। মাঝারি স্টিলের নিব মসৃণভাবে চলে, কনভার্টার দিয়ে বোতলের কালিও ভরা যায়।</p>",
-   "specs": [
-    [
-     "নিব",
-     "মাঝারি, স্টেইনলেস স্টিল"
-    ],
-    [
-     "ভরার পদ্ধতি",
-     "কার্তুজ বা কনভার্টার"
-    ],
-    [
-     "সঙ্গে",
-     "২টি কালো কার্তুজ"
-    ]
-   ],
-   "weight": "0.05",
-   "sales": 52,
-   "reviews": [
-    {
-     "author": "তানভীর হাসান",
-     "email": "tanvir.demo@example.com",
-     "rating": 5,
-     "title": "প্রথম ফাউন্টেন পেন",
-     "text": "নতুনদের জন্য দারুণ। কালি আটকায় না, লিখতে আরাম।",
-     "days": 17
-    }
-   ]
-  },
-  {
-   "key": "travel-mug",
-   "name": "ট্রাভেল মগ ৪০০ মিলি",
-   "slug": "travel-mug-400ml",
-   "sku": "LK-MG-011",
-   "categories": [
-    "mugs"
-   ],
-   "image": "product-3-alt",
-   "gallery": [
-    "product-3"
-   ],
-   "regular": 720,
-   "stock": 22,
-   "short": "ডাবল-ওয়াল স্টিলের মগ। ছয় ঘণ্টা পর্যন্ত গরম থাকে, ঢাকনা থেকে চুইয়ে পড়ে না।",
-   "description": "<p>অফিস, ক্লাস কিংবা দীর্ঘ যাত্রা, গরম চা থাকবে গরম আর ঠান্ডা পানি থাকবে ঠান্ডা। এক হাতে খোলা যায় এমন ঢাকনা।</p>",
-   "specs": [
-    [
-     "ধারণক্ষমতা",
-     "৪০০ মিলি"
-    ],
-    [
-     "উপকরণ",
-     "ডাবল-ওয়াল স্টেইনলেস স্টিল"
-    ],
-    [
-     "তাপ ধরে রাখে",
-     "৬ ঘণ্টা পর্যন্ত"
-    ]
-   ],
-   "weight": "0.3",
-   "sales": 93,
-   "reviews": [
-    {
-     "author": "আরিফুল ইসলাম",
-     "email": "ariful.demo@example.com",
-     "rating": 4,
-     "title": "চা গরম থাকে",
-     "text": "সকালে ভরে নিলে দুপুর পর্যন্ত গরম থাকে। ঢাকনাটা একটু শক্ত।",
-     "days": 30
-    }
-   ]
-  },
-  {
-   "key": "mini-tote",
-   "name": "মিনি টোট ব্যাগ",
-   "slug": "mini-tote-bag",
-   "sku": "LK-BG-012",
-   "categories": [
-    "bags"
-   ],
-   "image": "product-4-alt",
-   "gallery": [
-    "product-4"
-   ],
-   "regular": 320,
-   "sale": 260,
-   "stock": 3,
-   "short": "ছোট আকারের ক্যানভাস ব্যাগ। টিফিন বক্স বা বই বহনের জন্য হালকা ও মজবুত।",
-   "description": "<p>টিফিন বক্স, একটি বই আর পানির বোতল, এর বেশি লাগে না এমন দিনের জন্য।</p>",
-   "specs": [
-    [
-     "উপকরণ",
-     "সুতি ক্যানভাস"
-    ],
-    [
-     "মাপ",
-     "২৮ × ৩০ সেমি"
-    ]
-   ],
-   "weight": "0.18",
-   "sales": 27,
-   "reviews": [
-    {
-     "author": "সাদিয়া রহমান",
-     "email": "sadia.demo@example.com",
-     "rating": 4,
-     "title": "ছোট কিন্তু কাজের",
-     "text": "টিফিন আর বই নিয়ে যাওয়ার জন্য একদম ঠিক মাপ।",
-     "days": 20
-    }
-   ]
+   "weight": "0.08"
   }
  ],
  "posts": [
@@ -1338,247 +1348,253 @@
  ],
  "pages": [
   {
-   "key": "home",
-   "title": "Home",
-   "slug": "home",
-   "template": "templates/template-home.php",
-   "content": "",
-   "acfGroup": "group_6aca0d1273713",
+   "key": "home-ecommerce",
+   "title": "হোম",
+   "slug": "home-ecommerce",
+   "template": "templates/template-home-ecommerce.php",
+   "acfGroup": "group_lk_home_ecommerce",
    "acf": {
-    "slider_section": {
-     "slider_items": [
+    "he_hero_section": {
+     "show_departments": 1,
+     "menu_title": "সব ডিপার্টমেন্ট",
+     "slides": [
       {
-       "eyebrow": "নতুন কালেকশন ২০২৬",
-       "title": "লেখার টেবিল সাজান নিজের মতো করে",
-       "description": "নোটবুক, মগ আর কলম। প্রতিদিনের লেখালেখির সঙ্গী এখন এক জায়গায়।",
-       "image": "@image:hero-1",
-       "buy_now_url": "/product/lekhoni-classic-notebook",
-       "collection_url": "/product-category/notebooks"
+       "eyebrow": "মেগা ইলেকট্রনিক্স সেল",
+       "title": "হেডফোন, ফোন আর গ্যাজেটে ৪০% পর্যন্ত ছাড়",
+       "tone": "accent",
+       "text": "সেরা ব্র্যান্ডের আসল পণ্য, ১ বছরের ওয়ারেন্টিসহ।",
+       "link": {
+        "title": "এখনই কিনুন",
+        "url": "/product-category/electronics",
+        "target": ""
+       },
+       "image": "@image:ec-hero-1"
       },
       {
-       "eyebrow": "উপহারের মৌসুম",
-       "title": "প্রিয়জনের জন্য যত্নে সাজানো গিফট বক্স",
-       "description": "সুন্দর মোড়ক, শুভেচ্ছা কার্ড আর বাছাই করা পণ্য। অর্ডার করলেই পৌঁছে যাবে।",
-       "image": "@image:hero-2",
-       "buy_now_url": "/product/premium-gift-box",
-       "collection_url": "/product-category/gift-boxes"
+       "eyebrow": "নতুন সিজন",
+       "title": "স্টাইলে নতুন কালেকশন, দাম নাগালে",
+       "tone": "sale",
+       "text": "স্নিকার্স, ব্যাগ আর পোশাক। প্রতি সপ্তাহে নতুন ডিজাইন।",
+       "link": {
+        "title": "কালেকশন দেখুন",
+        "url": "/product-category/fashion",
+        "target": ""
+       },
+       "image": "@image:ec-hero-2"
       },
       {
-       "eyebrow": "ডেস্ক সেটআপ",
-       "title": "গোছানো ডেস্ক, গোছানো ভাবনা",
-       "description": "কাঠের অর্গানাইজার আর সাপ্তাহিক প্ল্যানারে কাজ এগোবে পরিকল্পনা মেনে।",
-       "image": "@image:hero-3",
-       "buy_now_url": "/product/wooden-desk-organizer",
-       "collection_url": "/product-category/desk-accessories"
+       "eyebrow": "ঘরের দরকারি জিনিস",
+       "title": "রান্নাঘর সাজান কম খরচে",
+       "tone": "success",
+       "text": "কেটলি, ফ্রাইপ্যান আর কুকওয়্যারে বিশেষ অফার।",
+       "link": {
+        "title": "অফার দেখুন",
+        "url": "/product-category/home-kitchen",
+        "target": ""
+       },
+       "image": "@image:ec-hero-3"
+      }
+     ],
+     "side_banners": [
+      {
+       "eyebrow": "−১৭% ছাড়",
+       "title": "স্মার্টওয়াচ কালেকশন",
+       "image": "@image:ec-banner-1",
+       "link": "/product/smartwatch-series-5",
+       "tone": "accent"
+      },
+      {
+       "eyebrow": "নতুন এসেছে",
+       "title": "ব্লুটুথ স্পিকার",
+       "image": "@image:ec-banner-2",
+       "link": "/product/portable-bluetooth-speaker",
+       "tone": "success"
       }
      ]
     },
-    "trust_section": {
+    "he_services_section": {
+     "enabled": 1,
      "items": [
       {
        "icon": "truck",
-       "title": "দ্রুত ডেলিভারি",
-       "description": "ঢাকায় ২৪ ঘণ্টায়, সারা দেশে ৩ থেকে ৫ দিনে"
-      },
-      {
-       "icon": "shield-check",
-       "title": "ক্যাশ অন ডেলিভারি",
-       "description": "পণ্য হাতে পেয়ে তারপর মূল্য পরিশোধ"
+       "title": "সারা দেশে ডেলিভারি",
+       "text": "৳১,০০০-এর বেশি অর্ডারে ফ্রি"
       },
       {
        "icon": "rotate-ccw",
-       "title": "৭ দিনে সহজ রিটার্ন",
-       "description": "পছন্দ না হলে ফেরত দিন, কোনো প্রশ্ন ছাড়াই"
+       "title": "৭ দিনে রিটার্ন",
+       "text": "ঝামেলা ছাড়া পণ্য ফেরত"
       },
       {
-       "icon": "headset",
-       "title": "২৪/৭ সাপোর্ট",
-       "description": "যেকোনো প্রয়োজনে ফোন বা মেসেজ করুন"
+       "icon": "shield-check",
+       "title": "১০০% আসল পণ্য",
+       "text": "অফিশিয়াল ওয়ারেন্টিসহ"
+      },
+      {
+       "icon": "credit-card",
+       "title": "নিরাপদ পেমেন্ট",
+       "text": "বিকাশ, নগদ, কার্ড, ক্যাশ"
       }
      ]
     },
-    "category_section": {
+    "he_departments_section": {
+     "enabled": 1,
+     "title": "ডিপার্টমেন্ট",
      "categories": [
-      "@term:product_cat:notebooks",
-      "@term:product_cat:pens",
-      "@term:product_cat:mugs",
-      "@term:product_cat:bags",
-      "@term:product_cat:stickers",
-      "@term:product_cat:gift-boxes"
+      "@term:product_cat:electronics",
+      "@term:product_cat:fashion",
+      "@term:product_cat:home-kitchen",
+      "@term:product_cat:beauty",
+      "@term:product_cat:sports",
+      "@term:product_cat:books-stationery"
      ]
     },
-    "flash_sale_section": {
-     "title": "ডিল অফ দ্য ডে",
+    "he_deals_section": {
+     "enabled": 1,
+     "title": "আজকের ডিল",
      "ends_at": "@date:+3",
      "products": [
-      "@product:sticker-pack",
-      "@product:ceramic-mug",
-      "@product:classic-notebook",
-      "@product:fountain-pen",
-      "@product:dotted-journal",
-      "@product:gift-box"
+      "@product:ec-headphones",
+      "@product:ec-watch",
+      "@product:ec-speaker",
+      "@product:ec-sneaker",
+      "@product:ec-pan",
+      "@product:ec-phone"
      ]
     },
-    "featured_section": {
-     "title": "নির্বাচিত পণ্য",
+    "he_tabs_section": {
+     "enabled": 1,
+     "title": "জনপ্রিয় পণ্য",
      "new_label": "নতুন এসেছে",
      "best_label": "বেস্টসেলার",
-     "sale_label": "অফারে",
+     "top_label": "সেরা রেটিং",
      "new_products": [
-      "@product:canvas-tote",
-      "@product:desk-organizer",
-      "@product:travel-mug",
-      "@product:weekly-planner"
+      "@product:ec-phone",
+      "@product:ec-shirt",
+      "@product:ec-lamp",
+      "@product:ec-handbag",
+      "@product:ec-speaker",
+      "@product:ec-bedsheet",
+      "@product:ec-sunglasses",
+      "@product:ec-powerbank"
      ],
-     "best_products": [
-      "@product:sticker-pack",
-      "@product:ceramic-mug",
-      "@product:classic-notebook",
-      "@product:gel-pen-set"
-     ],
-     "sale_products": [
-      "@product:dotted-journal",
-      "@product:fountain-pen",
-      "@product:mini-tote",
-      "@product:gift-box"
-     ]
+     "best_products": [],
+     "top_products": []
     },
-    "promo_section": {
-     "title": "চলতি অফার",
-     "banners": [
-      {
-       "eyebrow": "সীমিত সময়ের অফার",
-       "title": "স্টেশনারি কালেকশন: ২০% ছাড়",
-       "style": "accent",
-       "text": "নোটবুক, কলম আর প্ল্যানারে বিশেষ ছাড় চলছে এই মাসজুড়ে।",
-       "link": {
-        "title": "অফার দেখুন",
-        "url": "/shop",
-        "target": ""
-       },
-       "image": "@image:product-2"
-      },
-      {
-       "eyebrow": "উপহার",
-       "title": "গিফট বক্স: প্রিয়জনের জন্য",
-       "style": "sale",
-       "text": "জন্মদিন কিংবা সাফল্য উদ্‌যাপন, তৈরি বক্সেই উপহার প্রস্তুত।",
-       "link": {
-        "title": "গিফট বক্স দেখুন",
-        "url": "/product-category/gift-boxes",
-        "target": ""
-       },
-       "image": "@image:product-7"
-      }
-     ]
+    "he_wide_banner": {
+     "enabled": 1,
+     "eyebrow": "১১.১১ মেগা সেল",
+     "coupon_code": "MEGA15",
+     "title": "সব অর্ডারে অতিরিক্ত ১৫% ছাড়",
+     "text": "চেকআউটে কুপন কোড ব্যবহার করুন। ৳১,৫০০-এর বেশি অর্ডারে।",
+     "link": {
+      "title": "কেনাকাটা শুরু করুন",
+      "url": "/shop",
+      "target": ""
+     }
     },
-    "spotlight_section": {
-     "eyebrow": "এই সপ্তাহের সেরা",
-     "product": [
-      "@product:gift-box"
-     ],
-     "highlights": [
-      {
-       "text": "নোটবুক, কলম সেট, মগ ও স্টিকার প্যাক একসঙ্গে"
-      },
-      {
-       "text": "হাতে লেখা শুভেচ্ছা কার্ড যোগ করার সুযোগ"
-      },
-      {
-       "text": "আলাদা কিনলে যা খরচ, তার চেয়ে ৳২৫০ সাশ্রয়"
-      }
-     ]
+    "he_category_rows": [
+     {
+      "category": "@term:product_cat:electronics",
+      "title": "",
+      "icon": "",
+      "banner_eyebrow": "গ্যাজেট উইক",
+      "banner_title": "ফোন আর অডিওতে ৩০% পর্যন্ত ছাড়",
+      "tone": "accent",
+      "banner_image": "@image:ec-dept-1",
+      "products": [
+       "@product:ec-phone",
+       "@product:ec-headphones",
+       "@product:ec-watch",
+       "@product:ec-speaker",
+       "@product:ec-powerbank"
+      ]
+     },
+     {
+      "category": "@term:product_cat:fashion",
+      "title": "",
+      "icon": "",
+      "banner_eyebrow": "নতুন কালেকশন",
+      "banner_title": "শীতের আগে নিজেকে সাজান নতুন করে",
+      "tone": "sale",
+      "banner_image": "@image:ec-dept-2",
+      "products": []
+     }
+    ],
+    "he_promo_banners": [
+     {
+      "eyebrow": "কম্বো অফার",
+      "title": "কেটলি + ফ্রাইপ্যান একসঙ্গে",
+      "image": "@image:ec-kettle",
+      "link": "/product-category/home-kitchen",
+      "tone": "success"
+     },
+     {
+      "eyebrow": "নতুন স্নিকার্স",
+      "title": "প্রথম অর্ডারে ১০% ছাড়",
+      "image": "@image:ec-sneaker",
+      "link": "/product/lightweight-running-sneakers",
+      "tone": "sale"
+     },
+     {
+      "eyebrow": "ফ্ল্যাশ ডিল",
+      "title": "পাওয়ার ব্যাংক মাত্র ৳১,৮৯০",
+      "image": "@image:ec-powerbank",
+      "link": "/product/power-bank-20000",
+      "tone": "star"
+     }
+    ],
+    "he_lists_section": {
+     "enabled": 1,
+     "top_title": "সেরা রেটিং",
+     "new_title": "নতুন এসেছে",
+     "sale_title": "অফারে আছে"
     },
-    "best_sellers_section": {
-     "title": "বেস্টসেলার",
-     "products": [
-      "@product:sticker-pack",
-      "@product:ceramic-mug",
-      "@product:classic-notebook",
-      "@product:travel-mug",
-      "@product:gel-pen-set",
-      "@product:gift-box",
-      "@product:dotted-journal",
-      "@product:canvas-tote"
-     ]
-    },
-    "reviews_section": {
-     "title": "ক্রেতারা যা বলছেন",
-     "source": "auto",
-     "testimonials": [
-      {
-       "name": "সাদিয়া রহমান",
-       "location": "ঢাকা",
-       "rating": 5,
-       "verified": 1,
-       "text": "বোনের জন্মদিনে গিফট বক্স পাঠিয়েছিলাম। মোড়ক আর কার্ড দেখে সে খুবই খুশি।"
-      },
-      {
-       "name": "আরিফুল ইসলাম",
-       "location": "চট্টগ্রাম",
-       "rating": 5,
-       "verified": 1,
-       "text": "নোটবুকের কাগজের মান অসাধারণ। ফাউন্টেন পেনেও কালি ছড়ায় না।"
-      },
-      {
-       "name": "নুসরাত জাহান",
-       "location": "সিলেট",
-       "rating": 4,
-       "verified": 1,
-       "text": "ডেলিভারি সময়মতো পেয়েছি, প্যাকিংও যত্ন করে করা। আবার কিনব।"
-      }
-     ]
-    },
-    "brands_section": {
-     "title": "যেসব ব্র্যান্ড আমাদের সঙ্গে আছে",
+    "he_brands_section": {
+     "enabled": 1,
+     "title": "জনপ্রিয় ব্র্যান্ড",
      "brands": [
       {
-       "name": "কাগজকলম",
+       "name": "সুরধ্বনি",
        "logo": "",
        "link": ""
       },
       {
-       "name": "নীলখাতা",
+       "name": "চলন্তিকা",
        "logo": "",
        "link": ""
       },
       {
-       "name": "চায়ের কাপ",
+       "name": "ঘরকন্না",
        "logo": "",
        "link": ""
       },
       {
-       "name": "সুতোবোনা",
+       "name": "আলোকিত",
        "logo": "",
        "link": ""
       },
       {
-       "name": "কাঠঠোকরা",
+       "name": "টেকবাংলা",
        "logo": "",
        "link": ""
       },
       {
-       "name": "ঝরনা কালি",
+       "name": "তাঁতঘর",
        "logo": "",
        "link": ""
       }
      ]
     },
-    "blog_section": {
-     "title": "কেনার আগে পড়ুন",
-     "link_label": "সব গাইড",
-     "category": [
-      "@term:category:buying-guide"
-     ],
-     "count": 3
-    },
-    "subscribe_section": {
-     "title": "নতুন অফারের খবর সরাসরি ইনবক্সে",
-     "text": "নতুন পণ্য, ছাড় আর লেখার খবর সবার আগে পেতে সাবস্ক্রাইব করুন।",
-     "success_message": "সাবস্ক্রাইব করার জন্য ধন্যবাদ!",
-     "note": "মাসে দু-একটির বেশি ইমেইল নয়। যেকোনো সময় আনসাবস্ক্রাইব করা যায়।"
+    "he_show_recently_viewed": 1,
+    "he_subscribe_section": {
+     "enabled": 1,
+     "title": "অফারের খবর সবার আগে",
+     "text": "সাবস্ক্রাইব করলেই প্রথম অর্ডারে ছাড়ের কুপন। সপ্তাহে একটির বেশি ইমেইল নয়।",
+     "success_message": "সাবস্ক্রাইব করার জন্য ধন্যবাদ!"
     }
-   }
+   },
+   "content": ""
   },
   {
    "key": "about",
@@ -1766,19 +1782,22 @@
      "url": "/shop",
      "children": [
       {
-       "term": "product_cat:notebooks"
+       "term": "product_cat:electronics"
       },
       {
-       "term": "product_cat:pens"
+       "term": "product_cat:fashion"
       },
       {
-       "term": "product_cat:mugs"
+       "term": "product_cat:home-kitchen"
       },
       {
-       "term": "product_cat:bags"
+       "term": "product_cat:beauty"
       },
       {
-       "term": "product_cat:gift-boxes"
+       "term": "product_cat:sports"
+      },
+      {
+       "term": "product_cat:books-stationery"
       }
      ]
     },
@@ -1825,7 +1844,7 @@
   }
  ],
  "reading": {
-  "front": "home",
+  "front": "home-ecommerce",
   "posts": "blog"
  },
  "themeSettings": {
@@ -1850,6 +1869,20 @@
     "source": "product_categories",
     "count": 8
    }
+  },
+  "style": {
+   "preset": "ecommerce",
+   "accent_color": ""
+  },
+  "announcement": {
+   "enabled": 1,
+   "dismissible": 1,
+   "icon": "zap",
+   "text": "১১.১১ মেগা সেল চলছে: কোড MEGA15 দিলে আরও ১৫% ছাড়",
+   "link_label": "অফার দেখুন",
+   "link_url": "/shop",
+   "starts_at": "",
+   "ends_at": ""
   }
  },
  "store": {
@@ -1876,11 +1909,11 @@
    "description": "পণ্য হাতে পেয়ে ডেলিভারি কর্মীকে নগদ টাকা দিন।"
   },
   "coupon": {
-   "code": "LEKHONI10",
-   "amount": 10,
+   "code": "MEGA15",
+   "amount": 15,
    "type": "percent",
-   "minimum": 500,
-   "description": "ডেমো কুপন: ৳৫০০-এর বেশি অর্ডারে ১০% ছাড়"
+   "minimum": 1500,
+   "description": "ডেমো কুপন: ৳১,৫০০-এর বেশি অর্ডারে ১৫% ছাড়"
   }
  }
 }

@@ -140,6 +140,35 @@ add_action(
                             ),
                         )
                     ),
+                    lekhoni_acf_field(
+                        'field_lk_ts_style',
+                        'style',
+                        'Style',
+                        'group',
+                        array(
+                            'instructions' => 'The look of the whole storefront, in light and dark mode. Pairs with the home page templates of the same name, but works with any of them.',
+                            'layout'       => 'block',
+                            'sub_fields'   => array(
+                                lekhoni_acf_field(
+                                    'field_lk_ts_style_preset',
+                                    'preset',
+                                    'Style Preset',
+                                    'select',
+                                    array(
+                                        'choices'       => array(
+                                            'default'   => 'Stationery: teal, warm paper, serif headings (default)',
+                                            'ecommerce' => 'E-commerce: orange, cool grey, squarer cards, sans headings',
+                                            'cosmetics' => 'Cosmetics: berry, soft blush, rounder cards, Tiro Bangla headings',
+                                        ),
+                                        'default_value' => 'default',
+                                        'return_format' => 'value',
+                                        'wrapper'       => array('width' => '60'),
+                                    )
+                                ),
+                                lekhoni_acf_field('field_lk_ts_style_accent', 'accent_color', 'Accent Colour', 'color_picker', array('instructions' => 'Optional. Replaces the preset\'s accent (buttons, links). Pick a dark enough colour for white text.', 'enable_opacity' => 0, 'return_format' => 'string', 'wrapper' => array('width' => '40'))),
+                            ),
+                        )
+                    ),
 
                     // ------------------------------------------------------------ Announcement bar
                     lekhoni_settings_tab('field_lk_ts_tab_announcement', 'Announcement Bar'),

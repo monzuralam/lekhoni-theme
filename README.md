@@ -57,10 +57,11 @@ that list.** Install it manually from
 
 1. Activate the **Lekhoni** theme and the plugins above.
 
-   > **Quickest start:** after step 2, open **Theme Settings → Demo Import**
-   > and click **Import demo**. It sets up steps 4–7 for you (pages, Reading,
-   > menus, Theme Settings and, if ticked, the store settings) and fills the
-   > shop with demo products and posts. See "Demo import" in section 4.
+   > **Quickest start:** after step 2, open **Theme Settings → Demo Import**,
+   > pick a homepage demo (Stationery, E-commerce or Cosmetics) and click
+   > **Import demo**. It sets up steps 4–7 for you (pages, Reading, menus,
+   > style and Theme Settings and, if ticked, the store settings) and fills
+   > the shop with that demo's products and posts. See "Demo import" in section 4.
 2. Add these to `wp-config.php` above `/* That's all, stop editing! */`:
 
    ```php
@@ -83,13 +84,15 @@ that list.** Install it manually from
 3. **Settings → Permalinks:** use any "pretty" structure (for example Post name).
    Product URLs must look like `/product/cap/` and categories like
    `/product-category/clothing/`.
-4. **Home page:** create a page with the **Home Shop** template, set it as
-   the static front page (Settings → Reading), and fill in the **Home Shop**
-   fields (section 4). What `/` shows follows "Your homepage displays":
+4. **Home page:** create a page with one of the three home templates, set it
+   as the static front page (Settings → Reading), and fill in its fields
+   (section 4). What `/` shows follows "Your homepage displays":
 
    | Settings → Reading | Storefront `/` |
    |---|---|
-   | A static page with the **Home Shop** template | Shop home (`design/home-shop.html`) |
+   | A static page with the **Home Shop** template | Stationery shop home (`design/home-shop.html`) |
+   | A static page with the **Home – E-commerce** template | Multi-department store home (`design/home-ecommerce.html`) |
+   | A static page with the **Home – Cosmetics** template | Beauty store home (`design/home-cosmetics.html`) |
    | A static page with any other template | That page's title, image and content |
    | **Your latest posts** (or no page chosen) | Blog home (`design/index.html`) |
 
@@ -107,8 +110,9 @@ that list.** Install it manually from
    and another for **Footer menu** (footer "Links" column). Until a menu is
    assigned, the header shows Home and Shop, and the footer shows Shop,
    My Account, About and Contact.
-6. **Theme Settings** (admin menu): logo, announcement bar, social profiles,
-   header buttons and footer (section 4). Optional: the defaults match the design.
+6. **Theme Settings** (admin menu): logo, **style preset**, announcement bar,
+   social profiles, header buttons and footer (section 4). Pick the preset
+   that matches the home template (E-commerce or Cosmetics) for the full look. Optional: the defaults match the design.
 7. **WooCommerce → Settings:** set the currency (BDT shows ৳), enable payment
    methods (cash on delivery works out of the box) and add shipping zones.
    For **Direct bank transfer**, fill in the account details and the
@@ -155,18 +159,24 @@ npm run build && npm start   # production
 | `inc/acf-contact.php` | ACF field group **Contact Page** (shown on the Contact template; GraphQL `contactPage`) |
 | `inc/contact.php` | Contact form: **Contact Messages** admin inbox and the `sendContactMessage` GraphQL mutation |
 | `inc/acf-home.php` | ACF field group **Home Shop**: every home page section in one group, one tab per section (shown on the Home Shop template; GraphQL `homeShop`) |
+| `inc/acf-home-ecommerce.php` | ACF field group **Home – E-commerce** (template "Home – E-commerce"; GraphQL `homeEcommerce`) |
+| `inc/acf-home-cosmetics.php` | ACF field group **Home – Cosmetics** (template "Home – Cosmetics"; GraphQL `homeCosmetics`) |
+| `inc/shop-fields.php` | **Icon** on product categories (GraphQL `productCategory { icon }`) and **Swatch Colour** on attribute terms (GraphQL `swatchColor`) |
+| `inc/routines.php` | Routine bundle discount: a negative cart fee when every product of a cosmetics routine is in the cart |
 | `inc/acf-author.php` | ACF field group **Author Profile** on the user profile screen (GraphQL `authorProfile`) |
 | `inc/newsletter.php` | Newsletter: **Subscribers** admin list with CSV export, and the `subscribeNewsletter` GraphQL mutation |
 | `inc/payments.php` | GraphQL `bankTransfer { instructions accounts }`: the Direct bank transfer accounts, shown at checkout (when that method is picked) and on the order-received page |
 | `inc/email-login.php` | Email link login: the `sendLoginLink` and `loginWithEmailLink` GraphQL mutations (switched on under Theme Settings → Login; section 6) |
 | `inc/demo-import.php` | Demo import engine: the steps, lookups by demo marker, and removal |
 | `inc/demo-import-admin.php` | **Theme Settings → Demo Import** page, its AJAX endpoints and the "import the demo" notice after activation |
-| `inc/demo-import-cli.php` | `wp lekhoni demo import` / `wp lekhoni demo remove` |
-| `demo/content.json`, `demo/images/` | The demo package (built by the storefront's `scripts/build-demo.mjs`; don't edit by hand) |
+| `inc/demo-import-cli.php` | `wp lekhoni demo list` / `import --demo=<id>` / `remove` |
+| `demo/<id>/` (`stationery`, `ecommerce`, `cosmetics`), `demo/shared/` | The demo packages: `content.json`, `images/` and `preview.jpg` per demo, plus images several demos share (built by the storefront's `scripts/build-demo.mjs`; don't edit by hand) |
 | `inc/acf-export-*.json` | An old ACF export of the first Home Shop fields. Not loaded; outdated reference only |
 | `inc/headless.php` | Headless helpers (below) |
 | `inc/preview.php` | Storefront previews of drafts and unsaved changes (section 4, "Previews") |
 | `templates/template-home.php` | "Home Shop" page template |
+| `templates/template-home-ecommerce.php` | "Home – E-commerce" page template |
+| `templates/template-home-cosmetics.php` | "Home – Cosmetics" page template |
 | `templates/template-about.php` | "About" page template |
 | `templates/template-contact.php` | "Contact" page template |
 | `lib/class-tgm-plugin-activation.php` | TGM library |
@@ -210,36 +220,46 @@ npm run build && npm start   # production
 
 ### Demo import (wp-admin → Theme Settings → Demo Import)
 
-One click fills a fresh install with the লেখনী demo, built from the design:
+One click fills a fresh install with a লেখনী demo, built from the design.
+**Pick the homepage demo first:** each card shows a screenshot of its design.
 
-| Content | What |
-|---|---|
-| Images | 32 illustrations from `design/assets/img`, as JPG/PNG (about 640 KB), added to the Media Library |
-| Products | 12 Bangla stationery products in 8 categories (with images). Prices in ৳, sales with end dates, stock levels including low and out of stock. The notebook (ruling) and gift box (colour × size) are variable products. Gallery images, featured products, 18 approved 4–5★ reviews and sales counts for "best sellers". |
-| Blog | 12 posts in 5 categories with tags, cover images and two authors (role Author, random passwords, `@example.com` emails); one sticky |
-| Pages | Home (every Home Shop tab filled), About, Contact and ব্লগ (Blog) |
-| Menus | "প্রধান মেনু" (Shop with category submenu) and "ফুটার মেনু" |
+| Demo | Home template, style | Shop |
+|---|---|---|
+| **Stationery shop** (`stationery`) | Home Shop, Stationery | 12 stationery products in 8 categories (notebooks, pens, mugs, gift boxes…); notebook (ruling) and gift box (colour × size) are variable; 18 reviews; coupon `LEKHONI10` |
+| **E-commerce store** (`ecommerce`) | Home – E-commerce, E-commerce | 17 products in 6 departments with icons (electronics, fashion, home & kitchen, beauty, sports, books); smartwatch (colour, with swatches) and shirt (size) are variable; deals, category rows, the MEGA15 coupon banner; coupon `MEGA15` |
+| **Cosmetics store** (`cosmetics`) | Home – Cosmetics, Cosmetics | 13 beauty products in 6 categories with images; 6 skin concerns as product tags; lipstick in 5 shades with swatch colours; morning and night routines (15% bundle discount); 3 extra "বিউটি টিপস" posts; coupon `GLOW10` |
+
+Every demo also brings the 12 blog posts with two authors (role Author,
+random passwords, `@example.com` emails), the About, Contact and ব্লগ (Blog)
+pages, the "প্রধান মেনু" (Shop with that demo's category submenu) and
+"ফুটার মেনু" menus, and its announcement bar text.
 
 **Options on the page:**
-- **Use the demo homepage, menus and Theme Settings** (ticked): fills the Home,
-  About and Contact fields (replacing what's there), makes Home the front page
-  and ব্লগ the posts page, assigns the menus to their locations and adds social
-  links and footer topics in Theme Settings.
+- **Use the demo homepage, menus, style and Theme Settings** (ticked): fills
+  the demo's Home page and the About and Contact fields (replacing what's
+  there), makes that Home the front page and ব্লগ the posts page, assigns the
+  menus, and sets Theme Settings: the demo's **style preset**, announcement,
+  social links and footer topics.
 - **Store settings for Bangladesh** (ticked): currency ৳ (BDT, no decimals),
   store country Bangladesh (Dhaka), a "বাংলাদেশ" shipping zone (flat ৳60, free
-  over ৳১,০০০), cash on delivery on, and the demo coupon `LEKHONI10` (10% over ৳500).
+  over ৳১,০০০), cash on delivery on, and the demo's coupon.
+- **Remove the installed demo first** (ticked; shown when a different demo is
+  installed): deletes the installed demo's content before importing the new
+  one, so the shop doesn't mix two demos. Untick to keep both.
 
 **How it works:**
-- **Small steps:** images, terms, products, posts, pages, menus, settings,
-  then finish. Each is its own AJAX request, so slow hosts don't time out.
-  A full import takes about 30 seconds.
-- **The page:** shows a requirements check (WooCommerce, ACF PRO, WPGraphQL,
-  WooGraphQL, writable uploads, GD/Imagick, PHP memory) and a progress log.
+- **Small steps:** remove previous demo (when asked), images, terms, products,
+  posts, pages, menus, settings, then finish. Each is its own AJAX request,
+  so slow hosts don't time out. A full import takes under a minute.
+- **The page:** shows the demo choices, a requirements check (WooCommerce, ACF
+  PRO, WPGraphQL, WooGraphQL, writable uploads, GD/Imagick, PHP memory) and a
+  progress log.
 - **Re-running is safe:** every created item carries the meta
-  `_lekhoni_demo = "<kind>:<key>"`, so a second run updates the demo items
-  instead of adding copies.
+  `_lekhoni_demo = "<kind>:<key>"`, so importing the same demo again updates
+  its items instead of adding copies. The option `lekhoni_demo_state`
+  remembers which demo is installed.
 - **Existing items with the same slug are used, never taken over:** pages
-  (home, about, contact, blog), categories and authors are marked
+  (home, about, contact, blog), categories, attributes and authors are marked
   `_lekhoni_demo_adopted` and are never deleted. An existing page's fields
   are only replaced with the first option ticked.
 - **Remove demo content** deletes exactly what the demo created: products
@@ -252,15 +272,20 @@ One click fills a fresh install with the লেখনী demo, built from the de
   within a few minutes).
 - **Prompt after activation:** a notice suggests the import until it's done
   or dismissed.
-- **Command line:** `wp lekhoni demo import [--no-site] [--no-store]` and
+- **Command line:** `wp lekhoni demo list`,
+  `wp lekhoni demo import [--demo=<id>] [--keep] [--no-site] [--no-store]`
+  (`--keep`: don't remove a different installed demo first) and
   `wp lekhoni demo remove [--yes]`.
 
-**Changing the demo:** edit `lekhoni/scripts/demo-content/*.mjs` (products,
-posts, pages, menus, settings; About/Contact text is in `pages.json`), then run
-`node scripts/build-demo.mjs` from `lekhoni/`. It renders the design's SVGs
-with sharp, writes `demo/content.json` and `demo/images/`, and stops if any
-reference (`@image:`, `@product:`, `@term:`, `@page:`) points at something
-missing.
+**Changing the demos:** edit `lekhoni/scripts/demo-content/`:
+`products.mjs`, `posts.mjs` and `site.mjs` (stationery; the posts and
+Theme Settings are shared), `ecommerce.mjs`, `cosmetics.mjs`, and
+`pages.json` (About/Contact). Then run `node scripts/build-demo.mjs` from
+`lekhoni/`. It renders the design's SVGs with sharp (images used by more than
+one demo go to `demo/shared/`), takes a screenshot of each design page for the
+preview when Chrome or Edge is installed (`CHROME_PATH` to point at one),
+writes `demo/<id>/`, and stops if any reference (`@image:`, `@product:`,
+`@term:`, `@page:`) points at something missing.
 
 ### Theme Settings (wp-admin → Theme Settings): header and footer
 
@@ -273,7 +298,7 @@ on, so an untouched page looks exactly like the design.
 
 | Tab | Fields | When empty |
 |---|---|---|
-| Branding | Logo, logo for dark mode, logo width (px) | Text logo from the Site Title (Settings → General) with the accent dot: "লেখনী." |
+| Branding | Logo, logo for dark mode, logo width (px) · **Style:** preset (Stationery, E-commerce, Cosmetics) and an optional accent colour | Text logo from the Site Title (Settings → General) with the accent dot: "লেখনী." · Stationery preset, the design's accent |
 | Announcement Bar | Show, visitors can close it, icon, text, link text, link URL (`/shop` or `https://…`), show from / until (site timezone) | "৳১,০০০-এর বেশি অর্ডারে ফ্রি ডেলিভারি · আজই অর্ডার করুন" with the truck icon |
 | Social Profiles | Repeater: network (Facebook, X, Instagram, YouTube, LinkedIn, RSS) and URL | Icons hidden in the header, footer and blog sidebar |
 | Login | **Email link login** on/off, link valid for (5–60 minutes), email subject (`{site}` = Site Title), email text | **Off.** 15 minutes, "{site}-এ লগইন করার লিংক". See "Email link login" in section 6. |
@@ -283,6 +308,13 @@ on, so an untouched page looks exactly like the design.
 - **Announcement bar:** a visitor who closes the bar doesn't see it again,
   until its text or link changes. The schedule is checked in the browser, so
   it works on cached pages.
+- **Style preset:** changes colours, card corners and the heading font across
+  the whole storefront, in light and dark mode (`<html data-preset>`, tokens
+  in `lekhoni/app/globals.css`, same values as `design/src/input.css`).
+  E-commerce: orange accent, cool grey, squarer cards, Hind Siliguri headings.
+  Cosmetics: berry accent, soft blush, rounder cards, Tiro Bangla headings.
+  Any preset works with any home template. The accent colour replaces the
+  preset's; pick one dark enough for white button text.
 - **Favicon:** the Site Icon (Settings → General), falling back to
   `lekhoni/public/favicon.ico`.
 - **When changes show:** right after **Save Settings**, when
@@ -323,6 +355,61 @@ field in `inc/acf-home.php` loses its saved content.
 
 Changes appear on the storefront within about 60 seconds (data is revalidated
 every 60s).
+
+### Home page: templates "Home – E-commerce" and "Home – Cosmetics"
+
+Two more home designs, each a page template with its own field group (one
+tab per section, in page order). Use one as the static front page. Every
+section has a **Show This Section** switch (never saved = on) and falls back
+to automatic content when its fields are empty; sections with nothing to show
+are hidden.
+
+**Home – E-commerce** (`inc/acf-home-ecommerce.php`, design
+`design/home-ecommerce.html`):
+
+| Tab | Fields | When empty |
+|---|---|---|
+| Hero | Department menu on/off and title; slides (badge, title, text, button, image, background tint); up to two side banners | No slides: hero hidden. Menu: the Departments tab's categories |
+| Services | Up to four items (icon, title, text) | Delivery, returns, genuine products, payment |
+| Departments | Title; categories in order | Top-level product categories. Icons: Products → Categories → **Icon** |
+| Deals | Title, countdown end, products | Best-selling products on sale; countdown from the earliest sale end date. "Sold" bars for products with stock management |
+| Popular Products | Title, three tab labels, products per tab | Newest, best sellers, highest rated |
+| Coupon Banner | Badge, coupon code, title, text, button | Hidden without a title (create the coupon under Marketing → Coupons) |
+| Category Rows | Repeater: category, title, icon, banner (badge, title, image, tint), products | Rows hidden. Products: the category's best sellers |
+| Promo Banners | Repeater: badge, title, image, link, tint (three per row) | Hidden |
+| Product Lists | Titles of three automatic lists | Highest rated, newest, on sale (3 each) |
+| Brands | Title; brands (name, logo, link) | WooCommerce product brands |
+| Newsletter | "Recently viewed" on/off; newsletter title, text, success message | Design texts |
+
+**Home – Cosmetics** (`inc/acf-home-cosmetics.php`, design
+`design/home-cosmetics.html`):
+
+| Tab | Fields | When empty |
+|---|---|---|
+| Hero | Image badge, rating line, slides (eyebrow, title, text, two buttons, portrait image shown in an arch) | No slides: hero hidden. The rating line shows the store's average review rating |
+| Promises | Up to four items (icon, text) | Genuine, cruelty-free, paraben-free, easy returns |
+| Categories | Eyebrow, title, categories | Top-level categories with their Thumbnails |
+| Skin Concerns | Eyebrow, title, "All" chip, concerns (chip label + **product tag**), products | Hidden without concerns. Products: best sellers with any of the concern tags. The chips filter on the page |
+| Best Sellers | Eyebrow, title, products | The 8 best sellers. Variable products show colour dots from their attribute terms' **Swatch Colour** |
+| Routines | Eyebrow, title, text, bundle discount (%), routines (tab name, icon, steps: label + product) | Hidden without routines. Discount 15% |
+| Ingredients | Eyebrow, title, ingredients (name, icon, tint, text, good for, link) | Hidden |
+| Offer | Eyebrow, countdown end, title, text, button, image | Hidden without a title. The offer itself (e.g. a free gift) is set up in WooCommerce |
+| Reviews | Eyebrow, title, source, testimonials (name, skin type, rating, verified, text, product) | Product reviews rated 4–5, else the testimonials |
+| Photo Gallery | Eyebrow, title, text, link (e.g. Instagram), photos | Hidden without photos |
+| Beauty Tips | Title, link text, category, number of posts | The latest 3 posts |
+| Newsletter | Title, text, success message, small print | Design texts |
+
+- **Routine bundles** (`inc/routines.php`): when the cart holds every product
+  of a routine, WooCommerce adds a negative fee, e.g. "রুটিন ছাড়: সকালের রুটিন",
+  worth the bundle discount on one set. The cart, checkout and order
+  confirmation show it. "Add the whole routine" only appears when every step
+  is a simple, in-stock product (variable products need a shade first).
+- **Category icons and swatches** (`inc/shop-fields.php`): Products →
+  Categories → edit → **Icon**; Products → Attributes → (e.g. Shade) →
+  Configure terms → edit → **Swatch Colour**.
+- **Storefront code:** `lekhoni/app/components/home-ecommerce/` and
+  `home-cosmetics/` (data in `data.ts`, one cached request per home), shared
+  helpers in `home-kit/`. Changes show within a few minutes (cache).
 
 ### Subscribers (wp-admin → Subscribers)
 
@@ -456,7 +543,7 @@ preview shows the page's editor content with a note).
 
 | Route | What it is |
 |---|---|
-| `/` | Home: the shop home (hero, trust strip, categories, flash sale, …), a plain page, or the blog home, depending on Settings → Reading (section 2, step 4) |
+| `/` | Home: the stationery shop home, the e-commerce home, the cosmetics home, a plain page, or the blog home, depending on Settings → Reading and the front page's template (section 2, step 4) |
 | `/about` | About page (WordPress page `about`, ACF "About Page") |
 | `/contact` | Contact page (WordPress page `contact`, ACF "Contact Page"); form saves to wp-admin |
 | `/shop` | All products: filters (category, max price, in stock), sort, pages |
@@ -680,7 +767,7 @@ Cart API: `GET/POST/PATCH/DELETE /api/cart`, `/api/cart/coupon`,
 - [ ] `LEKHONI_REVALIDATE_SECRET`: a new random value, the same in `wp-config.php` and the storefront's environment
 - [ ] If email link login is on: WordPress can send email on the live server (an SMTP plugin), and a test link arrives
 - [ ] Test users and orders deleted
-- [ ] Demo content removed (Theme Settings → Demo Import → Remove demo content), or replaced with real products; the demo coupon `LEKHONI10` deleted if not wanted
+- [ ] Demo content removed (Theme Settings → Demo Import → Remove demo content), or replaced with real products; the demo coupon (`LEKHONI10`, `MEGA15` or `GLOW10`) deleted if not wanted
 
 ---
 
